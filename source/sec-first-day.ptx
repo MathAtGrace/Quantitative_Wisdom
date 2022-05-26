@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec_first-day" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <objectives>
+    <p><strong><span style="font-size: 14.4px;">Course Objectives</span></strong></p>
+    <ul>
+      <li>Interact with different philosophical and theological views of mathematics</li>
+      <li>Extract relevant information from complex scenarios. Obtain any necessary additional information from outside sources. Synthesize the information in order to solve problems and make decisions.</li>
+    </ul>
+  </objectives>
+  <title>First Day of Class</title>
+  <introduction>
+    <p>
+      Welcome to Quantitative Reasoning.  The goal of this course is to teach you how to use and understand numbers (quantitative) to understand the world and think for yourself (reasoning).  However, this book is also written from a Christian perspective, and we find in scripture the mostly commmonly used word for learning to understand and live according to God's created order is <em> wisdom </em>.  This course will strongly resemble Quantitative Reasoning courses found in secular colleges and universities, but ocassionally our Christian perspective will break through in ways different from or contrary to a secular perspecive.
+    </p>
+    <p>
+      This is a math course designed for students who are majoring in fields that do not <em>directly</em> require a lot of mathematics.  Dr. Eric Gaze at Bowdoin College summarizes Quantitative Reasoning as <q>doing complicated reasoning using elementary mathematics.</q>  Most of the topics are intended to help you better understand adult life, be a better citizen, and better understand ethical questions with numerical components.
+    </p>
+    <p>
+      One of the most important things you need to succeed in this class is patience and determination.  As Keith Plummer, a professor of apologetics, theology, and counseling at Cairn University once said,
+      <center><q>
+        The speed with which we're able to communicate can tempt us to view precision and those who value it with impatient disdain.
+      </q></center>
+      Although we will sometimes work only in terms of estimation, a great deal of this course will be spent patiently and diligently figuring out answers that might surprise us.  As you work hard in this class I hope that you improve in the Biblical virtues of patience, understanding <fn>Proverbs 14:25</fn>, discipline, and diligence.<fn>Proverbs 12:1</fn>
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>In Class Activity</title>
+    <exercise xml:id="first-day-math-autobio">
+      <statement>The solution to this exercise describes an in-class activity.  If you are taking this class online or if you missed the first day of class, write a one-page paper of their own math autobiography.</statement>
+      <solution>
+        <p>In class, ask students to pair up and tell each other their math autobiographies.</p>
+        <p>Then ask for students to summarize (i.e. bullet points) their partner's math autobiography in writing.</p>
+        <p>Then ask the partners to check with each other that their summaries are okay.  They may need to fix something.</p>
+        <p>Ask the class what Christian virtues were important during this activity.</p>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <worksheet xml:id="first-day-worksheet">
+    <title>First Day Worksheet</title>
+    <objectives xml:id="first-day-objectives">
+      <ul>
+        <li>Interact with different philosophical and theological views of mathematics</li>
+        <li>Solve problems and estimate effectively in groups</li>
+      </ul>
+    </objectives>
+
+    <page xml:id="first-day-worksheet-p1">
+      <p>In the first part of this worksheet, we will consider what people from history have said about math, and we try to consider math from our own Christian perspective.</p>
+
+      <exercise xml:id="first-day-warm-up" workspace="1in">
+        <title>Warm-up.</title>
+        <statement>
+          Why did God give people the capacity to do mathematics?  Before reading any further, write a couple of sentences giving your answer to this question.  
+          If all you can think of is <q>I have no idea!</q>, take your best guess, even if it seems silly to you.
+        </statement>
+      </exercise>
+
+      <p>The following statements have been made during the past 4,000 years.  They suggest possible answers to the question of why we should study math.  Most are by famous and influential people.  As you read each one, fill in the first column of the table linked below, <q>What reason for studying math does this suggest?</q>  These quotes are rich and many good things could be said about them, so aim for one good point for each.  You will work in groups to fill in the rest of each row; we’ve done one as an example.  Note the column <q>Is this a good reason?</q> Some quotes provide reasons that are partly good and partly bad.
+      </p>
+      <blockquote>
+        <p><q>Accurate reckoning. The entrance into the knowledge of all existing things and all obscure secrets.</q></p>
+        <attribution>Introduction to the Rhind Mathematical Papyrus, written in Egypt around 1850 B.C.</attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>As a matter of fact, I admit that I don’t know why mice and frogs, or flies and  worms were created; yet I see that all things are beautiful according to their types, even though because of our sins many of them seem to be against  us.  Indeed, I cannot think of the body and members of any animal, in which I fail to find that measures and numbers and order pertain to the unity of agreement.  Where all these come from, I don’t understand, unless from the highest measure and number and order, which dwell in the immutable and eternal sublimity of God Himself...</q></p>
+        <attribution>St. Augustine, North Africa, c. 400 AD <cite>De Genesi Contra Manichaeos, I</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>In all those transactions which relate to worldly… (or)  religious affairs, calculation is of use.  In the science of love, in the science of wealth, in music and in the drama, in the art of cooking, and similarly in medicine and in things like the knowledge of architecture; in prose, in poetics and poetry, in logic and grammar and such other things,...the science of computation is held in high esteem.  In relation to the movements  of the sun and other heavenly bodies, in connection with eclipses and conjunction of the planets…it is utilized.  The number, the diameter, and the  perimeter of islands, oceans, and mountains; the extensive dimensions of the rows of habitations and halls belonging to the inhabitants of the world…all of   these are made out by means of computation.</q></p>
+        <attribution> Mahavira’s (mah-hah-VEE-rah) Ganitasarasangraha, India, 9th century A.D.</attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>Whatever way [the geometer] may go, through exercise will he be lifted from the physical to the divine teachings, which are little accessible because of the difficulty to understand their meaning…and because of the circumstance that not everybody is able to have a conception of them, especially not the one who turns away from the art of demonstration.</q></p>
+        <attribution>Muhammad ibn Ahmad al-Biruni (al bee-ROO-nee), Uzbekistan, c. 1030 A.D.
+        <p><cite>Preface to the Book on Finding the Chords in the Circle</cite></p></attribution>
+      </blockquote>
+    </page>
+
+    <page xml:id="first-day-worksheet-p2">
+      <blockquote style="border: 1px; border-style: solid; color: gray;">
+        <p><q>Now the science of mathematics is very important.  This book ...therefore will be of great benefit to the people of the world.  The knowledge for investigation, the development of intellectual power, the way of controlling the kingdom and of ruling even  the whole world, can be obtained by those who are able to make good use of this book.  Ought not those who have great desire to be learned take this with them and study it with great care?</q></p>
+        <attribution>Zhu Shijie (JOO shoor-jieh), China, 1303.  <cite>The introduction to Precious Mirror of the Four Elements</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>Geometry, being part of the divine mind from time immemorial, from before the origin of  things, being God Himself (for what is in God that is not God himself?), has supplied God with the models for the creation of the world. </q></p>
+        <attribution>Johannes Kepler, 1619.  <cite>The Harmony of the World</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>Philosophy is written in this grand book, the universe, which  stands continually open to our gaze.  But the book cannot be understood unless one first learns to comprehend the     language and read the letters in which it is composed. It is written in the language of mathematics, and its characters triangles, circles, and other geometric figures with out which it is humanly impossible to understand a single  word of it; without these, one wanders about in a dark labyrinth.</q></p>
+        <attribution>Galileo Galilei, 1623. <cite>II Saggiatore</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>The long chains of simple and easy reasonings by means of which geometers are accustomed to reach the conclusions of their most difficult demonstrations led me to imagine that all things, to the knowledge of which man is competent, are mutually connected in the same way, and that there is nothing so far removed from us as to be beyond our reach, or so hidden that we cannot discover it, providing only that we abstain from accepting the false for the true, and always preserve in our thoughts the order necessary for the deduction of one truth from another.</q></p>
+        <attribution>Rene Descartes (day-KART), France, 1637. <cite>Discourse on Method</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>Mathematics, rightly viewed, possesses not only truth, but supreme beauty—a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of paintings or music, yet sublimely pure and capable of a stern perfection such as only the greatest art can show.  The true spirit of delight, the exaltation, the sense of being more than man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as in poetry.</q></p>
+        <attribution>Bertrand Russell, England, 1967.  <cite>The Study of Mathematics: Philosophical Essays</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>...the most urgest social issue affeting poor people and people of color is economic access.  In today's world, economic access and full citizenship depend crucially on math and science literacy.  I believe that the absence of math literacy in urban and rural communities throughout this country is an issue as urgent as the lack of registered Black voters in Mississippi was in 1961.</q></p>
+        <attribution>Robert P Moses, United States, 2001. <cite>Radical Equations: Math Literacy and Civil Rights</cite></attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>The 1999 Jobs Rated Almanac by Les Krantz ranked 250 jobs based on salary, work environment, security, stress level, physical demands, and outlook.  The top five jobs were all in mathematics or computer science:
+        <ul style="padding: 0em; margin: 0em;">
+          <li>Website manager</li>
+          <li>Actuary</li>
+          <li>Computer Systems Analyst</li>
+          <li>Software engineer</li>
+          <li>Mathematician</li>
+        </ul>
+        In fact, 9 of the top 10 jobs in the list were math or computer related!</q></p>
+        <attribution>The website of a college mathematics department, United States, 2005</attribution>
+      </blockquote>
+      <blockquote>
+        <p><q>You don't pass math, you don't graduate.</q></p>
+        <attribution>A high school principle, timeless</attribution>
+      </blockquote>
+      <exercise xml:id="first-day-quotes">
+        <title> Views of Mathematics </title>
+        <statement>
+          Fill in the table on the next page (if you are doing this homework online, please create your own table in a text document).
+        </statement>
+      </exercise>
+    </page>
+
+    <page xml:id="first-day-worksheet-p3">
+      <table>
+        <tabular left="minor" top="minor">
+          <col right="minor" width="15%" />
+          <col right="minor" width="20%" />
+          <col right="minor" width="5%" />
+          <col right="minor" width="60%" />
+          <row bottom="medium">
+            <cell>Author</cell>
+            <cell width="1in">
+              <line>What reason does</line>
+              <line>this suggest?</line>
+            </cell>
+            <cell width="1in">
+              <line>Is this a</line>
+              <line>good</line>
+              <line>reason?</line>
+            </cell>
+            <cell width="3in">Why?</cell>
+          </row>
+          <row bottom="minor">
+            <cell>Rhind Papyrus</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Augustine</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Mahavira</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>al-Biruni</cell>
+            <cell>
+              <line>Understanding math</line>
+              <line>can help us</line>
+              <line>understand our</line>
+              <line>creator.</line>
+            </cell>
+            <cell>Yes</cell>
+            <cell>
+              <line>Even though al-Biruni was Muslim, if we interpret his</line>
+              <line>words from a Christian perspective, we can agree that</line>
+              <line>God wants us to know him. Understanding the order and</line>
+              <line>beauty of God’s world can also help us understand God’s</line>
+              <line>order and beauty.</line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Zhu Shijie</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Kepler</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Galileo</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Descartes</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Russel</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Robert Moses</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>
+              <line>Math Department</line>
+              <line>Website</line>
+            </cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>Highschool principle</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+        </tabular>
+      </table>
+    </page>
+
+    <page xml:id="first-day-worksheet-p4X">
+      <p> Now that we have looked at what several key thinkers have said, let’s look at what God says.  The Bible uses numbers frequently, but does not speak directly about mathematics.  Nevertheless, we can take several statements the Bible makes about God’s plans and purposes and apply them to the study of math.  After each quote, summarize its main ideas in your own words and apply them to the study of math. </p>
+      <blockquote>
+        <p><q>So God created man in his own image, in the image of God he created him; male and female he created them.  And God blessed them and God said to them, “Be fruitful and multiply, and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the air and over every living thing that moves upon the earth</q></p>
+        <attribution>Genesis 1:27–28</attribution>
+      </blockquote>
+      <exercise xml:id="proverbs-ideas" workspace="1in">
+        <title>Genesis 1:27-28</title>
+        <statement>What are the main ideas of this passage?</statement>
+      </exercise>
+      <exercise xml:id="proverbs-math" workspace="1in">
+        <title>Genesis 1:27-28</title>
+        <statement> What might this statement have to do with how we think about math?</statement>
+      </exercise>
+      <blockquote>
+        <p><q>
+          Blessed are those who find wisdom,
+            those who gain understanding,
+          for she is more profitable than silver
+            and yields better returns than gold.
+          She is more precious than rubies;
+            nothing you desire can compare with her.
+          Long life is in her right hand;
+            in her left hand are riches and honor.
+          Her ways are pleasant ways,
+            and all her paths are peace.
+          She is a tree of life to those who take hold of her;
+            those who hold her fast will be blessed.
+          </q></p>
+          <p><q>
+          By wisdom the Lord laid the earth’s foundations,
+            by understanding he set the heavens in place;
+          by his knowledge the watery depths were divided,
+            and the clouds let drop the dew.
+          </q></p>
+        <attribution>Proverbs 3:13–20</attribution>
+      </blockquote>
+      <exercise xml:id="genesis-ideas" workspace="1in">
+        <title>Proverbs 3:13–20</title>
+        <statement>What are the main ideas of this passage?</statement>
+      </exercise>
+      <exercise xml:id="genesis-math" workspace="1in">
+        <title>Proverbs 3:13–20</title>
+        <statement> What might this statement have to do with how we think about math?</statement>
+      </exercise>
+    </page>
+
+    <page xml:id="first-day-worksheet-p4">
+      <blockquote>
+        <p><q>He [Christ] is the image of the invisible God, the first-born of all creation; for in him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or principalities or authorities—all things were created through him and for him.  He is before all things, and in him all things hold together.</q></p>
+        <attribution>Colossians 1:15–17</attribution>
+      </blockquote>
+      <exercise xml:id="colosians-ideas" workspace="1in">
+        <title>Colossians 1:15–17</title>
+        <statement>What are the main ideas of this passage?</statement>
+      </exercise>
+      <exercise xml:id="colosians-math" workspace="1in">
+        <title>Colossians 1:15–17</title>
+        <statement> What might this statement have to do with how we think about math?</statement>
+      </exercise>
+      <p> Now we'll work together on a couple quantitative reasoning problems to give you a flavor of the course.</p>
+      <p>
+        A woman writes the following question to <em>Ask Marilyn</em>, a newspaper help columnist:<fn>Maryilyn Vos Savant, <q>Sharing the Cost of a Vacation Rental,</q> <em>Parade</em>, May 2, 2016, accessed February 2, 2019, <url>https://parade.com/409251/marilynvossavant/how-should-you-divide-up-a-confusing-rental-cost/</url></fn>
+      </p>
+      <blockquote>
+        Nine members of our family will be renting a vacation property. The total rental fee is $3600 for ten days. People will be staying for a varying number of days. I say the first step in figuring how much each person will owe for his or her share is to divide the fee by nine. My husband says we should start by dividing the fee by ten–the number of days we have the rental. Who is right?
+      </blockquote>
+      <exercise xml:id="vacation-two-methods" workspace="1.5in">
+        <title> The Vacation Puzzle </title>
+        <statement>
+          Discuss this situation with your group.  Make sure everyone understands the problem.  Investigate the two methods proposed by the husband and wife to determine the monetary implications.
+        </statement>
+      </exercise>
+      <exercise xml:id="vacation-pick-solution" workspace="1.5in">
+        <statement> Explore different solutions to the Vacation Property Puzzle.  As a group, pick a solution to share with the class. </statement>
+      </exercise>
+    </page>
+
+    <page xml:id="first-day-worksheet-p5">
+      <exercise xml:id="toilet-paper-world" workspace="3in">
+        <title>The Toilet Paper Problem</title>
+        <statement>
+          <p>
+            If you took all of the toilet paper that Americans use in a year and wrapped it around the planet at the equator, how many times would it go around the world?  Work in your groups to find an answer to present to the class.
+            <!--todo figure out why this fails: <fn>This problem was orignally posed to the author by Dr. Ben Markham in a QR Faculty Workshop in October, 2018.</fn>-->
+          </p>
+          <p>Here are some statistics that may or may not be helpful:</p>
+          <ul>
+            <li>3 Years: The average time a person sits on the toilet in a lifetime. Some much longer.</li>
+            <li>384 trees are cut to provide toilet paper for one American's lifetime.</li>
+            <li>810 rolls of toilet paper are produced from one average tree.</li>
+            <li>Worldwide, products made from almost 270,000 trees are sent to landfills every day, Worldwide Fund for Nature reports. Roughly 10 percent of that total is attributable to toilet paper.</li>
+            <li>The average American uses 57 sheets of toilet paper per day.</li>
+            <li>Name brand TP is a preference for only 50% of consumers, while 35% reported that they didn't have a preference, and 15% said they didn't know how to answer the question.</li>
+            <li>7% of American steal toilet paper from hotels. Really? C'mon people.</li>
+            <li>Toilet paper squares are usually 4 inches long.</li>
+            <li>Sales in the United States of what the industry calls "luxury" rolls - anything quilted, lotioned, perfumed or ultra-soft, from two- to four-ply - climbed to $1.4 billion in 2014, says Euromonitor International show. This segment is fastest growing segment of industry.</li>
+            <li>There are approximately 325 million people in the United States of America.</li>
+            <li>The circumference of the earth at the equator is almost 25,000 miles.</li>
+          </ul>
+        </statement>
+        <solution>
+          <p>
+            <md>
+              <mrow>
+                \amp(\text{325,000,000 Americans})\frac{57 \text{ sheets}}{1 \text{ American}} \frac{4 \text{ in}}{1 \text{ sheet}} \frac{1 \text{ ft}}{12 \text{ in}} \frac{1 \text{ mile}}{5280 \text{ ft}} \frac{1 \text{ wrap around}}{\text{25,000 miles}}
+              </mrow>
+              <mrow>
+                \amp \approx 46.78 \text{ times around the world}
+              </mrow>
+            </md>
+          </p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Problem Situation: Does This Information Make Sense?</title>
+        <introduction>
+          <p>
+            In this lesson, you will learn how to evaluate information you see often in society. You will start with the following situation.
+          </p>
+          <p>
+            You are traveling down the highway and see a billboard with this message:
+          </p>
+          <table class="gridded" border="1">
+          <tabular top="minor" left="minor">
+            <col right="minor"/>
+              <row bottom="minor">
+                <cell left="minor">
+                  <b>Every year since 1950, the number of American children gunned down has doubled.</b>
+                </cell>
+              </row>
+            </tabular>
+          </table>
+        </introduction>
+        <exercise xml:id="guns-children-1" workspace="1in">
+          <statement>
+            <p>You do not see the name of the organization that put up the billboard. What groups might have wanted to publish this statement? What are some social issues or political ideas that this statement might support?</p>
+            <p>This question does not have a "right" answer, or even a numerical answer. The goal here is for you to think about the question, and write up a response. You will earn full credit as long as your answer is reasonable and on-topic.</p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+      <p>
+        The information in this statement is called <em>quantitative</em>. Quantitative information uses concepts about quantity or number. This can be specific numbers or a pattern based on numerical relationships such as doubling.
+      </p>
+      <p>
+        You hear and see statements using quantitative information every day. People use these statements as evidence to convince you to do things like
+      </p>
+      <ul>
+        <li>vote a certain way</li>
+        <li>donate or give money to a cause</li>
+        <li>understand a health risk</li>
+      </ul>
+      <p>You often do not know whether these statements are true. You may not be able to locate the information, but you can start by asking if the statement is reasonable. This means to ask if the statements make sense. You will be asked if information is <em>reasonable</em> throughout this course. This lesson will help you understand what is meant by this question.</p>
+      <exercise xml:id="guns-children-2" workspace="1in">
+        <statement>
+          <p>In 1995, an article published the statement in the Problem Situation. Do you think this was a reasonable statement to make in 1995? (At this point, this should be an unjustified opinion, based on your intuition)</p>
+          <p>You only have the information in the statement. Using only that information, how can you decide if the statement is reasonable? (Focus on quantitative (numerical) approaches)</p>
+        </statement>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise xml:id="guns-children-3">
+        <statement>
+          <p>To keep things simple, suppose the number of children in 1950 was 1 child. We could use any starting point, but this is a very easy number to work with. Using the problem situation statement that the number doubled every year since 1950, determine the number of children the statement claims were gunned down in the next few years after 1950.</p>
+        </statement>
+      </exercise>
+      <table class="gridded" border="0">
+        <tabular top="minor" left="minor">
+          <col right="minor"/>
+          <col right="minor"/>
+          <row bottom="minor">
+            <cell><b>Year</b></cell>
+            <cell><b>Number of Children</b></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1950</cell>
+            <cell>1</cell>
+          </row>
+          <row bottom="minor">
+            <cell>1951</cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1952</cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1953</cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1954</cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1955</cell>
+            <cell><line></line><line></line></cell>
+          </row>
+        </tabular>
+      </table>
+      <exercise xml:id="guns-children-4" workspace="1in">
+        <statement>
+          <p>Now, determine how many children this predicts for 1960.  Try to figure it out without multiplying by 2 ten times.</p>
+        </statement>
+      </exercise>
+      <exercise xml:id="guns-children-5">
+        <statement>
+          <p>Earlier, you thought about ways to decide if the problem situation statement was reasonable.  One approach is to pick a starting number and see what the statement predicts.  Complete the following table.</p>
+          <p>In the third column, choose the most appropriate place value and round to the nearest whole value for that place value.  For example, if you had 3,125, you'd round that to <q>3 thousand.</q></p>
+        </statement>
+      </exercise>
+      <table class="gridded" border="0">
+        <tabular top="minor" left="minor">
+          <col right="minor"/>
+          <col right="minor"/>
+          <col right="minor"/>
+          <row bottom="minor">
+            <cell><b>Year</b></cell>
+            <cell><b>Number of Children</b></cell>
+            <cell><b>Rounded (using words)</b></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1950</cell>
+            <cell>1</cell>
+            <cell></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1960</cell>
+            <cell><line></line><line></line></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1970</cell>
+            <cell><line></line><line></line></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1980</cell>
+            <cell><line></line><line></line></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1990</cell>
+            <cell><line></line><line></line></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+          <row bottom="minor">
+            <cell>1995</cell>
+            <cell><line></line><line></line></cell>
+            <cell><line></line><line></line></cell>
+          </row>
+        </tabular>
+      </table>
+      <exercise xml:id="guns-children-6" workspace="1in">
+        <statement>
+          <p>Based on your calculations above, does the original statement from the problem situation seem reasonable?</p>
+        </statement>
+      </exercise>
+    </page>
+  </worksheet>
+
+
+</section>
