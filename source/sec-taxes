@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="Income Taxes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Income Taxes</title>
+  <worksheet xml:id="worksheet-income-taxes">
+    <title>Income Taxes</title>
+
+    <page xml:id="worksheet-income-taxes-p1">
+      <objectives>
+        <ul>
+          <li>Demonstrate operation sense by communicating in words and symbols the effects of operations on numbers. Apply the correct order of operations in evaluating expressions and formulas.</li>
+          <li>Apply quantitative reasoning strategies to solve real-world problems with proportional relationships using whole numbers, fractions, decimals, and percents as appropriate.</li>
+       </ul>
+      </objectives>
+      <introduction>
+        <p>
+          In the United States, people pay income tax on any income they earn during the year.  The total amount of money they earn through work, investments, and other means is called <b>total income</b>.  From this, people are able to deduct certain things, like retirement contributions and tuition payments, reducing their income to what is called their <b>adjusted gross income</b>.  From this, certain expenses can be deducted resulting in the <b>taxable income</b> that tax is actually calculated on.
+        </p>
+        <p>
+          Taxes can be, as you've probably heard, fairly complicated, but for this lesson we are going to focus on a simple case.
+        </p>
+        <ul>
+          <li>A married couple with no kids, filing jointly.  No one can claim either as a dependent.</li>
+          <li>Together, they earned $93,000 of wage income, and had no interest or other income</li>
+        </ul>
+      </introduction>
+      <exercise xml:id="exercise-income-taxes-1" workspace="1in">
+        <statement>
+          Because their situation is pretty simple, this couple can fill out a 1040EZ tax form.  As the name implies, this is the easy form for simple cases.  Fill out the income portion of the form to find the couple's taxable income
+          <image source="images/cross-square.png" width="100%">
+        </statement>
+        <solution>
+          Boxes 1-6 should be 93000, 0, 0, 93000, 20300, 72700
+        </solution>
+      </exercise>
+    </page>
+  </worksheet>
+</section>

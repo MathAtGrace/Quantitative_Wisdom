@@ -7,6 +7,7 @@
   </introduction>
 
   <xi:include href="./sec-credit-crunch.ptx"/>
-  <xi:include href="./sec-finance-project.ptx"/>
   <xi:include href="./lab-mortgage.ptx"/>
+  <xi:include href="./sec-taxes.ptx"/>
+  <xi:include href="./sec-finance-project.ptx"/>
 </chapter>
