@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="decisions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data Decisions</title>
+  <introduction>
+    The following text and worksheet are based on Pierce College's Math 96, Lesson 2.10, which was based on Quantway 1.0.
+  </introduction>
+  <worksheet xml:id="worksheet-decisions">
+    <title>Data Decisions Worksheet</title>
+    <page xml:id="worksheet-decisions-p1">
+      <objectives>
+        <ul>
+          <li>Demonstrate an understanding of the connection between the distribution of data and various mathematical summaries of data (measures of central tendency and of variation).</li>
+       </ul>
+      </objectives>
+      <exercisegroup>
+        <title>Problem Situation 1: Making Sense of Measures of Central Tendency</title>
+        <introduction>
+          Examine these three job advertisements.
+          <example xml:id="example-job-1">
+            <title>Outdoor Sales</title>
+            <p>
+              Sales Positions Available!
+            </p>
+            <p>
+              We have immediate need for five enthusiastic self-starters who love the outdoors and who love people.  Our salespeople make an average of $1,000 per week. Come join the winning team.
+            </p>
+          </example>
+          <example xml:id="example-job-2">
+            <title>Above Average Sales</title>
+            <p>
+              Are you above average?
+            </p>
+            <p>
+              Our company is hiring one person this month—will you be that person? We pay the top percentage commission and supply you leads. Half of our sales force makes over $3,000 per month. Join the Above Average Team!
+            </p>
+          </example>
+          <example xml:id="example-job-3">
+            <title>Home Sales</title>
+            <p>
+              NEED A NEW CHALLENGE?
+            </p>
+            <p>
+              Join a super sales force and make as much as you want.  Five of our nine salespeople closed FOUR homes last month. Their average commission was $1,500 on each sale. Do the math—this is the job for you.
+            </p>
+          </example>
+        </introduction>
+        <exercise xml:id="exercise-decisions-1">
+          <statement>
+            Consider the phrase from each advertisement.  Which measure of central tendency is it most likely describing?
+            <ul>
+              <li>"Our salespeople make an average of $1,000 per week." [mean] [median] [mode]</li>
+              <li>"Half of our sales force makes over $3,000 per month." [mean] [median] [mode]</li>
+              <li>"Five of our nine salespeople closed FOUR homes last month." [mean] [median] [mode]</li>
+            </ul>
+          </statement>
+          <solution>
+            <p>mean</p>
+            <p>median</p>
+            <p>mode</p>
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-2">
+          <statement>
+            <p>
+              Consider the set of monthly salaries below.  Which company (which Ad) could these salaries have come from?
+            </p>
+            <p>
+              $1500,  $2000,  $2000,  $2500,  $2500,  $2500,  $6000,  $8000,  $9000
+            </p>
+            <ul>
+              <li>Outdoor Sales</li>
+              <li>Above Average Sales</li>
+              <li>Home Sales</li>
+            </ul>
+          </statement>
+          <solution>
+            From Outdoor Sales. This data has mean $4000 (= $1000/week * 4 weeks)
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-3" workspace=".5in">
+          <statement>
+            For the company "Above Average Sales", create a set of data for 8 employees that fits the measure of center described in the advertisement. You did this in the previous lesson when you made a list of credit card debts for the six college students.
+          </statement>
+          <solution>
+            Answers will vary - any set of data with half the values over 3000 is acceptable. One such set: $2,000, $2,200, $2,400, $2,900, $3,100, $3,300, $3,500, and $3,800 per month. Four of the eight make more than $3,000 per month.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-4" workspace="1in">
+          <statement>
+            Which company would you prefer to work for? Why?
+          </statement>
+          <solution>
+            Answers will vary.
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page xml:id="worksheet-decisions-p2">
+      <exercisegroup xml:id="exercise-group-trends">
+        <title>Problem Situation 2: Understanding Trends in Data</title>
+        <introduction>
+          The median and average sales price of new homes sold in the United States from 1963–2008 is shown in the following graphic. Examine the graph.
+          <image source="average-median-price.jpg" width="95%"/>
+        </introduction>
+        <exercise xml:id="exercise-decisions-5" workspace=".25in">
+          <statement>
+            Looking at the graph above, what was the average (mean) and median home price in 2005?
+          </statement>
+          <solution>
+            The mean was $295,000 and the median was $240,000.
+          </solution>
+        </exercise>
+      </exercisegroup>
+      <exercisegroup xml:id="exercise-group-trends-2">
+        <title></title>
+        <introduction>
+          Five possible data sets for the year 2005 are given in Table <xref ref="table-six-possible-data-points"/> Use your knowledge of mean and median to answer the following questions <em>without calculating</em> the mean of the data sets. There may be more than one correct answer to any of the questions.  Explain your reasoning.
+          <table xml:id="table-six-possible-data-points">
+            <tabular>
+              <row header="yes">
+                <cell>
+                  Set A
+                </cell>
+                <cell>
+                  Set B
+                </cell>
+                <cell>
+                  Set C
+                </cell>
+                <cell>
+                  Set D
+                </cell>
+                <cell>
+                  Set E
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $240,000
+                </cell>
+                <cell>
+                  $84,000
+                </cell>
+                <cell>
+                  $120,000
+                </cell>
+                <cell>
+                  $74,000
+                </cell>
+                <cell>
+                  $74,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $245,000
+                </cell>
+                <cell>
+                  $105,000
+                </cell>
+                <cell>
+                  $135,000
+                </cell>
+                <cell>
+                  $95,000
+                </cell>
+                <cell>
+                  $90,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $250,000
+                </cell>
+                <cell>
+                  $125,000
+                </cell>
+                <cell>
+                  $150,000
+                </cell>
+                <cell>
+                  $105,000
+                </cell>
+                <cell>
+                  $120,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $256,000
+                </cell>
+                <cell>
+                  $240,000
+                </cell>
+                <cell>
+                  $168,000
+                </cell>
+                <cell>
+                  $240,000
+                </cell>
+                <cell>
+                  $240,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $267,000
+                </cell>
+                <cell>
+                  $245,000
+                </cell>
+                <cell>
+                  $201,000
+                </cell>
+                <cell>
+                  $242,000
+                </cell>
+                <cell>
+                  $250,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $275,000
+                </cell>
+                <cell>
+                  $469,000
+                </cell>
+                <cell>
+                  $225,000
+                </cell>
+                <cell>
+                  $250,000
+                </cell>
+                <cell>
+                  $635,000
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  $312,000
+                </cell>
+                <cell>
+                  $810,000
+                </cell>
+                <cell>
+                  $336,000
+                </cell>
+                <cell>
+                  $251,000
+                </cell>
+                <cell>
+                  $669,000
+                </cell>
+              </row>
+            </tabular>
+          </table>
+        </introduction>
+        <exercise xml:id="exercise-decisions-6" workspace=".25in">
+          <statement>
+            Which of the data sets could have the same mean and median shown in the graph for 2005?  (there could be more than one)
+          </statement>
+          <solution>
+            Sets B, D, and E have a median (middle value) of $240,000, but all the values in Set D are below $295,000 so it would be impossible for that set to have a mean of $295,000. So sets B and E are the only two that could have the same mean and median shown in the graph for 2005.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-7" workspace=".25in">
+          <statement>
+            Which of the data sets would likely have a mean that is less than the median?  (there could be more than one)
+          </statement>
+          <solution>
+            D, since values over the median are close to the median, but values below the median are far below, which would pull down the mean.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-8" workspace=".25in">
+          <statement>
+            Which of the data sets would likely have a mean and median that are close together? (there could be more than one)
+          </statement>
+          <solution>
+            A, since values are all fairly close to the median and are fairly equally distributed above and below the median
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page xml:id="worksheet-decisions-p3">
+      <exercisegroup xml:id="exercise-group-trends-3">
+        <title></title>
+        <introduction>
+          <image source="average-median-price.jpg" width="95%"/>
+        </introduction>
+        <exercise xml:id="exercise-decisions-9" workspace=".25in">
+          <statement>
+            Both the mean and median sales prices decreased from 2005 to 2007.  How much did each decrease?
+          </statement>
+          <solution>
+            <p>
+              The mean decreased by approximately $22,000
+            </p>
+            <p>
+              The median decreased by approximately $11,000
+            </p>
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-10">
+          <statement>
+            <p>
+              What type of changes of home sales prices occurred from 2005 to 2007 so that the mean and median would change in that way?  Choose the correct statement.
+            </p>
+            <p>
+              Since both the median and mean decreased:
+            </p>
+            <ul>
+              <li>In general all house prices increased</li>
+              <li>In general all house prices decreased</li>
+              <li>Only high-end home prices decreased</li>
+              <li>Only low-end home prices decreased</li>
+            </ul>
+          </statement>
+          <solution>
+            In general all house prices decreased
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-11">
+          <statement>
+            <p>
+              What type of changes of home sales prices occurred from 2005 to 2007 so that the mean and median would change in that way?  Choose the correct statement.
+            </p>
+            <p>
+              Since the mean decreased more than the median:
+            </p>
+            <ul>
+              <li>All home prices decreased about the same amount</li>
+              <li>Low-end home prices decreased more than the high-end home prices decreased</li>
+              <li>High-end home prices decreased more than the low-end home prices decreased</li>
+            </ul>
+          </statement>
+          <solution>
+            High-end home prices decreased more than the low-end home prices decreased
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-decisions-12">
+          <statement>
+            <p>
+              On the sales price graph, for the years 1999 and onward the mean sales price is greater than the median sales price (which it had been for many years).  What is new is that the difference between the mean and median prices of the homes is growing larger, especially so in the years 2003 and 2005.
+            </p>
+            <p>
+              What type of changes in housing prices in those years after 1999 would make the mean be further above the median?
+            </p>
+            <ul>
+              <li>Low-end home prices increased faster than high-end home prices</li>
+              <li>High-end home prices increased faster than low-end home prices</li>
+              <li>All home prices increased at the same rate</li>
+            </ul>
+          </statement>
+          <solution>
+            High-end home prices increased faster than low-end home prices
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+  </worksheet>
+</section>

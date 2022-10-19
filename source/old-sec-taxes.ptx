@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-taxes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Income Taxes</title>
+  <p>
+    This worksheet is based on Lesson 2.1 from Quantway 1 remixed by Pierce Community College.  Dr. Ryan Johnson updated the tax code to 2021, added other necessary details, and re-wrote the last two questions to focus on spreadsheets instead of algebra.
+  </p>
+  <worksheet xml:id="worksheet-income-taxes">
+    <title>Income Taxes</title>
+
+    <page xml:id="worksheet-income-taxes-p1">
+      <objectives xml:id="objectives-taxes">
+        <ul>
+          <li>Demonstrate operation sense by communicating in words and symbols the effects of operations on numbers. Apply the correct order of operations in evaluating expressions and formulas.</li>
+          <li>Apply quantitative reasoning strategies to solve real-world problems with proportional relationships using whole numbers, fractions, decimals, and percents as appropriate.</li>
+       </ul>
+      </objectives>
+      <introduction xml:id="introduction-taxes">
+        <p>
+          In the United States, people pay income tax on any income they earn during the year.  The total amount of money they earn through work, investments, and other means is called <em>total income</em>.  From this, people are able to deduct certain things, like retirement contributions and tuition payments, reducing their income to what is called their <em>adjusted gross income</em>.  From this, certain expenses can be deducted resulting in the <em>taxable income</em> that tax is actually calculated on.
+        </p>
+        <p>
+          Taxes can be, as you've probably heard, fairly complicated, but for this lesson we are going to focus on a simple case: a couple we'll name Gracie and Lancel.
+        </p>
+        <ul>
+          <li>Gracie and Lancel are married with no kids, filing jointly.  No one can claim either as a dependent.</li>
+          <li>Together, they earned $106,700 of wage income</li>
+          <li>They did <em>not</em> earn anything from interest, dividends, distributions, annuities, benefits, capital gains, or anything else.</li>
+          <li>They plan to take the standard deduction.</li>
+          <li>They contributed more than $600 to their church (According to instructions from the IRS, for a couple filing jointly who take the standard deduction, the maximum amount they can claim is $600).</li>
+          <li>They had no qualified business income</li>
+          <li>They can claim $2250 in adjustments to income because Gracie is an elementary teacher who can mark $250 for educator expenses and they can claim $2000 because of their payments toward the interest of their student loans.</li>
+        </ul>
+      </introduction>
+      <exercise xml:id="exercise-income-taxes-1" workspace="1in">
+        <statement>
+          Fill out boxes 1-15 the form to find the couple's taxable income
+          <image source="1040.png" width="100%"/>
+        </statement>
+        <solution>
+          <p>Box 1 should be 106,700</p>
+          <p>Boxes 2a-8 should be 0</p>
+          <p>Box 9 should be 106,700</p>
+          <p>Box 10 should be 2,250</p>
+          <p>Box 11 should be 104,450</p>
+          <p>Box 12a should be 25,100</p>
+          <p>Box 12b should be 600</p>
+          <p>Box 12c should be 25,700</p>
+          <p>Boxes 13 and 14 should be 0</p>
+          <p>Box 15 should be 78,750</p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-income-taxes-p2">
+      <sidebyside widths="75% 25%" margins="auto">
+        <!--<exercisegroup xml:id="exercise-group-tax-table">-->
+          <exercise xml:id="exercise-taxes-2" workspace="1in">
+            <statement>
+              Usually tax owed is looked up from a tax table. You would use the first line of the table if the taxable income from line 6  is at least 72,000 but less than 72,050.
+              <ol>
+                <li>Write this as a compound inequality, using t to represent the income from line 6.</li>
+                <li>Then use the table provided to determine the tax the couple owes.</li>
+              </ol>
+            </statement>
+            <solution>
+              <me>78750 \leq t &lt; 78800</me>
+              Line 16 give $9,055.
+            </solution>
+          </exercise>
+        <image source="tax-table-78.png" width="100%"/>
+      </sidebyside>
+
+      <p>
+        Alternatively, the couple could calculate the tax based on tax rate information.  A portion of the rate table from 2021 is shown.
+      </p>
+      <table xml:id="table-tax-brackets">
+        <tabular>
+          <row header="yes">
+            <cell>
+              If Taxable Income Is:
+            </cell>
+            <cell>
+              The Tax Is:
+            </cell>
+          </row>
+          <row>
+            <cell>
+              Not over $19,900
+            </cell>
+            <cell>
+              10% of taxable income
+            </cell>
+          </row>
+          <row>
+            <cell>
+              Over $19,900 but not over $81,050
+            </cell>
+            <cell>
+              $1,990 plus 12% of the amount over $19,900
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <line>
+                Over $81,050 but not over $172,750
+              </line>
+            </cell>
+            <cell>
+              $9,328 plus 22% of the amount over $81,050
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <line>
+                Over $172,750 but not over $329,850
+              </line>
+            </cell>
+            <cell>
+              $29,502 plus 24% of the amount over $172,750
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <line>
+                Over $329,850 but not over $418,850
+              </line>
+            </cell>
+            <cell>
+              $67,206 plus 32% of the amount over $329,850
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <line>
+                Over $418,850 but not over $628,300
+              </line>
+            </cell>
+            <cell>
+              $95,686 plus 35% of the amount over $418,850
+            </cell>
+          </row>
+          <row>
+            <cell>
+              $628,301 or more
+            </cell>
+            <cell>
+              $168,993.50 plus 37% of the amount over $628,300
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <p>
+        The rates you see on the right (10%, 12%, 22%, 24%, 32%, 35%, 37%) are called <em>marginal tax rates</em>, but most people just call them <em>tax brackets</em>.
+      </p>
+      <exercise xml:id="exercise-taxes-4" workspace="1in">
+        <statement>
+          Use the tax rates above to calculate the couple's tax.  Does it match the tax table?
+        </statement>
+        <solution>
+          <p>Taxable income is not over $81,050, so we'll use the second row</p>
+          <p>Tax will be $1,990 plus 12% of the excess over $19,900</p>
+          <p>$78,750 - $19,900 = $58,850 excess</p>
+          <p>12% of $58,850 = $7,062</p>
+          <p>$1,990 + $7,062 = $9,052</p>
+
+          <p>It's off by $3, because the table is providing an average value based on the range of taxable incomes.  But it's close enough to tell the two are consistent.</p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-income-taxes-p3" workspace=".5in">
+      <exercise xml:id="exercise-taxes-5">
+        <statement>
+          A commonly held belief is that marginal tax rate applies to all of a person's taxable income.  What is 12% of their taxable income, and how does this compare to actual income tax?
+        </statement>
+        <solution>
+          <m> 12\% \times \$78,750 = \$9,450.</m>, which is about $400 more than their actual taxes due.
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-taxes-6" workspace=".5in">
+        <statement>
+          What percent of their taxable income are they paying?  This is called the effective or average tax rate.  Round your answer to a tenth of a percentage point.
+        </statement>
+        <solution>
+          <p>$9,055/$78,750 <m>\approx</m> 11.5%</p>
+          <p>Answer will be basically the same if they use $9,052 as the tax.</p>
+        </solution>
+      </exercise>
+      <p>
+        Sometimes people have been hesitant to accept raises, worried that it will push them into a new tax bracket and they'll end up losing money.
+      </p>
+      <exercise xml:id="exercise-taxes-7" workspace="1in">
+        <statement>
+          Suppose the couple got an unexpected $3,000 bonus at the end of the year, pushing them into the 22% marginal rate tax bracket. How much tax will they pay?
+        </statement>
+        <solution>
+          <p>Taxable income will now be $81,750, so the tax will now be calculated using</p>
+          <p>$9,328 plus 22% of the excess over $81,050</p>
+          <p>$81,750-$81,050 = $700 excess.  22% of $700 = $154</p>
+          <p>Taxes owed:  $9,328 + $154 = $9,482</p>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-taxes-8" workspace="1in">
+        <statement>
+          What is the difference between their take-home pay with and without the bonus?  Will the couple end up with less take-home pay because the bonus pushed them into a higher tax bracket?
+        </statement>
+        <solution>
+          <p>Original: $106,700 income - $9,055 taxes = $97,645 take home pay.</p>
+          <p>After: $109,700 income - $9,482 taxes = $100,218 take home pay.</p>
+          <p>Even though they were pushed into a new marginal bracket, the bonus still increased their take-home income by $2573.</p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-income-taxes-p4">
+      <p>
+        While tax tables and the tax rates work well for calculating tax for a single individual, a business might want to create a spreadsheet that automatically calculates the tax for their employees.
+      </p>
+      <image source="taxes-company.png" width="100%"/>
+      <p>
+        For simplicity, let's assume all of the employees are married and filing jointly, and all of their taxable incomes fall between $19,900 and $81,050.  Let's also assume that they will take the standard deduction, have no other income, make no adjustments to their taxable income, and give nothing to charity.  These assumptions will be close enough for this company's purposes.
+      </p>
+      <exercise xml:id="exercise-taxes-9" workspace="1in">
+        <statement>
+          Write an equation for cell C2.  It should be general enough to be copied down the rest of the column.
+        </statement>
+        <solution>
+          <me>C2 = B2 - 25100</me>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-taxes-10" workspace="1in">
+        <statement>
+          Write an equation for cell D2.  It should be general enough to be copied down the rest of the column.
+        </statement>
+        <solution>
+          Tax is $1,990 plus 12% of the amount over $19,900.
+          <me> D2 = 1990 + 0.12*(C2 - 19900)</me>
+          alternately, they could have simplified:
+          <me> D2 = 0.12*C2 - 398</me>
+        </solution>
+      </exercise>
+    </page>
+
+  </worksheet>
+</section>

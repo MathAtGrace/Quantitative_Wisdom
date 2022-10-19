@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="average" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Averages</title>
+  <introduction>
+    The following text and worksheet are based on Pierce College's Math 96, Lesson 2.9, which was based on Quantway 1.0.
+  </introduction>
+  <subsection>
+    <title>Measures of Center</title>
+    <p>
+      People often talk about “averages,” and you probably have an idea of what is meant by that. Now, you will look at more formal mathematical ways of defining averages. In mathematics, you call an average, a measure of center because an average is a way of measuring or quantifying the center of a set of data. There are different measures of center because there are different ways to define the center.
+    </p>
+    <image source="QW2-1-5-PNL.png" width="100%"/>
+    <p>
+      Think about a long line of people waiting to buy tickets for a concert. (Figure A shows a line about 100-feet long and each dot represents a person in the line.) In some sections of the line people are grouped together very closely, while in other sections of the line people are spread out. How would you describe where the center of the line is?
+    </p>
+    <p>
+      Would you define the center of the line by finding the point at which half the people in the line are on one side and half are on the other (see Figure B)? Is the center based on the length of the line even though there would be more people on one side of the center than on the other (see Figure C)? Would you place the center among the largest groups of people (see Figure D)? The answer would depend on what you needed the center for. When working with data, you need different measures for different purposes.
+    </p>
+    <subsubsection>
+      <title>Mean (Arithmetic Average)</title>
+      <p>
+        Find the average of numeric values by finding the sum of the values and dividing the sum by the number of values. The mean is what most people call the “average.”
+      </p>
+      <example xml:id="example-mean-whole-numbers">
+          <title>Mean of Whole Numbers</title>
+          <statement>Find the mean of 18, 23, 45, 18, 36</statement>
+          <solution>
+            <p>Find the sum of the numbers: 18 + 23 + 45 + 18 +36 = 140</p>
+            <p>Divide the sum by 5 because there are 5 numbers: 140 ÷ 5 = 28</p>
+            <p>The mean is 28.</p>
+          </solution>
+      </example>
+      <example xml:id="example-mean-decimals">
+          <title>Mean of Decimals</title>
+          <statement>Find the mean of 1.5, 1.2, 3.7, 5.3, 7.1, 2.9</statement>
+          <solution>
+            <p>Find the sum of the numbers: 1.5 + 1.2 + 3.7 + 5.3 + 7.1 + 2.9 = 21.7</p>
+            <p>DDivide the sum by 6 because there are 6 numbers: 21.7 ÷ 6 = 3.6166666666</p>
+            <p>
+              Since the original values were only accurate to one decimal place, reporting the mean as 3.61666666 would be misleading, as it would imply we knew the original values with a higher level of accuracy.  To avoid this, we round the mean to one more decimal place than the original data.
+            </p>
+            <p>The mean is 3.62</p>
+          </solution>
+      </example>
+    </subsubsection>
+    <subsubsection>
+      <title>Median</title>
+      <p>
+        Find the median of numeric values by arranging the data in order of size. If there is an odd number of values, the median is the middle number. If there is an even number of values, the median is the mean of the two middle numbers.
+      </p>
+      <example xml:id="example-median-odd">
+        <title>Median of Odd Number of Values</title>
+        <statement>Find the median of 18, 23, 45, 18, 36</statement>
+        <solution>
+          <p>Write the numbers in order: 18, 18, 23, 36, 45</p>
+          <p>There is an odd number of values, so the median is the number in the middle. </p>
+          <p>The mean is 23.</p>
+        </solution>
+      </example>
+      <example xml:id="example-median-even">
+        <title>Median of Even Number of Values</title>
+        <statement>Find the median of 18, 23, 45, 18, 12, 50.</statement>
+        <solution>
+          <p>Write the numbers in order: 12, 18, 18, 23, 45, 50</p>
+          <p>There is an even number of values, so there is no one middle number. Find the median by finding the mean of the two middle numbers:</p>
+          <p>18 + 23 = 41</p>
+          <p>41 ÷ 2 = 20.5</p>
+          <p>The median is 20.5.</p>
+        </solution>
+      </example>
+    </subsubsection>
+    <subsubsection>
+      <title>Mode</title>
+      <p>
+        Find the mode by finding the number(s) that occur(s) most frequently. There may be more than one mode.
+      </p>
+      <example xml:id="example-mode">
+        <statement>Find the mode of 18, 23, 45, 18, 36.</statement>
+        <solution>The number 18 occurs twice, more than any other number, so the mode is 18.</solution>
+      </example>
+    </subsubsection>
+    <subsubsection>
+      <title>Note on terminology</title>
+      <p>
+        The terms mean, median, and mode are well defined in mathematics and each gives a measure of center of a set of numbers.  In everyday usage, the word “average” usually refers to the mean.  But be aware that “average” is not clearly defined and someone might use it to refer to any measure of center.
+      </p>
+    </subsubsection>
+  </subsection>
+  <worksheet xml:id="worksheet-averages">
+    <title>Averages Worksheet</title>
+    <page xml:id="worksheet-average-p1">
+      <objectives>
+        <ul>
+          <li>Demonstrate an understanding of the connection between the distribution of data and various mathematical summaries of data (measures of central tendency and of variation).</li>
+       </ul>
+      </objectives>
+      <exercise xml:id="exercise-average-1" workspace="0.25in">
+        <statement>
+          <p>Consider the data set</p>
+          <table xml:id="table-exercise-average-1">
+            <tabular top="minor">
+              <row bottom="minor">
+                <cell>
+                  3
+                </cell>
+                <cell>
+                  5
+                </cell>
+                <cell>
+                  1
+                </cell>
+                <cell>
+                  6
+                </cell>
+                <cell>
+                  6
+                </cell>
+                <cell>
+                  2
+                </cell>
+                <cell>
+                  4
+                </cell>
+                <cell>
+                  1
+                </cell>
+                <cell>
+                  4
+                </cell>
+                <cell>
+                  9
+                </cell>
+                <cell>
+                  9
+                </cell>
+              </row>
+            </tabular>
+          </table>
+          <p>Find the mean and median.</p>
+        </statement>
+        <solution>
+          The mean is 4.55 and the median is 4.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-2" workspace="0.25in">
+        <statement>
+          <p>Consider the data set</p>
+          <table>
+            <tabular top="minor" >
+              <row bottom="minor">
+                <cell>
+                  9
+                </cell>
+                <cell>
+                  3
+                </cell>
+                <cell>
+                  2
+                </cell>
+                <cell>
+                  9
+                </cell>
+                <cell>
+                  2
+                </cell>
+                <cell>
+                  8
+                </cell>
+                <cell>
+                  6
+                </cell>
+                <cell>
+                  8
+                </cell>
+              </row>
+            </tabular>
+          </table>
+          <p>Find the mean and median.</p>
+        </statement>
+        <solution>
+          The mean is 5.88 and the median is 7.
+        </solution>
+      </exercise>
+      <exercisegroup xml:id="exercise-group-credit-cards">
+        <title>Problem Situation:  Summarizing Data About Credit Cards</title>
+        <introduction>
+          <p>
+            A revolving line of credit is an agreement between a consumer and lender that allows the consumer to obtain credit for an undetermined amount of time. The debt is repaid periodically and can be borrowed again once it is repaid. The use of a credit card is an example of a revolving line of credit.
+          </p>
+          <p>
+            U.S. consumers own more than 600 million credit cards.  As of 2015 the average credit card debt per household with a credit card was $15,863.  In total, American consumers owe $901 billion in credit card debt.  Worldwide the number of credit card transactions at merchants was over 135 billion in 2011.
+          </p>
+          <p>
+            Surveys indicate that the percentage of college freshmen with a credit card was 21% in 2012, while 60% of college seniors had a credit card.  One-third of the college students reported having a zero balance on their credit card.   The average balance carried across all students’ cards was $500.  However, the median balance was $136.
+          </p>
+          <p>
+            At www.creditcards.com it explains that card issuers divide customers into two groups:
+          </p>
+          <ul>
+            <li>"transactors" who use their cards for purchases and pay off the balances each month.  Transactors pay off the balance before any interest charges are applied.</li>
+            <li>"revolvers" who carry balances on their cards, paying interest charges month to month.</li>
+          </ul>
+          <p>
+            The number of people who carry credit card debt, the “revolvers”, has been steadily decreasing in the U.S. since 2009.  By 2014 only one-third of adults surveyed said their household carries credit card debt.  Fifteen percent of adults carry $2,500 or more in credit card debt each month.
+          </p>
+          <p>
+            In the first part of this lesson, you will use the information about credit cards given above to learn about some ways to summarize quantitative information.
+          </p>
+        </introduction>
+        <exercise xml:id="exercise-average-3" workspace="0.25in">
+          <statement>
+            The population of the United States is slightly more than 300 million people. There are about 100 million households in the United States.  Use the information above to find the average number of credit cards per person and the average number of credit cards per household.
+          </statement>
+          <solution>
+            <p>600 million cards/300 million people = 2 cards per person</p>
+            <p>600 million cards/100 million households = 6 cards per household</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page xml:id="worksheet-average-p2">
+      <exercise xml:id="exercise-average-4" workspace=".5in">
+        <statement>
+          In the U.S. the average number of credit cards held by cardholders is 3.7.  Why is this number different than the average number of credit cards per person you found in the last question?
+        </statement>
+        <solution>
+          The last question answer was when the credit cards are averaged over all the people in the country, including children and people who have no cards. 3.7 is the number of cards for person when averaged over only the people with cards.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-5" workspace=".75in">
+        <statement>
+          Consider the statement, “Average credit card debt per household with a credit card is $15,863.” What does this statement tell us?  (Assume the "average" they're using is the mean)
+        </statement>
+        <solution>
+          That if we added up all the credit card debt and spread it evenly among the households with credit cards, each would owe $15,863
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-6" workspace=".5in">
+        <statement>
+          If about 45% of households with credit cards carry no debt, what does that indicate about the amount of debt of some of the other 55% of households?
+        </statement>
+        <solution>
+          Since a lot of households have no debt, the others must have debt much higher than $15,863 so the mean will come out to 15,863
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-7" workspace=".5in">
+        <statement>
+          The introduction states that the average balance carried across all college students’ cards was $500.  Imagine you ask four groups of six college students what their credit card debt is. The amount of dollars of debt for each student in each group is shown in the table, values listed in order of size.  Find the mean and median debt of each group of college students.
+          <table xml:id="table-averages-2">
+            <tabular>
+              <row header="yes" bottom="minor">
+                <cell>
+                  Group A
+                </cell>
+                <cell>
+                  Group B
+                </cell>
+                <cell>
+                  Group C
+                </cell>
+                <cell>
+                  Group D
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  0
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  410
+                </cell>
+                <cell>
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  100
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  460
+                </cell>
+                <cell>
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  110
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  480
+                </cell>
+                <cell>
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  170
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  490
+                </cell>
+                <cell>
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  1000
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  550
+                </cell>
+                <cell>
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  1620
+                </cell>
+                <cell>
+                  500
+                </cell>
+                <cell>
+                  610
+                </cell>
+                <cell>
+                  3000
+                </cell>
+              </row>
+            </tabular>
+          </table>
+        </statement>
+        <solution>
+          <p>Group A: mean 500, median 140.</p>
+          <p>Group B: mean 500, median 500.</p>
+          <p>Group C: mean 500, median 485.</p>
+          <p>Group D: mean 500, median 0.</p>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-8">
+        <statement>
+          Observe the <em>medians</em> and the <em>data values</em> of each of the groups.  For each statement below, indicate if it is true for:  None of the groups, Some but not all of the groups, or All of the groups.
+          <ul>
+            <li>Half of the data values are less than the median. [None] [Some but not all] [All]</li>
+            <li>Half of the data values are either less than or equal to the median. [None] [Some but not all] [All]</li>
+            <li>Half of the data values are greater than the median. [None] [Some but not all] [All]</li>
+            <li>Half of the data values are either greater than or equal to the median. [None] [Some but not all] [All]</li>
+            <li>Half of the data values equal the median. [None] [Some but not all] [All]</li>
+          </ul>
+        </statement>
+        <solution>
+          <ul>
+            <li>Some</li>
+            <li>All</li>
+            <li>Some</li>
+            <li>All</li>
+            <li>Some</li>
+          </ul>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-9" workspace=".5in">
+        <statement>
+          Recall that college students’ credit cards carry a mean balance of $500 while having a median balance of $136.  What does this indicate about the distribution of credit card debt among various students?  Does one of the Groups in the table have a distribution similar to this?
+        </statement>
+        <solution>
+          The median is much lower than the mean, which occurs when a lot of data values are near or below the median, and a few data values are much larger than the median. Group A has data with mean of $500 and median close to $136.
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-average-p3">
+      <exercise xml:id="exercise-average-10" workspace=".5in">
+        <statement>
+          A survey in 2012 indicated that college freshmen carry a mean credit card debt of $611 but the median of their credit card debt is $47.  Create a data set of five freshmen students so that the data set has a mean and median that is the same as that of the surveyed college freshmen.
+        </statement>
+        <solution>
+          Answers will vary.  One set of data that has the required mean and median would be: 0, 10, 47, 100, 2898
+        </solution>
+      </exercise>
+      <exercisegroup xml:id="exercise-group-weighted-means">
+        <title>Problem Situation 2:  Weighted Means</title>
+        <introduction xml:id="exercise-group-weighted-means-introduction">
+          <p>
+            Sometimes you want to find the mean average of some numbers, but the numbers are not “equally important” or in other words they don’t have the same “weight” or “frequency”.  In that case we find the “weighted average” of the numbers.
+          </p>
+          <example xml:id="example-mean-credit-card-debt">
+            <title>mean credit card debt:</title>
+            <p>
+              Suppose researchers at a small two-year college surveyed students who have credit cards and report the following:
+            </p>
+            <ol>
+              <li>Mean credit card debt of $350 for 114 freshmen surveyed</li>
+              <li>Mean credit card debt of $285 for 220 sophomores surveyed</li>
+            </ol>
+            <p>
+              If we want to know overall for all the surveyed students what their mean credit card debt was, we cannot simply average $350 and $285 since these numbers are not equally “weighted”. The $350 was an average for only 114 people while the $285 was an average for a larger group of 220 people.  The way to find the overall average credit card debt for all students surveyed is to multiply each of the values by its “weight” or “frequency” or “importance” before adding them together, and then divide by the total “weight” or “frequency”.
+            </p>
+            <me>
+              \text{Overall mean} = \frac{350(114)+285(220)}{114+220} = \frac{102600}{334} = 307.19 
+            </me>
+            <p>
+              Conclude:  The mean credit card debt of all the students surveyed was about $307
+            </p>
+          </example>
+          <example xml:id="example-weighted-grade-average">
+            <title>Weighted grade averages in a course:</title>
+            <p>
+              Suppose a History course has a midterm, a final exam, and a 20 page report, and the syllabus states they have these weights in determining the final course grade:
+            </p>
+            <ol>
+              <li>midterm - 20%;   final exam - 45%;   report - 35%.</li>
+            </ol>
+            <p>
+              Kim’s grades in the course were these:
+            </p>
+            <ol>
+              <li>Midterm – 82;      final exam – 89;     report – 93.</li>
+            </ol>
+            <p>
+              Kim’s final grade in the course is found by the weighted average:
+            </p>
+            <ol>
+              <li>(82(.20) + 89(.45) + 93(.35))/(.20+.45+.35) = 89/1.00 = 89     Kim’s final course grade is 89.</li>
+            </ol>
+            <p>
+              Note:  If the grades were not weighted, Kim’s average would be (82 + 89 + 93)/3  =  88
+            </p>
+          </example>
+        </introduction>
+      </exercisegroup>
+    </page>
+
+    <page xml:id="worksheet-average-p4">
+      <exercise xml:id="exercise-average-11" workspace="0.5in">
+        <statement>
+          Researchers at Acme groceries studied how long customers had to stand in the check-out line.  One day 35 customers spent on average 7.7 minutes each in the check-out line.  The next day 24 customers spent an average of 6.5 minutes each.  What is the overall average time customers spent in line? Round your answer to two decimal places.
+        </statement>
+        <solution>
+          <p>
+            We weight each time by the number of customers:
+          </p>
+          <p>
+            <m>(7.7(35) + 6.5(24))/(35+24) = 425.5/59 = 7.21186</m>, or about 7.21 minutes.
+          </p>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-average-12" workspace="1in">
+        <statement>
+          Your college GPA is a weighted mean. The grade earned in each class needs to be weighted by the number of credits for the class.  Compute the GPA for a student who has earned the following credits:
+          <ol>
+            <li>English 101 (5 credits) with a grade of 3.0,</li>
+            <li>Math 96 (7 credits) with a grade of 3.2,</li>
+            <li>Public Speaking (5 Credits) with a grade or 3.6,</li>
+            <li>Chemistry 100 (5 credits) with a grade of 2.7, and</li>
+            <li>College Success (3 credits) with a grade of 3.8.</li>
+          </ol>
+          Round the GPA to two decimal places.
+        </statement>
+        <solution>
+          We weight each course grade by the number of credits:
+          (3.0(5)+3.2(7)+3.6(5)+2.7(5)+3.8(3))/(5+7+5+5+3) = 80.3/25 = 3.212, or about 3.21
+        </solution>
+      </exercise>
+    </page>
+
+  </worksheet>
+</section>

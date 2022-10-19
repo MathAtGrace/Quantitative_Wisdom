@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="linear" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear Equations</title>
+  <objectives>
+    <ul>
+      <li> Translate problems from a variety of contexts into mathematical representation and vice versa (linear, exponential, simple quadratics).</li>
+      <li> Identify when a linear model is reasonable for a given situation and, when appropriate, formulate a linear model. In the context of the situation interpret the slope and intercepts and determine the reasonable domain and range.</li>
+      <li> Use functional models to make predictions and solve problems.</li>
+   </ul>
+  </objectives>
+  <introduction>
+    The following text and worksheet are based on Pierce College's Math 96, Lesson 3.3, which was based on Quantway 1.0.
+  </introduction>
+  <subsection>
+    <title>Four Representations of a Relationship</title>
+    <p>
+      In 2002, the poverty rate of each state in the United States of America (plus D.C. and Puerto Rico) were recorded, as well as the number of births performed by teenage mothers ages 15-17.  The data is plotted below, along with a trend line of best fit.
+    </p>
+    <image source="teen_preg.jpg" width="95%"/>
+    <p>
+      The units for the <m>x</m>-axis are people below the poverty line per 100 people in each state or territory.  The <m>y</m>-axis is measured in births per 1000 girls ages 15-17 for each state or territory.  
+    </p>
+    <p>
+      A <em>graph</em> provides a visual representation of the situation. It helps you see how the variables are related to each other and make predictions about future values or values in between those in your table. The horizontal and vertical axis of the graph should be labeled, including units.
+    </p>
+    <p>
+      The equation for the red line is
+    </p>
+    <me>T = 1.3733 \times P + 4.2673</me>
+    <p>
+      This is an <em>equation for a model</em>.  This equation is useful because it can be used to calculate the expected teen pregnancy rate given a state's poverty rate.  Equations are useful for communicating complex relationships. In writing equations, it is always important to define what the variables represent, including units.  For example, in the equation above, <m>T </m> is in births per 1000 girls ages 15-17,  and <m>P</m> is in people living in a household below the poverty line per 100 people.
+    </p>
+    <p>
+      Another way that you could have represented this relationship is in a <em>table</em> that shows values of t and B as ordered pairs. An ordered pair is two values that are matched together in a given relationship.  You used a table in the last lesson.  Tables are helpful for recognizing patterns and general relationships or for giving information about specific values. A table should always have labels for each column. The labels should include units when appropriate.
+    </p>
+    <table xml:id="table-linear-teen-preg-predicted">
+      <tabular>
+        <row>
+          <cell>
+            Location
+          </cell>
+          <cell>
+            PovPct
+          </cell>
+          <cell>
+            Model-Brth15to17
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Illinois
+          </cell>
+          <cell>
+            12.4
+          </cell>
+          <cell>
+            21.3
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Indiana
+          </cell>
+          <cell>
+            9.6
+          </cell>
+          <cell>
+            17.5
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Kentucky
+          </cell>
+          <cell>
+            14.7
+          </cell>
+          <cell>
+            24.5
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Michigan
+          </cell>
+          <cell>
+            12.2
+          </cell>
+          <cell>
+            21.0
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Ohio
+          </cell>
+          <cell>
+            11.5
+          </cell>
+          <cell>
+            20.1
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      The values of <q>Model-Brth15to17</q> are not the actual values, but instead, they are the predicted values using our equation above.  We can compare our predicted values with the actual values by including that column.
+    </p>
+    <table xml:id="table-linear-teen-preg-actual">
+      <tabular>
+        <row>
+          <cell>
+            Location
+          </cell>
+          <cell>
+            PovPct
+          </cell>
+          <cell>
+            Actual-Brth15to17
+          </cell>
+          <cell>
+            Model-Brth15to17
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Illinois
+          </cell>
+          <cell>
+            12.4
+          </cell>
+          <cell>
+            23.4
+          </cell>
+          <cell>
+            21.3
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Indiana
+          </cell>
+          <cell>
+            9.6
+          </cell>
+          <cell>
+            22.6
+          </cell>
+          <cell>
+            17.5
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Kentucky
+          </cell>
+          <cell>
+            14.7
+          </cell>
+          <cell>
+            26.5
+          </cell>
+          <cell>
+            24.5
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Michigan
+          </cell>
+          <cell>
+            12.2
+          </cell>
+          <cell>
+            18
+          </cell>
+          <cell>
+            21.0
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Ohio
+          </cell>
+          <cell>
+            11.5
+          </cell>
+          <cell>
+            20.1
+          </cell>
+          <cell>
+            20.1
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      In the table above, the last column represents points of our equation (the red line) while the second to last column are the actual numbers (corresponding to blue dots).
+    </p>
+    <p>
+      A <em>verbal</em> description explains the relationship in words.  In this case, we can do that by looking at how the values in the formula affect the result.  According to our model, we would expect a state with no poverty to have a pregancy rate among 1000 girls 15-17 at about 4.2673.  And for any state whose poverty rate increases by 1 person per 100, the pregnancy rate for 1000 girls ages 15-17 is expected to go up 1.3733.  So we could verbally describe the relationship as:  A state's expected pregnancy rate per 1000 girls ages 15-17 is 4.2673 plus 1.3733 for every person per 100 living in a household below the poverty line.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Linear Equations and Slope</title>
+    <p>
+      The type of equation we looked at for poverty and teen pregnany is a linear equation, or a linear model.  Recall that the graph of a linear equation is a line.  The primary characteristic of a linear equation is that it has a constant rate of change, meaning that each time the input increases by one, the output changes by a fixed amount.  In the example above, if one state as 1 more person per 100 below the poverty line than another state, then we expect the first state to have 1.3733 more pregnancies per 1000 girls 15-17 years old.  This constant rate of change is also called slope.
+    </p>
+    <example>
+      <statement>
+        <p>
+         If I were walking at a constant speed, my distance would change 6 miles in 2 hours. We could compute the slope or rate of change as
+        </p>
+        <me> \frac{6 \text{ miles}}{2 \text{ hours}} = \frac{3 \text{ miles}}{1 \text{ hour}} = 3</me>
+        <p>
+         In general, we can compute slope as
+        </p>
+        <me> \frac{\text{change of output}}{\text{change of input}}</me>
+         <sidebyside widths="25% 70%">
+          <p>
+            In the graph shown, we can see that the graph is a line, so the equation is linear.  We can compute the slope using any two pairs of points by counting how much the input and output change, and divide them.  Notice that we get the same slope regardless of which points we use.
+          </p>
+          <image source="M96-L3-2-g2.jfif" width = "100%" margins="auto" valign="top"/>
+        </sidebyside>
+        <p>
+          If the output increases as the input increases, we consider that a positive change.  If the output decreases as the input increases, that is a negative change, and the slope will be negative.
+        </p>
+      </statement>
+    </example>
+    <p>
+      Some people call the calculation of slope <em>"rise over run"</em>, where "rise" refers to the vertical change in output, and "run" refers to the horizontal change of input.
+    </p>
+    <p>
+      The units on slope will be a rate based on the units of the output and input variables.  It will have units of "output units per input units".  For example,
+    </p>
+    <ul>
+      <li>Input: hours.  Output:  miles.   Slope:  miles per hour</li>
+      <li>Input: number of cats.  Output:  pounds of litter.    Slope:  pounds of litter per cat</li>
+    </ul>
+  </subsection>
+  <subsection>
+    <title>Slope Intercept Equation of a Line</title>
+    <p>
+      The slope-intercept form of a line, the most common way you'll see linear equations written, is
+    </p>
+    <me> y = mx + b</me>
+    <p>
+      where <m>m</m> is the slope, and <m>b</m> is the vertical intercept (called y intercept when the output variable is <m>y</m>).  In the equation, <m>x</m> is the input variable, and <m>y</m> is the output variable.
+    </p>
+    <p>
+      Notice our equation from earlier,
+    </p>
+    <me>T = 1.3733 \times P + 4.2673</me>
+    <p>
+      fits this form where the slope is 1.3733 and the vertical intercept is 4.2673.   The input variable is <m>P</m> and the output variable is <m>T</m>.
+    </p>
+  </subsection>
+
+  <worksheet xml:id="worksheet-linear">
+    <title>Linear Equations Worksheet</title>
+    <page xml:id="worksheet-linear-p1">
+      <exercise xml:id="exercise-linear-1" workspace="0.25in">
+        <statement>
+          Write the equation of a line with slope 4 and <m>y</m>-intercept of <m>(0, 6)</m>.  Use <m>x</m> as the input variable, and <m>y</m> as the output variable.
+        </statement>
+        <solution>
+          <m>y = 4x + 6</m>
+        </solution>
+      </exercise>
+    </page>
+
+  </worksheet>
+</section>

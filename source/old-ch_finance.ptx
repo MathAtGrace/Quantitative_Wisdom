@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="ch-finance" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Finance</title>
+  <introduction>
+    <p>This chapter will focus on finances, budgeting, and interest.</p>
+  </introduction>
+
+  <xi:include href="./lab-budget.ptx"/>
+  <xi:include href="./sec-credit-crunch.ptx"/>
+  <xi:include href="./lab-mortgage.ptx"/>
+  <xi:include href="./sec-taxes.ptx"/>
+  <xi:include href="./sec-finance-project.ptx"/>
+</chapter>

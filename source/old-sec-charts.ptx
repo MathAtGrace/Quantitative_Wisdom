@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="charts" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Charts</title>
+  <introduction>
+    The following worksheet is based on Pierce College's Math 96, Lesson 2.8, which was based on Quantway 1.0.
+  </introduction>
+  <worksheet xml:id="worksheet-charts">
+    <title>Charts Worksheet</title>
+    <page xml:id="worksheet-charts-p1">
+      <objectives>
+        <ul>
+          <li>Read, interpret, and make decisions based upon data from tables and graphical displays such as line graphs, bar graphs, scatterplots, pie charts, and histograms. Given data, choose an appropriate type of graphical display and create it using scales appropriate to the application.</li>
+       </ul>
+      </objectives>
+      <introduction>
+        Graphs are a helpful way to summarize data. Often there are many ways to portray information graphically. Sometimes one form is easier to read than another. Sometimes the way a graph is made can affect the impression it gives. Today, you will look at three examples of such graphs.
+      </introduction>
+      <exercisegroup xml:id="exercisegroup-reading-line-graphs">
+        <title>Problem Situation: Reading Line Graphs</title>
+        <exercise xml:id="exercise-charts-1">
+          <statement>
+            Compare the two graphs below.
+            <sidebyside>
+              <image source="QW2-1-3-1a.jpg" width="49%"/>
+              <image source="QW2-1-3-1b.jpg" width="49%"/>
+           </sidebyside>
+            Which statement best descries the relationship between the graphs?  Circle the correct one.
+            <ul>
+              <li>The data appears to be different - the first graph shows larger changes in income</li>
+              <li>They appear to show the same data, but on different vertical scales.</li>
+            </ul>
+          </statement>
+          <solution>
+            They appear to show the same data, but on different vertical scales.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-2" workspace=".5in">
+          <statement>
+            What was the average household income in 1999?  Give your answer as a range between two numbers and as an estimate.
+          </statement>
+          <solution>
+            Looking at the graph, the value is between $52,000 and $52,500, but much closer to $52,500. About $52,400.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-3" workspace=".5in">
+          <statement>
+            What was the average household income in 2009?  Give your answer as a range between two numbers and as an estimate.
+          </statement>
+          <solution>
+            Looking at the graph, the value is between $49,500 and $50,000, and close to the middle of both. About $49,750.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-4" workspace=".5in">
+          <statement>
+            Use your estimates from the last two questions to determine the percent change in household income from 1999 until 2009.
+          </statement>
+          <solution>
+            Average household income decreased approximately 5% from 1999 until 2009.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-5" workspace=".5in">
+          <statement>
+            Based on these two graphs, would it be fair to say that the average household income was significantly lower in 2009 than it was in 1999?  Explain.
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page xml:id="worksheet-charts-p2">
+        <p>
+          In this example, we will be looking at bar graphs.  Before doing that, answer the question about Jeff’s Housing so that you can understand the questions about national debt and GDP that follow.
+        </p>
+        <exercise xml:id="exercise-charts-6">
+          <statement>
+            Jeff’s Housing: Two pairs of statements are given below.
+            <table xml:id="table-jeffs-housing">
+              <tabular top="minor">
+                <row bottom="minor">
+                  <cell left="minor" right="minor">
+                    <line>
+                      In 1990, Jeff spent $700 per month on housing.
+                    </line>
+                    <line>
+                      In 2010, Jeff spent $1,400 per month on housing.
+                    </line>
+                  </cell>
+                  <cell left="minor" right="minor">
+                    <line>
+                      In 1990, Jeff spent 20% of his income on housing.
+                    </line>
+                    <line>
+                      In 2010, Jeff spent 10% of his income on housing.
+                    </line>
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+            How can both pairs of statements be true?  Circle the correct one.
+            <ul>
+              <li>It is not possible for both statements to be true, since one shows his housing costs rising, and the other shows his housing costs decreasing</li>
+              <li>Both statements can be true if his income increased significantly from 1990 to 2010</li>
+              <li>Both statements can be true if his income fell significantly from 1990 to 2010</li>
+            </ul>
+          </statement>
+          <solution>
+            Both statements can be true if his income increased significantly from 1990 to 2010, so that even though he was spending more money on housing, it was a smaller part of his much larger income.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-7" workspace=".5in">
+          <statement>
+            Calculate Jeff's monthly income in 1990 and 2010
+          </statement>
+          <solution>
+            <p>
+              In 1990, $700 was 20% of his income, so 0.20(income) = $700. His income was $700/0.20 = $3,500
+            </p>
+            <p>
+              In 2010, $1,400 was 10% of his income, so 0.10(income) = $1,400. His income was $1,400/0.10 = $14,000
+            </p>
+          </solution>
+        </exercise>
+      <exercisegroup xml:id="exercisegroup-reading-bar-graphs">
+        <title>Problem Situation: Reading Line Graphs</title>
+        <introduction>
+          <p>
+            GDP, or Gross Domestic Product, can be thought of as the country’s income. It is the value of all goods and services the country produces. The national debt is how much the country owes. Just as Jeff’s spending on housing can be calculated as a percent of income, a country’s national debt can be calculated as a percent of its GDP.
+            </p>
+          <sidebyside>
+            <image source="QW2-1-3-3a.jpg" width="49%"/>
+            <image source="QW2-1-3-3b.jpg" width="49%"/>
+          </sidebyside>
+        </introduction>
+        <exercise xml:id="exercise-charts-8" workspace=".5in">
+          <statement>
+            Using the graphs above, what was the national debt in 2010? What percent of the GDP was the national debt in 2010?
+          </statement>
+          <solution>
+            <p>
+              In the first graph, notice that the vertical scale is labeled in increments of 2 (0, 2, 4, 6, etc.) with 4 divisions between, so each mark is 0.5. The national debt for 2010 is one mark below 14, so that would be 13.5 trillion dollars.
+            </p>
+            <p>
+              In the second graph, notice that the vertical scale is labeled in increments of 10 with 5 divisions between, so each mark is 2. The bar for 2010 is one mark above 60, so that would be 62%.
+            </p>
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-9">
+          <statement>
+            Consider the two graphs above.  Think about the statement, "The 2010 national debt is way out of hand and has never been higher." Use the graphs above to evaluate the statement.  While of the following responses to that statement is the most correct?
+            <ul>
+              <li>The total debt has never been higher, but as a percentage of income debt was not at the highest level ever in 2010</li>
+              <li>As a percentage of GDP, debt is higher now than in the last few decades, but it was higher in 1950</li>
+              <li>The debt has never been higher</li>
+              <li>The debt is higher than the last few decades, but was higher in 1950</li>
+            </ul>
+          </statement>
+          <solution>
+            The total debt has never been higher, but as a percentage of income debt was not at the highest level ever in 2010
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+
+    <page xml:id="worksheet-charts-p3">
+      <exercisegroup xml:id="exercisegroup-reading-circle-graphs">
+        <title>Problem Situation: Reading Pie (Circle) Graphs</title>
+        <exercise xml:id="exercise-charts-10">
+          <statement>
+            Decide if the following statement is true or false based on the two graphs below.
+            <image source="Hispanic_pop_2010.png" width="100%"/>
+            True or False: This pair of graphs predicts that the number of non-Hispanics in the United States is expected to decline between 2010 and 2050.
+            <ul>
+              <li>True</li>
+              <li>False</li>
+              <li>Not enough information given</li>
+            </ul>
+          </statement>
+          <solution>
+            Not enough information is given. We can't know whether the actual number will decline without knowing how the total population will change.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-11" workspace=".5in">
+          <statement>
+            The U.S. population in 2010 was around 310,000,000. In 2050, the U.S. population is expected to be around 439,000,000. Using this information and the pie charts above, find the number of non-Hispanic Americans at each time, to the nearest million people.
+          </statement>
+          <solution>
+            <p>
+              2010: 84% of 300 million is about 260 million
+            </p>
+            <p>
+              2050: 70% of 439 million is about 307 million
+            </p>
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-charts-12" workspace=".5in">
+          <statement>
+            <p>
+              Based on your calculations, now is the statement below true or false?  Explain.
+            </p>
+            <p>
+              This pair of graphs predicts that the number of non-Hispanics in the United States is expected to decline between 2010 and 2050.
+            </p>
+          </statement>
+          <solution>
+            False. Even though the percentage of the population that is non-Hispanic is expected to decline, the total number of non-Hispanic Americans is expected to increase.
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+  </worksheet>
+</section>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-10-17T21:48:13-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Planning and Budget Project</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap_two_review.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="financial_math.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="statistics.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chap_two_review.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="financial_math.html" title="Up">Up</a><a class="next-button button toolbar-item" href="statistics.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
+<li><a href="chap_two_intro_spreadsheet.html" data-scroll="chap_two_intro_spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="lab-budget.html" data-scroll="lab-budget" class="internal">Budget Lab</a></li>
+<li><a href="chap_two_simple_compound.html" data-scroll="chap_two_simple_compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="chap_two_savings_plan.html" data-scroll="chap_two_savings_plan" class="internal">Savings Plans</a></li>
+<li><a href="chap_two_loans.html" data-scroll="chap_two_loans" class="internal">Loan Payments</a></li>
+<li><a href="mortgage-lab.html" data-scroll="mortgage-lab" class="internal">Mortgage Lab</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="chap_two_review.html" data-scroll="chap_two_review" class="internal">Chapter 2 Review</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="active">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="chap_three_statistical_process.html" data-scroll="chap_three_statistical_process" class="internal">Overview of the Statistical Process</a></li>
+<li><a href="chap_three_describing_data.html" data-scroll="chap_three_describing_data" class="internal">Describing Data</a></li>
+<li><a href="chap_three_measure_of_center.html" data-scroll="chap_three_measure_of_center" class="internal">Summary Statistics: Measures of Center</a></li>
+<li><a href="chap_three_measure_of_variation.html" data-scroll="chap_three_measure_of_variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
+<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="internal">The Normal Distribution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link">
+<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
+<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
+<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
+<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
+<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
+<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
+<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="finance-final-project"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.9</span> <span class="title">Planning and Budget Project</span>
+</h2>
+<section class="introduction" id="introduction-43"><p id="p-1545">This project is based on material from <a class="external" href="https://serc.carleton.edu/person/2501.html" target="_blank">Dr. Corri Taylor of Wellesley College.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 19 </sup></a> Dr. Taylor attributes material from the <a class="external" href="http://www.nnn-us.org/" target="_blank">National Numeracy Network</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 20 </sup></a> as part of collaboration with the <a class="external" href="https://serc.carleton.edu/sp/index.html" target="_blank">SERC Pedagogic Service.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 21 </sup></a></p></section><article class="objectives goal-like" id="objectives-14"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc">
+<li id="li-565"><p id="p-derived-li-565">Make explicit assumptions that guide calculations for a loosely defined problem.</p></li>
+<li id="li-566"><p id="p-derived-li-566">Use spreadsheets to perform unit conversions, budget costs, etc.</p></li>
+<li id="li-567"><p id="p-derived-li-567">Use geometry (including volumes, surface areas, etc.) to solve a real world planning project.</p></li>
+<li id="li-568"><p id="p-derived-li-568">Apply personal knowledge and skills related to personal finance. Specifically, work with regular payments and with lump sum payments.</p></li>
+<li id="li-569"><p id="p-derived-li-569">Incorporate tables and graphs in a paper, with descriptive references to these materials in the body of the paper.</p></li>
+</ul></article><section class="subsection" id="subsection-47"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.9.1</span> <span class="title">Details</span>
+</h3>
+<p id="p-1546">Grace College was founded in 1948.  You have been elected to serve as chair of the planning committee for the upcoming Centennial (100th anniversary celebration).  The celebration is to be held on a Friday night, early in September of 2048.  The planning committee has three main responsibilities:</p>
+<ol class="decimal">
+<li id="li-570"><p id="p-1547">Plan and budget for the elaborate dinner party for the entire Grace College Community (students, faculty, and staff).  Appetizers, main courses (regular, vegetarian, and allergen-free), dessert, and beverages are to be provided.  Before the College approaches specific catering services, you need to pull together and neatly present relevant details about the expected college community’s population (e.g., percent with food allergies, percent who will drink water vs more expensive drinks, total population size, etc.) to estimate the amount and types of food and drink needed.  You also need to provide fairly detailed estimates of expenses for the food and drink desired and for the hourly service fees for the servers and any other relevant expenses.</p></li>
+<li id="li-571"><p id="p-1548">Plan and budget for the giant Centennial cake to be displayed on Beta field for the first two weeks of the school year.  The decorative (but non-edible) cake is to measure 15 feet in diameter.  The President of the College did not specify a particular height for the giant cake; he merely asked that it be of reasonable “cake proportions.” The specifics are up to you. The hollow, decorative cake is to be made of a wooden frame covered with plywood and is to be filled with red, black, and white helium balloons.  (The balloons will be released at the end of the dinner party.)  You need to provide the specific design instructions for making this cake and need to budget for its construction, decoration, and filling (with the appropriate number of balloons).  Students will make the cake, so there’s no need to budget for labor, only for materials.</p></li>
+<li id="li-572"><p id="p-1549">Arrange for the funding of the Centennial celebration.  The total costs of the dinner party, the giant decorative cake, and the fireworks display (which is to follow the release of the balloons from the cake and is estimated to cost $25,000) are to be covered by the Centennial Fund.  Plan A is to get a donor to deposit enough money this year so that with interest payments, the accumulated balance in 2048 will fully cover all the costs.  (Note: You are NOT to actually contact any potential donors!  Just calculate how much money would need to be invested now to pay for the party and related expenses.)  If Plan A doesn’t work, there’s Plan B: set aside donations each month starting next September so that costs will be covered.  You need to describe each of these plans and explain the calculations.</p></li>
+</ol></section><section class="subsection" id="subsection-48"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.9.2</span> <span class="title">Assignment</span>
+</h3>
+<p id="p-1550">As chair of Grace College’s Centennial Planning Committee, you are to prepare a professional-looking report detailing the plans, budgets, and funding arrangements described above.  The report should be typed (Times New Roman, 12 point font, one inch margins is the standard report style) and appropriate charts and graphs and diagrams should accompany the report.  These charts, graphs, and diagrams should be labeled (e.g., Table 3: Cost Estimates for Beverages, Figure 2: 3-D Illustration of the Giant Cake) and should be referred to in the content of the report.</p>
+<p id="p-1551">The report should begin with a one to three paragraph executive summary.  (Busy people like college administrators want to know the “conclusions” up front.)   After the executive summary, use appropriate section headings to separate the other key parts of the detailed report.  In each section of the report, be sure to spell out key assumptions, explain how calculations are made, etc.  Please type out your equations (see help videos for <a class="external" href="https://support.microsoft.com/en-us/office/write-an-equation-or-formula-4f799df7-4ca4-4670-afd3-6135768b01d0" target="_blank">Microsoft Word</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 22 </sup></a>, <a class="external" href="https://youtu.be/pOtICjEo8Gs" target="_blank">Mac Pages</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a>, or come ask me if you need help)</p>
+<p id="p-1552">You may work on your own or in teams of two or three students.  (Three is the absolute maximum – no exceptions.)  If you work in a team, you will all get the same grade on the project.  You need to handle all team issues (division of labor, work effort, etc.) on your own.  However, if would like to break up your group or vote out a member, I am willing to act as your arbitrator.  If you have questions about this project, you can see me during my office hours.  Additionally, I will be available for help with conceptualizing the report, creating tables or graphs, etc. on the last day of class.</p>
+<p id="p-1553">I’m open to other project ideas.  If you have an idea for a different project involving estimation, planning, and budgeting, check with me so I can make sure it is equivalent.</p>
+<p id="p-1554">If you have questions, please see me.  Have fun with this project and good luck!</p></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.9.3</span> <span class="title">Grading Break Down</span>
+</h3>
+<ul class="disc">
+<li id="li-573"><p id="p-derived-li-573">Executive Summary (15 points)</p></li>
+<li id="li-574"><p id="p-derived-li-574">Dinner Party Details (25)</p></li>
+<li id="li-575"><p id="p-derived-li-575">Plan for Decorative Cake: Structure, Balloons (20)</p></li>
+<li id="li-576"><p id="p-derived-li-576">Costs of Cake (10)</p></li>
+<li id="li-577"><p id="p-derived-li-577">Funding (10 points for each plan)</p></li>
+<li id="li-578"><p id="p-derived-li-578">Overall Layout/Professionalism: Graphs, Writing, Clarity, Coordination (10)</p></li>
+</ul></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">https://serc.carleton.edu/person/2501.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.nnn-us.org/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn"><code class="code-inline tex2jax_ignore">https://serc.carleton.edu/sp/index.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn"><code class="code-inline tex2jax_ignore">https://support.microsoft.com/en-us/office/write-an-equation-or-formula-4f799df7-4ca4-4670-afd3-6135768b01d0</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn"><code class="code-inline tex2jax_ignore">https://youtu.be/pOtICjEo8Gs</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-10-17T21:47:14-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>God and Math Worksheet</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-math-theology.html#subsection-1" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec-math-theology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-numbers.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-math-theology.html#subsection-1" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec-math-theology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-numbers.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
+<li><a href="chap_two_intro_spreadsheet.html" data-scroll="chap_two_intro_spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="lab-budget.html" data-scroll="lab-budget" class="internal">Budget Lab</a></li>
+<li><a href="chap_two_simple_compound.html" data-scroll="chap_two_simple_compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="chap_two_savings_plan.html" data-scroll="chap_two_savings_plan" class="internal">Savings Plans</a></li>
+<li><a href="chap_two_loans.html" data-scroll="chap_two_loans" class="internal">Loan Payments</a></li>
+<li><a href="mortgage-lab.html" data-scroll="mortgage-lab" class="internal">Mortgage Lab</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="chap_two_review.html" data-scroll="chap_two_review" class="internal">Chapter 2 Review</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="chap_three_statistical_process.html" data-scroll="chap_three_statistical_process" class="internal">Overview of the Statistical Process</a></li>
+<li><a href="chap_three_describing_data.html" data-scroll="chap_three_describing_data" class="internal">Describing Data</a></li>
+<li><a href="chap_three_measure_of_center.html" data-scroll="chap_three_measure_of_center" class="internal">Summary Statistics: Measures of Center</a></li>
+<li><a href="chap_three_measure_of_variation.html" data-scroll="chap_three_measure_of_variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
+<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="internal">The Normal Distribution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link">
+<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
+<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
+<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
+<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
+<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
+<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
+<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="worksheet" id="god-math-worksheet"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">1.3.2</span> <span class="title">God and Math Worksheet</span><div class="print-links">
+<a href="god-math-worksheet-a4.html" class="a4">A4</a><a href="god-math-worksheet-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="objectives goal-like" id="god-math-objectives"><h4 class="heading"><span class="type">Objectives</span></h4>
+<ul class="disc"><li id="li-39"><p id="p-derived-li-39">Interact with different philosophical and theological views of mathematics</p></li></ul></article><section class="onepage" id="god-math-worksheet-p1"><p id="p-27">In the first part of this worksheet, we will consider what people from history have said about math, and we try to consider math from our own Christian perspective.</p>
+<article class="exercise exercise-like" id="god-math-warm-up"><h4 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Warm-up..</span>
+</h4>Why did God give people the capacity to do mathematics?  Before reading any further, write a couple of sentences giving your answer to this question. If all you can think of is “I have no idea!”, take your best guess, even if it seems silly to you.<div class="workspace" data-space=".75in"></div></article><p id="p-28">The following statements have been made during the past 4,000 years.  They suggest possible answers to the question of why we should study math.  Most are by famous and influential people.  As you read each one, fill in the first column of the table linked below, “What reason for studying math does this suggest?”  These quotes are rich and many good things could be said about them, so aim for one good point for each.  You will work in groups to fill in the rest of each row; we’ve done one as an example.  Note the column “Is this a good reason?” Some quotes provide reasons that are partly good and partly bad.</p>
+<blockquote class="blockquote" id="blockquote-1">
+<p id="p-29">“Whatever way [the geometer] may go, through exercise will he be lifted from the physical to the divine teachings, which are little accessible because of the difficulty to understand their meaning…and because of the circumstance that not everybody is able to have a conception of them, especially not the one who turns away from the art of demonstration.”</p>
+<cite class="attribution">―Muhammad ibn Ahmad al-Biruni (al bee-ROO-nee), Uzbekistan, c. 1030 A.D. <p id="p-30">Preface to the Book on Finding the Chords in the Circle</p></cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-1"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-31">Why did al-Biruni think math was important?</p>
+<p id="p-32">Example Answer: Al-Biruni seems to be saying that understanding math can help us understand our creator.</p></article><article class="exercise exercise-like" id="exercise-god-math-2"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-33">Do you agree with al-Biruni?  Why or why not?</p>
+<p id="p-34">Example Answer: Even though al-Biruni was Muslim, if we interpret his words from a Christian perspective, we can agree that God wants us to know him. Understanding the order and beauty of God’s world can also help us understand God’s order and beauty.</p></article><blockquote class="blockquote" id="blockquote-2">
+<p id="p-35">“Accurate reckoning. The entrance into the knowledge of all existing things and all obscure secrets.”</p>
+<cite class="attribution">―Introduction to the Rhind Mathematical Papyrus, written in Egypt around 1850 B.C.</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-3"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>Why did Rhind Mathematical Papyrus think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-4"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>Do you agree with what the Rhind Mathematical Papyrus is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article></section><section class="onepage" id="god-math-worksheet-p3"><blockquote class="blockquote" id="blockquote-3">
+<p id="p-36">“You [God] have arranged all things by measure and number and weight.”</p>
+<p id="p-37">“...Wherever you turn, Wisdom speaks to you through the imprint it has stamped upon its works.... Look at the sky, the earth, and the sea, and at whatever in them shines from above or crawls, flies, or swims below. These have form because they have number.”</p>
+<cite class="attribution">―Augustine, North Africa, c. 400 AD De Genesi Contra Manichaeos, I (first line is quoting from the Wisdom of Solomon)</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-5"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>Why did Augustine think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-6"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>Do you agree with what Augustine is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-4">
+<p id="p-38">“In all those transactions which relate to worldly… (or)  religious affairs, calculation is of use.  In the science of love, in the science of wealth, in music and in the drama, in the art of cooking, and similarly in medicine and in things like the knowledge of architecture; in prose, in poetics and poetry, in logic and grammar and such other things,...the science of computation is held in high esteem.  In relation to the movements  of the sun and other heavenly bodies, in connection with eclipses and conjunction of the planets...it is utilized.  The number, the diameter, and the  perimeter of islands, oceans, and mountains; the extensive dimensions of the rows of habitations and halls belonging to the inhabitants of the world...all of these are made out by means of computation.”</p>
+<cite class="attribution">―Mahavira’s (mah-hah-VEE-rah) Ganitasarasangraha, India, 9th century A.D.</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-7"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>Why did Mahavira think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-8"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>Do you agree with what Mahavira is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-5">
+<p id="p-39">“Now the science of mathematics is very important.  This book ...therefore will be of great benefit to the people of the world.  The knowledge for investigation, the development of intellectual power, the way of controlling the kingdom and of ruling even  the whole world, can be obtained by those who are able to make good use of this book.  Ought not those who have great desire to be learned take this with them and study it with great care?”</p>
+<cite class="attribution">―Zhu Shijie (JOO shoor-jieh), China, 1303.  The introduction to Precious Mirror of the Four Elements</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-9"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>Why did Zhu Shijie think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-10"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>Do you agree with what Zhu Shijie is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article></section><section class="onepage" id="god-math-worksheet-p2"><blockquote class="blockquote" id="blockquote-6">
+<p id="p-40">“Geometry, being part of the divine mind from time immemorial, from before the origin of  things, being God Himself (for what is in God that is not God himself?), has supplied God with the models for the creation of the world.”</p>
+<cite class="attribution">―Johannes Kepler, 1619.  The Harmony of the World</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-11"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>Why did Kepler think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-12"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>Do you agree with what Kepler is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-7">
+<p id="p-41">“Philosophy is written in this grand book, the universe, which  stands continually open to our gaze.  But the book cannot be understood unless one first learns to comprehend the language and read the letters in which it is composed. It is written in the language of mathematics, and its characters triangles, circles, and other geometric figures with out which it is humanly impossible to understand a single  word of it; without these, one wanders about in a dark labyrinth.”</p>
+<cite class="attribution">―Galileo Galilei, 1623. II Saggiatore</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-13"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>Why did Galileo think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-14"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>Do you agree with what Galileo is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-8">
+<p id="p-42">“The long chains of simple and easy reasonings by means of which geometers are accustomed to reach the conclusions of their most difficult demonstrations led me to imagine that all things, to the knowledge of which man is competent, are mutually connected in the same way, and that there is nothing so far removed from us as to be beyond our reach, or so hidden that we cannot discover it, providing only that we abstain from accepting the false for the true, and always preserve in our thoughts the order necessary for the deduction of one truth from another.”</p>
+<cite class="attribution">―Rene Descartes (day-KART), France, 1637. Discourse on Method</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-15"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>Why did Descartes think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-16"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>Do you agree with what Descartes is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article></section><section class="onepage" id="god-math-worksheet-p4"><blockquote class="blockquote" id="blockquote-9">
+<p id="p-43">“Mathematics, rightly viewed, possesses not only truth, but supreme beauty—a beauty cold and austere, like that of sculpture, without appeal to any part of our weaker nature, without the gorgeous trappings of paintings or music, yet sublimely pure and capable of a stern perfection such as only the greatest art can show.  The true spirit of delight, the exaltation, the sense of being more than man, which is the touchstone of the highest excellence, is to be found in mathematics as surely as in poetry.”</p>
+<cite class="attribution">―Bertrand Russell, England, 1967.  The Study of Mathematics: Philosophical Essays</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-17"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>Why did Russell think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-18"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>Do you agree with what Russell is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-10">
+<p id="p-44">“...the most urgest social issue affeting poor people and people of color is economic access.  In today's world, economic access and full citizenship depend crucially on math and science literacy.  I believe that the absence of math literacy in urban and rural communities throughout this country is an issue as urgent as the lack of registered Black voters in Mississippi was in 1961.”</p>
+<cite class="attribution">―Robert P Moses, United States, 2001. Radical Equations: Math Literacy and Civil Rights</cite>
+</blockquote>
+<article class="exercise exercise-like" id="exercise-god-math-19"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>Why did Robert Moses think math was important?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-god-math-20"><h4 class="heading"><span class="codenumber">21<span class="period">.</span></span></h4>Do you agree with what Robert Moses is saying?  Why or why not?<div class="workspace" data-space=".5in"></div></article><blockquote class="blockquote" id="blockquote-11">
+<p id="p-45">“So God created man in his own image, in the image of God he created him; male and female he created them.  And God blessed them and God said to them, “Be fruitful and multiply, and fill the earth and subdue it, and have dominion over the fish of the sea and over the birds of the air and over every living thing that moves upon the earth”</p>
+<cite class="attribution">―Genesis 1:27–28</cite>
+</blockquote>
+<article class="exercise exercise-like" id="proverbs-ideas"><h4 class="heading">
+<span class="codenumber">22<span class="period">.</span></span><span class="space"> </span><span class="title">Genesis 1:27-28.</span>
+</h4>What are the main ideas of this passage?<div class="workspace" data-space=".75in"></div></article><article class="exercise exercise-like" id="proverbs-math"><h4 class="heading">
+<span class="codenumber">23<span class="period">.</span></span><span class="space"> </span><span class="title">Genesis 1:27-28.</span>
+</h4>What might this statement have to do with how we think about math?<div class="workspace" data-space=".75in"></div></article></section><section class="onepage" id="god-math-worksheet-p5"><blockquote class="blockquote" id="blockquote-12">
+<p id="p-46">“Blessed are those who find wisdom, those who gain understanding, for she is more profitable than silver and yields better returns than gold. She is more precious than rubies; nothing you desire can compare with her. Long life is in her right hand; in her left hand are riches and honor. Her ways are pleasant ways, and all her paths are peace. She is a tree of life to those who take hold of her; those who hold her fast will be blessed.”</p>
+<p id="p-47">“By wisdom the Lord laid the earth’s foundations, by understanding he set the heavens in place; by his knowledge the watery depths were divided, and the clouds let drop the dew.”</p>
+<cite class="attribution">―Proverbs 3:13–20</cite>
+</blockquote>
+<article class="exercise exercise-like" id="genesis-ideas"><h4 class="heading">
+<span class="codenumber">24<span class="period">.</span></span><span class="space"> </span><span class="title">Proverbs 3:13–20.</span>
+</h4>What are the main ideas of this passage?<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="genesis-math"><h4 class="heading">
+<span class="codenumber">25<span class="period">.</span></span><span class="space"> </span><span class="title">Proverbs 3:13–20.</span>
+</h4>What might this statement have to do with how we think about math?<div class="workspace" data-space="1in"></div></article><blockquote class="blockquote" id="blockquote-13">
+<p id="p-48">“He [Christ] is the image of the invisible God, the first-born of all creation; for in him all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or principalities or authorities—all things were created through him and for him.  He is before all things, and in him all things hold together.”</p>
+<cite class="attribution">―Colossians 1:15–17</cite>
+</blockquote>
+<article class="exercise exercise-like" id="colosians-ideas"><h4 class="heading">
+<span class="codenumber">26<span class="period">.</span></span><span class="space"> </span><span class="title">Colossians 1:15–17.</span>
+</h4>What are the main ideas of this passage?<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="colosians-math"><h4 class="heading">
+<span class="codenumber">27<span class="period">.</span></span><span class="space"> </span><span class="title">Colossians 1:15–17.</span>
+</h4>What might this statement have to do with how we think about math?<div class="workspace" data-space="1in"></div></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-10-17T16:38:52-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Charts Worksheet</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="charts.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="charts.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="average.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="charts.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="charts.html" title="Up">Up</a><a class="next-button button toolbar-item" href="average.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Financial Math</span></a><ul>
+<li><a href="chap_two_intro_spreadsheet.html" data-scroll="chap_two_intro_spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="lab-budget.html" data-scroll="lab-budget" class="internal">Budget Lab</a></li>
+<li><a href="chap_two_simple_compound.html" data-scroll="chap_two_simple_compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="chap_two_savings_plan.html" data-scroll="chap_two_savings_plan" class="internal">Savings Plans</a></li>
+<li><a href="chap_two_loans.html" data-scroll="chap_two_loans" class="internal">Loan Payments</a></li>
+<li><a href="mortgage-lab.html" data-scroll="mortgage-lab" class="internal">Mortgage Lab</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="chap_two_review.html" data-scroll="chap_two_review" class="internal">Chapter 2 Review</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-data.html" data-scroll="ch-data" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="charts.html" data-scroll="charts" class="internal">Charts</a></li>
+<li><a href="average.html" data-scroll="average" class="internal">Averages</a></li>
+<li><a href="decisions.html" data-scroll="decisions" class="internal">Data Decisions</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="worksheet" id="worksheet-charts"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">4.1.1</span> <span class="title">Charts Worksheet</span><div class="print-links">
+<a href="worksheet-charts-a4.html" class="a4">A4</a><a href="worksheet-charts-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="onepage" id="worksheet-charts-p1"><article class="objectives goal-like" id="objectives-15"><h4 class="heading"><span class="type">Objectives</span></h4>
+<ul class="disc"><li id="li-579"><p id="p-derived-li-579">Read, interpret, and make decisions based upon data from tables and graphical displays such as line graphs, bar graphs, scatterplots, pie charts, and histograms. Given data, choose an appropriate type of graphical display and create it using scales appropriate to the application.</p></li></ul></article><div class="introduction" id="introduction-46">Graphs are a helpful way to summarize data. Often there are many ways to portray information graphically. Sometimes one form is easier to read than another. Sometimes the way a graph is made can affect the impression it gives. Today, you will look at three examples of such graphs.</div>
+<div class="exercisegroup" id="exercisegroup-reading-line-graphs">
+<h4 class="heading"><span class="title">Problem Situation: Reading Line Graphs.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-charts-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Compare the two graphs below. <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/QW2-1-3-1a.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/QW2-1-3-1b.jpg" class="contained"></div>
+</div></div> Which statement best descries the relationship between the graphs?  Circle the correct one. <ul class="disc">
+<li id="li-580"><p id="p-derived-li-580">The data appears to be different - the first graph shows larger changes in income</p></li>
+<li id="li-581"><p id="p-derived-li-581">They appear to show the same data, but on different vertical scales.</p></li>
+</ul></article><article class="exercise exercise-like" id="exercise-charts-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>What was the average household income in 1999?  Give your answer as a range between two numbers and as an estimate.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-charts-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>What was the average household income in 2009?  Give your answer as a range between two numbers and as an estimate.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-charts-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Use your estimates from the last two questions to determine the percent change in household income from 1999 until 2009.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-charts-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Based on these two graphs, would it be fair to say that the average household income was significantly lower in 2009 than it was in 1999?  Explain.<div class="workspace" data-space=".5in"></div></article>
+</div>
+</div></section><section class="onepage" id="worksheet-charts-p2"><p id="p-1556">In this example, we will be looking at bar graphs.  Before doing that, answer the question about Jeff’s Housing so that you can understand the questions about national debt and GDP that follow.</p>
+<article class="exercise exercise-like" id="exercise-charts-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>Jeff’s Housing: Two pairs of statements are given below. <figure class="table table-like" id="table-jeffs-housing"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular"><tr>
+<td class="l m b1 r1 l0 t1 lines">In 1990, Jeff spent $700 per month on housing.<br>In 2010, Jeff spent $1,400 per month on housing.</td>
+<td class="l m b1 r1 l0 t1 lines">In 1990, Jeff spent 20% of his income on housing.<br>In 2010, Jeff spent 10% of his income on housing.</td>
+</tr></table></div></figure> How can both pairs of statements be true?  Circle the correct one. <ul class="disc">
+<li id="li-582"><p id="p-derived-li-582">It is not possible for both statements to be true, since one shows his housing costs rising, and the other shows his housing costs decreasing</p></li>
+<li id="li-583"><p id="p-derived-li-583">Both statements can be true if his income increased significantly from 1990 to 2010</p></li>
+<li id="li-584"><p id="p-derived-li-584">Both statements can be true if his income fell significantly from 1990 to 2010</p></li>
+</ul></article><article class="exercise exercise-like" id="exercise-charts-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>Calculate Jeff's monthly income in 1990 and 2010<div class="workspace" data-space=".5in"></div></article><div class="exercisegroup" id="exercisegroup-reading-bar-graphs">
+<h4 class="heading"><span class="title">Problem Situation: Reading Line Graphs.</span></h4>
+<div class="introduction" id="introduction-47">
+<p id="p-1559">GDP, or Gross Domestic Product, can be thought of as the country’s income. It is the value of all goods and services the country produces. The national debt is how much the country owes. Just as Jeff’s spending on housing can be calculated as a percent of income, a country’s national debt can be calculated as a percent of its GDP.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/QW2-1-3-3a.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/QW2-1-3-3b.jpg" class="contained"></div>
+</div></div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-charts-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Using the graphs above, what was the national debt in 2010? What percent of the GDP was the national debt in 2010?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-charts-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>Consider the two graphs above.  Think about the statement, "The 2010 national debt is way out of hand and has never been higher." Use the graphs above to evaluate the statement.  While of the following responses to that statement is the most correct? <ul class="disc">
+<li id="li-585"><p id="p-derived-li-585">The total debt has never been higher, but as a percentage of income debt was not at the highest level ever in 2010</p></li>
+<li id="li-586"><p id="p-derived-li-586">As a percentage of GDP, debt is higher now than in the last few decades, but it was higher in 1950</p></li>
+<li id="li-587"><p id="p-derived-li-587">The debt has never been higher</p></li>
+<li id="li-588"><p id="p-derived-li-588">The debt is higher than the last few decades, but was higher in 1950</p></li>
+</ul></article>
+</div>
+</div></section><section class="onepage" id="worksheet-charts-p3"><div class="exercisegroup" id="exercisegroup-reading-circle-graphs">
+<h4 class="heading"><span class="title">Problem Situation: Reading Pie (Circle) Graphs.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-charts-10"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Decide if the following statement is true or false based on the two graphs below. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/Hispanic_pop_2010.png" class="contained"></div> True or False: This pair of graphs predicts that the number of non-Hispanics in the United States is expected to decline between 2010 and 2050. <ul class="disc">
+<li id="li-589"><p id="p-derived-li-589">True</p></li>
+<li id="li-590"><p id="p-derived-li-590">False</p></li>
+<li id="li-591"><p id="p-derived-li-591">Not enough information given</p></li>
+</ul></article><article class="exercise exercise-like" id="exercise-charts-11"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>The U.S. population in 2010 was around 310,000,000. In 2050, the U.S. population is expected to be around 439,000,000. Using this information and the pie charts above, find the number of non-Hispanic Americans at each time, to the nearest million people.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-charts-12"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-1564">Based on your calculations, now is the statement below true or false?  Explain.</p>
+<p id="p-1565">This pair of graphs predicts that the number of non-Hispanics in the United States is expected to decline between 2010 and 2050.</p>
+<div class="workspace" data-space=".5in"></div></article>
+</div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

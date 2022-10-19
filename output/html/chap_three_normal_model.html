@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-10-17T21:49:35-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Normal Distribution</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap_three_review.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-models.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chap_three_review.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch-models.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
+<li><a href="chap_two_intro_spreadsheet.html" data-scroll="chap_two_intro_spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="lab-budget.html" data-scroll="lab-budget" class="internal">Budget Lab</a></li>
+<li><a href="chap_two_simple_compound.html" data-scroll="chap_two_simple_compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="chap_two_savings_plan.html" data-scroll="chap_two_savings_plan" class="internal">Savings Plans</a></li>
+<li><a href="chap_two_loans.html" data-scroll="chap_two_loans" class="internal">Loan Payments</a></li>
+<li><a href="mortgage-lab.html" data-scroll="mortgage-lab" class="internal">Mortgage Lab</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="chap_two_review.html" data-scroll="chap_two_review" class="internal">Chapter 2 Review</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="chap_three_statistical_process.html" data-scroll="chap_three_statistical_process" class="internal">Overview of the Statistical Process</a></li>
+<li><a href="chap_three_describing_data.html" data-scroll="chap_three_describing_data" class="internal">Describing Data</a></li>
+<li><a href="chap_three_measure_of_center.html" data-scroll="chap_three_measure_of_center" class="internal">Summary Statistics: Measures of Center</a></li>
+<li><a href="chap_three_measure_of_variation.html" data-scroll="chap_three_measure_of_variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
+<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="active">The Normal Distribution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link">
+<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
+<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
+<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
+<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
+<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
+<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
+<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="chap_three_normal_model"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">The Normal Distribution</span>
+</h2>
+<article class="objectives goal-like" id="objectives-19"><h3 class="heading">
+<span class="type">Objectives:</span><span class="space"> </span><span class="title">Section 4.6 The Normal Distribution</span>
+</h3>
+<div class="introduction" id="introduction-54"><p id="p-3060">Students will be able to:</p></div>
+<ul class="disc">
+<li id="li-1234"><p id="p-3061">Explain the properties of the Normal distribution</p></li>
+<li id="li-1235"><p id="p-3062">Calculate probabilities using the Empirical Rule</p></li>
+<li id="li-1236"><p id="p-3063">Calculate probabilities using technology</p></li>
+<li id="li-1237"><p id="p-3064">Calculate and interpret Z-scores</p></li>
+<li id="li-1238"><p id="p-3065">Calculate and interpret the bounds of a 95% confidence interval given the point estimate and the standard error</p></li>
+</ul></article><section class="introduction" id="introduction-55"><figure class="figure figure-like" id="figure-32"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-16" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed?listType=playlist&amp;list=PLsFUxEAXGFKQLLCscP23Tm7kerZ63PKQ0&amp;modestbranding=1&amp;rel=0"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6.1<span class="period">.</span></span><span class="space"> </span>Alternative Video Lessons</figcaption></figure></section><section class="subsection" id="subsection-109"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.1</span> <span class="title">Introduction to The Normal Distribution</span>
+</h3>
+<p id="p-3066">There is a pattern or shape that comes up frequently when graphing data called the <em class="alert">Normal distribution</em>. You might be familiar with it as the <em class="alert">bell curve</em>. When we take measurements like the lengths of newborn babies or the weights of potato chip bags on an assembly line there are usually more measurements near the mean and fewer as we get further away from the mean on each side. We often see histograms with this shape:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:28.5%;margin-right:28.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/intro_pic.png" class="contained" alt="A histogram where the bars form a bell shape. A Normal curve is overlaid on the histogram."></div></div></div>
+<p id="p-3067">Notice how the shape is unimodal and symmetric with larger and smaller values getting less and less common as they get further from the mean. When we take samples from a population we might not get an exact Normal distribution but it is often close. We call this approximately Normal or nearly Normally distributed. The curve drawn over the histogram shows that the data are nearly Normal. Earlier in this chapter we learned about the <em class="alert">mean</em>, <em class="alert">median</em> and <em class="alert">mode</em> as measures of center and the <em class="alert">standard deviation</em> as a measure of variation or spread. The mean is often written with the greek letter mu, <span class="process-math">\(\mu\text{.}\)</span> The standard deviation is usualy represented by the lowercase Greek letter sigma, <span class="process-math">\(\sigma\text{.}\)</span></p></section><section class="subsection" id="subsection-110"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.2</span> <span class="title">Properties of the Normal Distribution</span>
+</h3>
+<p id="p-3068">Regardless of the data values, the Normal distribution has these properties:</p>
+<ul class="disc">
+<li id="li-1239"><p id="p-3069">The shape is unimodal and symmetric around the center.</p></li>
+<li id="li-1240"><p id="p-3070">The mean, median and mode are approximately the same value in the center.</p></li>
+<li id="li-1241">
+<p id="p-3071">Due to the symmetry, approximately 50% of the data values are below the mean, and approximately 50% of the data values are above the mean.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:28.5%;margin-right:28.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/mean_median_mode_pic.png" class="contained" alt="A normal curve with a line drawn in the middle to indicate the mean, median and mode. The drawing shows that 50% of the data values are below the line and 50% are above the line."></div></div></div>
+</li>
+<li id="li-1242"><p id="p-3072">Almost all of the area under a Normal curve is within 3 standard deviations of the mean, so we use the standard deviation as our scale.</p></li>
+<li id="li-1243"><p id="p-3073">Data within two standard deviations of the mean are considered typical or usual. Data beyond two standard deviation are considered unusual. Data beyond 3 standard deviations are considered rare.</p></li>
+</ul>
+<p id="p-3074">Now let's look at an example where we draw and label a Normal distribution given the mean and standard deviation<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-61" id="fn-61"><sup> 61 </sup></a>.</p>
+<article class="example example-like" id="mean18_and_sd4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.2</span><span class="period">.</span>
+</h4>
+<p id="p-3075">The test scores on a math quiz are approximately normally distributed with a mean of 18 points and a standard deviation of 4 points. Draw the Normal distribution and label the axis using the standard deviation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:29%;margin-right:29%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/mean18_sd4_pic2.png" class="contained" alt="A normal curve with the mean of 18 points labeled in the middle. To the right, 3 standard deviations are labeled 22, 26 and 30 points. To the left 3 standard deviations are labeled 14, 10 and 6 points."></div></div></div>
+<p id="p-3076">We start by drawing a Normal curve and the horizontal axis. Then we place the mean of 18 points in the center of the graph and make 3 marks on each side, ending where the curve gets close to the axis.</p>
+<p id="p-3077">Each mark represents one standard deviation. As we move to the right of the mean we will add the standard deviation of 4 points to get 22, 26 and 30 points. These are the values that are 1, 2 and 3 standard deviations above the mean.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-158">
+\begin{align*}
+\text{Mean} + 1 \text{ standard deviation} \amp= 18 + 4 = 22\\
+\text{Mean} + 2 \text{ standard deviations} \amp= 18 + 2(4) = 26\\
+\text{Mean} + 3 \text{ standard deviations} \amp= 18 + 3(4) = 30
+\end{align*}
+</div>
+<p id="p-3079">Then we move to the left of the mean we subtract the standard deviation of 4 from 18 to get 14, 10 and 6 points. These are the values that are 1, 2 and 3 standard deviations below the mean.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-159">
+\begin{gather*}
+\text{Mean}-1 \text{ standard deviation} = 18-4 = 14\\
+\text{Mean}-2 \text{ standard deviations} = 18-2(4) = 10\\
+\text{Mean}-3 \text{ standard deviations} = 18-3(4) = 6
+\end{gather*}
+</div></article></section><section class="subsection" id="subsection-111"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.3</span> <span class="title">The Empirical Rule</span>
+</h3>
+<p id="p-3081">No matter what the mean and standard deviation are for a Normal Distribution, they always have the same shape or distribution of the data. We can describe this with the <em class="alert">Empirical Rule</em> which is also called the <em class="alert">68-95-99.7 Rule</em>.</p>
+<p id="p-3082">The numbers in the 68-95-99.7 rule describe the percentage of data or area within 1, 2 and 3 standard deviations of the mean. Let's look at our previous example with scores on a math quiz that are approximately normally distributed with a mean of 18 points and a standard deviation of 4 points.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:40%;"><p id="p-3083">According to the Empirical rule, about 68% of all the data values fall within one standard deviation of the mean, or between 14 and 22 points.</p></div>
+<div class="sbspanel middle" style="width:42%;"><img src="external/statistics/3_6/68perc_pic.png" class="contained" alt="A graph of a normal curve that shows 68% of the data values shaded within one standard deviation of the mean, in this case between 14 and 22 points."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:40%;"><p id="p-3084">About 95% of all the data values fall within two standard deviation, or between 10 and 26 points.</p></div>
+<div class="sbspanel middle" style="width:42%;"><img src="external/statistics/3_6/95perc_pic.png" class="contained" alt="A graph of a normal curve that shows 95% of the data values shaded within two standard deviations of the mean, in this case between 10 and 26 points."></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:40%;"><p id="p-3085">About 99.7% of all the data values fall within three standard deviations, or between 6 and 30 points.</p></div>
+<div class="sbspanel middle" style="width:42%;"><img src="external/statistics/3_6/99perc_pic.png" class="contained" alt="A graph of a normal curve that show 99.7% of the data values shaded within 3 standard deviations of the mean, in this case between 6 and 30 points."></div>
+</div></div>
+<p id="p-3086">Now you can try this next example:</p>
+<article class="example example-like" id="example-99"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.3</span><span class="period">.</span>
+</h4>
+<p id="p-3087">The weights of black lab dogs are approximately normally distributed with a mean of 78 pounds and a standard deviation of 7 pounds.</p>
+<ol class="lower-alpha">
+<li id="li-1244"><p id="p-3088">Draw and label a sketch of this distribution.</p></li>
+<li id="li-1245">
+<p id="p-3089">Use the Empirical Rule to complete following statements.</p>
+<ul class="disc">
+<li id="li-1246"><p id="p-3090">Approximately 68% of black labs weigh between <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> and <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> pounds.</p></li>
+<li id="li-1247"><p id="p-3091">Approximately 95% of black lab dogs weigh between <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> and <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> pounds.</p></li>
+<li id="li-1248"><p id="p-3092">Approximately 99.7% of black lab dogs weigh between <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> and <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> pounds.</p></li>
+</ul>
+</li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-274" id="solution-274"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-274"><div class="solution solution-like"><ol id="p-3093" class="lower-alpha">
+<li id="li-1249"><p id="p-3094">We start by drawing the Normal curve and the horizontal axis, labeling 3 standard deviations on each side. <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/mean78_sd7_pic.png" class="contained" alt="A normal curve labeled with 57, 64, 71, 78, 85, 92 and 99 pounds. The title of the graph is weights of black lab dogs in points."></div></div></div></p></li>
+<li id="li-1250"><ul id="p-3095" class="disc">
+<li id="li-1251"><p id="p-3096">Approximately 68% of black labs weigh between 71 and 85 pounds.</p></li>
+<li id="li-1252"><p id="p-3097">Approximately 95% of black labs weigh between 64 and 92 pounds.</p></li>
+<li id="li-1253"><p id="p-3098">Approximately 99.7% of black labs weigh between 57 and 99 points.</p></li>
+</ul></li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.4</span> <span class="title">Using the Empirical Rule to Calculate Approximate Probabilities</span>
+</h3>
+<p id="p-3099">Now that we have learned about the Empirical rule we can use it to find approximate probabilities. First we will calculate the percentage in each segment of the Normal distribution. Returning to our example of quiz scores with a mean of 18 points and a standard deviation of 4 points, we can divide the curve into segments by drawing a line at each standard deviation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/mean18_sd4_pic.png" class="contained" alt="A normal curve labeled with 6, 10, 14, 18, 22, 26 and 30 points. The title is quiz scores in points. There is a line segment at each number listed to divide the curve into segments."></div></div></div>
+<p id="p-3100">Now, since we know that approximately 68% of the values are between 14 and 22 points, and the graph is symmetric, we divide 68% by 2 to get:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+68\%\div2=34\%
+\end{equation*}
+</div>
+<p class="continuation">So each of the middle 2 segments are 34% of the area each.</p>
+<p id="p-3101">Next, we know that 95% of the values fall within 2 standard deviations or between 10 and 26 points. That also includes the 68% though, so to get the area of the next two segments, we subtract:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+95\%-68\%=27\%
+\end{equation*}
+</div>
+<p class="continuation">Then since there is one segment on each side, we divide that by 2:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+27\%\div2=13.5\%
+\end{equation*}
+</div>
+<p class="continuation">So the next two segments from the mean are 13.5% each.</p>
+<p id="p-3102">Continuing outward, 99.7% of the values fall within 3 standard deviations of the mean or between 6 and 30 points. Since that includes the 95% we subtract:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+99.7\%-95\%=4.7\%
+\end{equation*}
+</div>
+<p class="continuation">Then we divide that by 2:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+4.7\%\div2=2.35\%
+\end{equation*}
+</div>
+<p class="continuation">So the next two segments outward are 2.35% each.</p>
+<p id="p-3103">Finally, there is one more set, since there is a tiny percentage outside of the 3 standard deviations. The total is 100% so we subtract:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+100\%-99.7\%=0.3\%
+\end{equation*}
+</div>
+<p class="continuation">Then we divide that by 2:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0.3\%\div2=0.15\%
+\end{equation*}
+</div>
+<p class="continuation">So the last two outer segments are 0.15% each.</p>
+<p id="p-3104">We can summarize all the calculations in this drawing:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/emperical_rule_pic.png" class="contained" alt="The previous normal curve with the area of each segment filled in. From left to right the areas are 0.15%, 2.35%, 13.5%, 34%, 34%, 13.5%, 2.35%, 0.15%."></div></div></div>
+<p id="p-3105">Now let's continue our quiz score example to see how to use the Empirical Rule to find probabilities.</p>
+<article class="example example-like" id="example-100"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.4</span><span class="period">.</span>
+</h4>
+<p id="p-3106">For the quiz score data that are approximately normally distributed with a mean of 18 points and a standard deviation 4 points, use the 68-95-99.7% rule to calculate the following probabilities:</p>
+<ol id="p-3107" class="lower-alpha">
+<li id="li-1254"><p id="p-3108">What percentage of students earned scores between 22 and 30 points?</p></li>
+<li id="li-1255"><p id="p-3109">What percentage of students earned scores above 14 points?</p></li>
+<li id="li-1256"><p id="p-3110">What percentage of students earned a score below 14 or above 22 points?</p></li>
+</ol>
+<p id="p-3111">Solution</p>
+<ol class="lower-alpha">
+<li id="li-1257">
+<p id="p-3112">Using the diagram above, we add the two segments between 22 and 30 to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+13.5\% +  2.35\% = 15.85\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">15.8% percent of students earned scores between 22 and 30 points on the quiz.</p>
+</li>
+<li id="li-1258">
+<p id="p-3113">We add all the segments above 14 to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+34\% + 34\% + 13.5\% + 2.35\% + 0.15\% = 84\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">84% of students earned scores above 14 points on the quiz.</p>
+</li>
+<li id="li-1259">
+<p id="p-3114">We add all the segments below 14 and above 22 to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0.15\% + 2.35\% + 13.5\% + 13.5\% + 2.35\% + 0.15\% = 32\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">32% of students earned scores below 14 or above 22 points on the quiz. Notice we could have done this in a faster way by taking</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+100\%-68\%=32\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">There can be more than one way to get the answer.</p>
+</li>
+</ol></article><p id="p-3115">Now you can try one with this next example.</p>
+<article class="example example-like" id="example-101"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.5</span><span class="period">.</span>
+</h4>
+<p id="p-3116">Continuing with the black lab dogs whose weights are approximately normally distributed with a mean of 78 pounds and a standard deviation 7 pounds, use the 68-95-99.7% rule to calculate the following probabilities:</p>
+<ol id="p-3117" class="lower-alpha">
+<li id="li-1260"><p id="p-3118">What percentage of black labs weigh between 78 and 92 pounds?</p></li>
+<li id="li-1261"><p id="p-3119">What percentage of black labs weigh below 71 points?</p></li>
+<li id="li-1262"><p id="p-3120">What percentage of black labs weigh below 64 or above 78 points?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-275" id="solution-275"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-275"><div class="solution solution-like">
+<p id="p-3121">First we need to draw this distribution and label three standard deviations on each side of the mean to determine where these weights fall. That will tell us which segments to add up. Here is our drawing of this distribution from before. <div class="sidebyside"><div class="sbsrow" style="margin-left:27.5%;margin-right:27.5%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/mean78_sd7_pic.png" class="contained" alt="The previous normal curve of weights of black lab dogs in pounds. The scale at the bottom is 57, 64, 71, 78, 85, 92, 99 pounds."></div></div></div></p>
+<ol class="lower-alpha">
+<li id="li-1263">
+<p id="p-3122">Using this Normal curve along with the diagram above we see we need to add the two segments between 78 and 92 pounds to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+34\% + 13.5\% = 47.5\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">47.5% percent of black labs weigh between 78 and 92 pounds.</p>
+</li>
+<li id="li-1264">
+<p id="p-3123">We add all the segments below 71 pounds to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+13.5\% + 2.35\% + 0.15\% = 16\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">16% of black labs weigh below 71 pounds.</p>
+</li>
+<li id="li-1265">
+<p id="p-3124">We add all the segments below 64 and above 78 pounds to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0.15\% + 2.35\% + 34\% + 13.5\% + 2.35\% + 0.15\% = 52.5\%\text{.}
+\end{equation*}
+</div>
+<p class="continuation">52.5% of black labs weigh below 64 or above 78 pounds. Notice we could have done this in a faster way since 78 is the mean we know the percentage above the mean is 50%. We could have added</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0.15\%+2.35\% + 50\%=52.5\%\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.5</span> <span class="title">Using Technology to Calculate Exact Probabilities</span>
+</h3>
+<p id="p-3125">The Empirical rule is used to find approximate probabilities and it only works if the number is one of the labels on our scale. We usually want to calculate an exact answer with any value. We will use technology to calculate probabilities with two different methods: <em class="alert">Onlinestatbook.com</em> and <em class="alert">spreadsheets</em>. Check with your class notes or instructor on which technology to use.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><p id="p-3126">To use Onlinestatbook.com, go to the <a class="external" href="http://onlinestatbook.com/2/calculators/normal_dist.html" target="_blank">OnlineStatbook Normal calculator</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-63" id="fn-63"><sup> 63 </sup></a> and enter the mean and standard deviation. Then select the option that matches the probability you want to find: Above, Below, Between or Outside and enter the probability you want to find. Then click on the Recalculate button.</p></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/statistics/3_6/onlinestatbook_general.png" class="contained" alt="A screenshot of the onlinestatbook.com normal probability calculator. It shows a normal curve, an input box for the mean and median, and a choice to find above, below, between or outside."></div>
+</div></div>
+<p id="p-3127">To use a spreadsheet, we will use the spreadsheet formula</p>
+<p id="p-3128"><code class="code-inline tex2jax_ignore">=NORM.DIST(value, mean, standard deviation, cumulative)</code></p>
+<p id="p-3129">This function always gives the probability to the left of a number or</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(X\leq \text{value})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can use this formula to find greater than, between and outside probabilities as well. Here are the commands we will use and we will explain them in the next example with visuals.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines">Probability</th>
+<th scope="col" class="l m b1 r1 l0 t1 lines">Spreadsheet Formula</th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Below</td>
+<td class="l m b1 r1 l0 t0 lines"><code class="code-inline tex2jax_ignore">=NORM.DIST(value, mean, SD, 1)</code></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Above</td>
+<td class="l m b1 r1 l0 t0 lines"><code class="code-inline tex2jax_ignore">=1-NORM.DIST(value, mean, SD,1)</code></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Between</td>
+<td class="l m b1 r1 l0 t0 lines"><code class="code-inline tex2jax_ignore">=NORM.DIST(upper_value, mean, SD, 1)-Norm.Dist(lower_value, mean, SD, 1)</code></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Outside</td>
+<td class="l m b1 r1 l0 t0 lines"><code class="code-inline tex2jax_ignore">=NORM.DIST(lower_value, mean, SD, 1)+1-NORM.DIST(upper_value,mean, SD, 1)</code></td>
+</tr>
+</table></div></div></div>
+<article class="example example-like" id="example-102"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.6</span><span class="period">.</span>
+</h4>
+<p id="p-3130">For the quiz score data that are approximately normally distributed with a mean of 18 points and a standard deviation 4 points, use technology to calculate the following probabilities:</p>
+<ol id="p-3131" class="lower-alpha">
+<li id="li-1266"><p id="p-3132">What percentage of students earned a score below 12 points?</p></li>
+<li id="li-1267"><p id="p-3133">What percentage of students earned scores above 27 points?</p></li>
+<li id="li-1268"><p id="p-3134">What percentage of students earned scores between 21 and 25 points?</p></li>
+<li id="li-1269"><p id="p-3135">What percentage of students earned scores less than 11 or more than 23?</p></li>
+</ol>
+<p id="p-3136">Solution</p>
+<ol class="lower-alpha">
+<li id="li-1270"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:41.2371134020619%;">
+<p id="p-3137">First, using OnlineStatbook, we we will enter the mean of 18 points and the standard deviation of 4 points. Then we select Below and enter 12. This gives us a result of <span class="process-math">\(0.0668\)</span> as shown in the image or <span class="process-math">\(6.68\%\text{.}\)</span></p>
+<p id="p-3138">To use a spreadsheet, we enter <code class="code-inline tex2jax_ignore">=NORM.DIST(12, 18, 4, 1)</code>. The last value is always a 1 to indicate that we want a cumulative probability or area. This also gives us a result of <span class="process-math">\(0.0668\)</span> or <span class="process-math">\(6.68\%\text{.}\)</span></p>
+</div>
+<div class="sbspanel top" style="width:55.6701030927835%;"><img src="external/statistics/3_6/quiz_ex_a.png" class="contained" alt="A screenshot of onlinestatbook showing the inputs and output described above."></div>
+</div></div></li>
+<li id="li-1271"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:41.2371134020619%;">
+<p id="p-3139">To use OnlineStatbook, we we will keep our mean of 18 points and standard deviation of 4 points. Then we select Above and enter 27. This gives us a result of <span class="process-math">\(0.0122\)</span> as shown in the image or <span class="process-math">\(1.22\%\text{.}\)</span></p>
+<p id="p-3140">To use a spreadsheet, NORM.DIST gives us the area to the left so if we want the area to the right we need to find the complement or subtract from 1. We enter <code class="code-inline tex2jax_ignore">=1-NORM.DIST(27, 18, 4, 1)</code>. This also gives us a result of <span class="process-math">\(0.0122\)</span> or <span class="process-math">\(1.22\%\text{.}\)</span></p>
+</div>
+<div class="sbspanel top" style="width:55.6701030927835%;"><img src="external/statistics/3_6/quiz_ex_b.png" class="contained" alt="A screenshot of onlinestatbook showing the inputs and output described above."></div>
+</div></div></li>
+<li id="li-1272">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:41.2371134020619%;"><p id="p-3141">To use OnlineStatbook, we we will keep our mean of 18 points and standard deviation of 4 points. Then we select Between and enter 21 and 25. This gives us a result of <span class="process-math">\(0.1866\)</span> as shown in the image or <span class="process-math">\(18.66\%\text{.}\)</span></p></div>
+<div class="sbspanel top" style="width:55.6701030927835%;"><img src="external/statistics/3_6/quiz_ex_c.png" class="contained" alt="A screenshot of onlinestatbook showing the inputs and output described above."></div>
+</div></div>
+<p id="p-3142">To use a spreadsheet, we need to use NORM.DIST twice. We can find the area to the left of the upper value and then subtract the area to the left of the lower value. That will give us the area between the two values. We enter <code class="code-inline tex2jax_ignore">=NORM.DIST(25, 18, 4, 1)-NORM.DIST(21, 18, 4, 1)</code>. This also gives us a result of <span class="process-math">\(0.1866\)</span> or <span class="process-math">\(18.66\%\text{.}\)</span></p>
+</li>
+<li id="li-1273">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:41.2371134020619%;"><p id="p-3143">To use OnlineStatbook, we we will keep our mean of 18 points and standard deviation of 4 points. Then we select Outside and enter 11 and 23. This gives us a result of <span class="process-math">\(0.1457\)</span> as shown in the image or <span class="process-math">\(14.57\%\text{.}\)</span></p></div>
+<div class="sbspanel top" style="width:55.6701030927835%;"><img src="external/statistics/3_6/quiz_ex_d.png" class="contained" alt="A screenshot of onlinestatbook showing the inputs and output described above."></div>
+</div></div>
+<p id="p-3144">To use a spreadsheet, we will find the left and right probabilities and add them together. We enter <code class="code-inline tex2jax_ignore">=NORM.DIST(11, 18, 4, 1)+1-NORM.DIST(23, 18, 4, 1)</code>. This also gives us a result of <span class="process-math">\(0.1457\)</span> or <span class="process-math">\(14.57\%\text{.}\)</span></p>
+</li>
+</ol></article><p id="p-3145">Now you can this try this example.</p>
+<article class="example example-like" id="example-103"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.7</span><span class="period">.</span>
+</h4>
+<p id="p-3146">Continuing with the black lab dogs whose weights are approximately normally distributed with a mean of 78 pounds and a standard deviation 7 pounds, use technology to calculate the following probabilities:</p>
+<ol id="p-3147" class="lower-alpha">
+<li id="li-1274"><p id="p-3148">The probability that a randomly chosen black lab weighs at least 95 pounds.</p></li>
+<li id="li-1275"><p id="p-3149">The probability that a randomly chosen black lab weighs less than 72 pounds.</p></li>
+<li id="li-1276"><p id="p-3150">The probability that a black lab weighs less than 65 pounds or greater than 86 pounds.</p></li>
+<li id="li-1277"><p id="p-3151">The probability that a black lab weighs between 66 and 75.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-276" id="solution-276"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-276"><div class="solution solution-like"><ol id="p-3152" class="lower-alpha">
+<li id="li-1278"><p id="p-3153">Using OnlineStatbook and/or <code class="code-inline tex2jax_ignore">=1-NORM.DIST(95, 78, 7, 1)</code> we get <span class="process-math">\(P(X\geq95)=0.0076\)</span> or <span class="process-math">\(0.76\%\text{.}\)</span></p></li>
+<li id="li-1279"><p id="p-3154">Using OnlineStatbook and/or <code class="code-inline tex2jax_ignore">=NORM.DIST(72, 78, 7, 1)</code> we get <span class="process-math">\(P(X\lt72)=0.1957\)</span> or <span class="process-math">\(19.57\%\text{.}\)</span></p></li>
+<li id="li-1280"><p id="p-3155">Using OnlineStatbook and/or <code class="code-inline tex2jax_ignore">=NORM.DIST(65, 78, 7, 1)+1-NORM.DIST(86, 78, 7, 1)</code> we get <span class="process-math">\(P(X\lt65)+P(X\gt86)=0.1582\)</span> or <span class="process-math">\(15.82\%\text{.}\)</span></p></li>
+<li id="li-1281"><p id="p-3156">Using OnlineStatbook and/or <code class="code-inline tex2jax_ignore">=NORM.DIST(75, 78, 7, 1)-NORM.DIST(66, 78, 7, 1)</code> we get <span class="process-math">\(P(66\leq X\leq 75)=0.2909\)</span> or <span class="process-math">\(29.09\%\text{.}\)</span></p></li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.6</span> <span class="title">The Standard Normal Distribution and Z-Scores</span>
+</h3>
+<p id="p-3157">Earlier in the chapter we learned how to calculate a <em class="alert">Z-score</em>, which is a way to determine how usual or unusual a data value is, or compare values from two different distributions. To calculate the Z-score for a data value, we calculate its distance from the mean. Then we divide that distance by the standard deviation to see how many standard deviations that is. Thus, the <em class="alert">Z-score</em> of a data value is the number of standard deviations it is away from the mean.</p>
+<article class="assemblage assemblage-like" id="assemblage-26"><h4 class="heading"><span class="title">Z-score.</span></h4>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-3158">
+\begin{equation*}
+Z=\frac{\text{data value } - \text{ mean}}{\text{standard deviation}}
+\end{equation*}
+</div>
+<p id="p-3159">Be sure to calculate the difference first, then divide.</p></article><p id="p-3160">If a data value is equal to the mean it will have a Z-score of 0. If a data value is one standard deviation above the mean, it will have a Z-score of 1. We can make a Normal distribution of Z-scores and it will have a mean of 0 and a standard deviation of 1. This is called the <em class="alert">Standard Normal distribution</em>, shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/empty_emperical_pic.png" class="contained" alt="A normal curve labeled with -3, -2, -1, 0, 1, 2, 3 standard deviations. The title is Z-scores. There is a line at each number dividing the curve into segments."></div></div></div>
+<p id="p-3161">Applying the Empirical Rule in percentage form to the Standard Normal curve looks like this.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/full_emperical_pic1.png" class="contained" alt="The previous normal curve with the area of each segment filled in. From left to right the areas are 0.15%, 2.35%, 13.5%, 34%, 34%, 13.5%, 2.35%, 0.15%."></div></div></div>
+<p id="p-3162">Sometimes we may want to use the decimal form of the numbers instead.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/full_emperical_pic2.png" class="contained" alt="The previous normal curve with the area of each segment filled in in decimal form. From left to right the areas are 0.0015, 0.0235, 0.135, 0.34, 0.34, 0.135, 0.0235, 0.0015."></div></div></div>
+<p id="p-3163">Applying the Empirical Rule to the Standard Normal distribution, we know that 68% of all Z-scores will be between -1 and 1, 95% of all Z-scores will be between -2 and 2 and 99.7% of all Z-scores will be between -3 and 3. A Z-score below -3 or above 3 is possible, but is very unlikely.</p>
+<article class="example example-like" id="example-104"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.8</span><span class="period">.</span>
+</h4>
+<p id="p-3164">Let's say a student scored 27 points on the math quiz where the scores were approximately normally distributed with a mean of 18 points and a standard deviation of 4 points. We know from our earlier drawing that they scored between 2 and 3 standard deviations above the mean. Let's calculate the Z-score to determine exactly how many standard deviations from the mean they scored.</p>
+<p id="p-3165">First we take the data value and subtract the mean of 18, then we divide by the standard deviation of 4 points:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+Z=\frac{27-18}{4}=\frac{9}{4}=2.25\text{ standard deviations}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The Z-score is positive so which confirms that they scored above the mean.</p></article><article class="example example-like" id="example-105"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6.9</span><span class="period">.</span>
+</h4>Now you can calculate the Z-score for a student who scored 15 on the math quiz.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-277" id="solution-277"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-277"><div class="solution solution-like">
+<p id="p-3166">First we take the data value and subtract the mean of 18, then we divide by the standard deviation of 4 points:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+Z=\frac{15-18}{4}=\frac{(-3)}{4}=-0.75\text{ standard deviations}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This student scored 0.75 standard deviations below the mean. The Z-score is negative which means they scored below the mean.</p>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-115"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.6.7</span> <span class="title">Confidence Intervals and Margin of Error</span>
+</h3>
+<p id="p-3167">Now that we have learned more about the Normal distribution, we can come back to confidence intervals which we studied in section 3.1. When we take a sample, our goal is to infer our statistic to the larger population. Let's say we wanted to know the average height of all 10-year-old kids living in the United States. It would take too much time and money to measure them all so we take a random sample that is representative of the population of 10-year-olds.</p>
+<p id="p-3168">If we measured 25 randomly selected 10-year-olds and calculated the sample mean of 54.5 inches, that statistic is called a <em class="alert">point estimate</em>. It is a single value that we got from a sample. However, if we measured another random sample of 25 different kids we would likely get a different mean. That is called sampling variation or sampling error. To be more accurate in our estimation of the height of all 10-year olds we give a range of values called a <em class="alert">confidence interval</em>.</p>
+<p id="p-3169">To construct a confidence interval we need to know the point estimate, the standard error of the data and the desired confidence level. The <em class="alert">standard error</em> is an estimate for the standard deviation that we calculate from the sample data and the sample size. You can learn more details about sampling distributions, why they are Normally distributed and how to calculate the standard error in a statistics course.</p>
+<p id="p-3170">The most common confidence level is the 95% confidence level. The 95% confidence interval represents the middle 95% of the Normal curve. From the Empirical rule we saw that approximately 95% of the data values are within 2 standard deviations of the mean. Using more exact methods, the middle 95% is 1.96 standard deviations from the mean.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_6/95perc_interval_pic.png" class="contained" alt="A normal curve showing the middle 95% of the area shaded, which is 1.96 standard deviations on each side of the mean of 0."></div></div></div>
+<p id="p-3171">Let's say that our point estimate for the height of 10-year-olds is 54.5 inches and the standard error is 1.75 inches. To estimate the middle 95% of values we multiply the standard error by 1.96 standard deviations.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-160">
+\begin{gather*}
+\text{Point estimate } \pm 1.96 \times SE\\
+54.5 \pm 1.96(1.75)
+\end{gather*}
+</div>
+<p id="p-3173">To find the lower boundary of the confidence interval we subtract</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+54.5-1.96(1.75)=51.07\text{ inches}
+\end{equation*}
+</div>
+<p id="p-3174">To find the upper boundary of the confidence interval add</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+54.5+1.96(1.75)=57.93\text{ inches}\text{.}
+\end{equation*}
+</div>
+<p id="p-3175">The 95% confidence interval is 51.07 to 57.93 inches or (51.07, 57.93) inches.</p>
+<p id="p-3176">To interpret a confidence interval we say: <em class="emphasis">We are 95% confident that the true average height of all 10-year-olds is between 51.07 and 57.93 inches.</em> This means if repeated samples were taken and the 95% confidence interval was computed for each sample, about 95% of the intervals would contain the true population mean. About five percent of the intervals would not contain the population mean.</p>
+<p id="p-3177">The standard error multiplied by the number of standard deviations for the confidence level is called the <em class="alert">margin of error</em>. In this example we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1.96 \times \text{SE}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1.96(1.75) = 3.43\text{ inches}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The margin of error is the range of values below and above your sample mean in the confidence interval.</p>
+<p id="p-3178">Since the point estimate is our best guess for the value of the parameter, it makes sense to build the confidence interval around that value. The standard error, which is the measure of the uncertainty associated with the point estimate, provides a guide for how large we should make the confidence interval. When the sampling distribution of a point estimate can reasonably be modeled as Normal, the point estimate we observe will be within 1.96 standard errors of the true value of interest. We can be 95% confident this interval captures the true value.</p>
+<p id="p-3179">The idea behind confidence intervals and margin of error is that any survey, study or poll will always be different from the population because samples vary. The confidence interval and margin of error reflect the sample size and the variation in the sample.</p></section><section class="exercises" id="exercises-12"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">4.6.8</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-337"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-3180">Describe the shape of a Normal distribution.</p></article><article class="exercise exercise-like" id="exercise-338"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-3182">In a Normal distribution, what percentage of observations will lie to the left of the mean?</p></article><article class="exercise exercise-like" id="exercise-339"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-3184">If the diameters of trees in a forest follow a nearly Normal distribution has a mean of 35 inches and a standard deviation of 15 inches. What is the median width?</p></article><article class="exercise exercise-like" id="exercise-340"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-3186">Two Normal distributions have the same means but different standard deviations. Distribution A has a standard deviation of 10 inches, and distribution B has a standard deviation of 15 inches. Which curve has a wider spread along the horizontal axis? Why?</p></article><div class="exercisegroup" id="exercisegroup-27">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-56"><p id="p-3188">Use the Empirical Rule to answer these questions.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-341"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-3189">About what percentage of the values from a Normal distribution fall within one standard deviation (left and right) of the mean?</p></article><article class="exercise exercise-like" id="exercise-342"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-3191">About what percentage of the values from a Normal distribution fall within two standard deviations (left and right) of the mean?</p></article><article class="exercise exercise-like" id="exercise-343"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-3193">About what percentage of the values from a Normal distribution fall within three standard deviations (left and right) of the mean?</p></article><article class="exercise exercise-like" id="exercise-344"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-3195">About what percentage of the values from a Normal distribution fall outside of three standard deviations (left and right) of the mean?</p></article><article class="exercise exercise-like" id="exercise-345"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p id="p-3197">About what percentage of the values from a Normal distribution fall between the first and second standard deviations from the mean (both sides)?</p></article><article class="exercise exercise-like" id="exercise-346"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p id="p-3199">About what percentage of the values from a Normal distribution fall between the first and third standard deviations (both sides)?</p></article><article class="exercise exercise-like" id="exercise-347"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-3201">About what percentage of values from a Normal distribution fall between the second and third standard deviations (on both sides)?</p></article><article class="exercise exercise-like" id="exercise-348"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-3203">About what percentage of values from a Normal distribution fall outside the first standard deviation from the mean (on both sides)?</p></article><article class="exercise exercise-like" id="exercise-349"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p id="p-3205">About what percent of values in a Normal distribution fall between the mean and one standard deviation below the mean?</p></article><article class="exercise exercise-like" id="exercise-350"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p id="p-3207">About what percent of values in a Normal distribution fall between the mean and three standard deviations above the mean?</p></article><article class="exercise exercise-like" id="exercise-351"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<p id="p-3209">Suppose a Normal distribution has a mean of 6 inches and a standard deviation of 1.5 inches.</p>
+<ol class="lower-alpha">
+<li id="li-1282"><p id="p-3210">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1283"><p id="p-3211">What is the range of data values that fall within one standard deviation of the mean?</p></li>
+<li id="li-1284"><p id="p-3212">What percentage of data fall between 3 and 10.5 inches?</p></li>
+<li id="li-1285"><p id="p-3213">What percentage of data fall below 1.5 inches?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-352"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<p id="p-3219">Suppose a Normal distribution has a mean of 45 cm and a standard deviation of 10 cm.</p>
+<ol class="lower-alpha">
+<li id="li-1290"><p id="p-3220">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1291"><p id="p-3221">What is the range of data values that fall within two standard deviations of the mean?</p></li>
+<li id="li-1292"><p id="p-3222">What percentage of the data fall between 15 and 55 cm?</p></li>
+<li id="li-1293"><p id="p-3223">What percentage of the data fall above 55 cm?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-353"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<p id="p-3229">Suppose a Normal distribution has a mean of $10 and a standard deviation of $2.</p>
+<ol class="lower-alpha">
+<li id="li-1298"><p id="p-3230">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1299"><p id="p-3231">What is the range of data values that fall within three standard deviations of the mean?</p></li>
+<li id="li-1300"><p id="p-3232">What percentage of data lie between $6 and $14?</p></li>
+<li id="li-1301"><p id="p-3233">What percentage of data lie above $14?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-354"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<p id="p-3239">Suppose the variable <span class="process-math">\(X\)</span> is normally distributed with a mean of 15 miles and a standard deviation of 3 miles.</p>
+<ol class="lower-alpha">
+<li id="li-1306"><p id="p-3240">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1307"><p id="p-3241">What is the range of data values that falls within one standard deviation of the mean?</p></li>
+<li id="li-1308"><p id="p-3242">What percentage of the data fall between 9 and 18 miles?</p></li>
+<li id="li-1309"><p id="p-3243">What percentage of the data fall above 18 or below 9 miles?</p></li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-28">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-57"><p id="p-3249">Use technology to answer these questions.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-355"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<p id="p-3250">Suppose a Normal distribution has a mean of 15.5 ounces and a standard deviation of 4.2 ounces.</p>
+<ol class="lower-alpha">
+<li id="li-1314"><p id="p-3251">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1315"><p id="p-3252">What percentage of the data values lie above 18.6 ounces?</p></li>
+<li id="li-1316"><p id="p-3253">What percentage of data lie between 9 and 20.2 ounces?</p></li>
+<li id="li-1317"><p id="p-3254">What percentage of data lie below 13.7 ounces?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-356"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<p id="p-3260">Suppose a Normal distribution has a mean of 26.1 grams and a standard deviation of 6.5 grams.</p>
+<ol class="lower-alpha">
+<li id="li-1322"><p id="p-3261">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1323"><p id="p-3262">What percentage of the data values fall above 32.6 grams?</p></li>
+<li id="li-1324"><p id="p-3263">What percentage of data is below 15 grams or greater than 36.7 grams?</p></li>
+<li id="li-1325"><p id="p-3264">What percentage of the data is less than or equal to 20.8 grams?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-357"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<p id="p-3270">Suppose the variable <span class="process-math">\(X\)</span> is normally distributed with a mean of 85 km and a standard deviation of 7 km.</p>
+<ol class="lower-alpha">
+<li id="li-1330"><p id="p-3271">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1331"><p id="p-3272">Find <span class="process-math">\(P(X \leq 82)\text{.}\)</span></p></li>
+<li id="li-1332"><p id="p-3273">Find <span class="process-math">\(P(76 \leq X \leq 90)\text{.}\)</span></p></li>
+<li id="li-1333"><p id="p-3274">Find <span class="process-math">\(P(X \geq 100)\text{.}\)</span></p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-358"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<p id="p-3280">Suppose the variable <span class="process-math">\(X\)</span> is normally distributed with a mean of $7 and a standard deviation of $1.30.</p>
+<ol class="lower-alpha">
+<li id="li-1338"><p id="p-3281">Draw and label the Normal distribution graph.</p></li>
+<li id="li-1339"><p id="p-3282">Find <span class="process-math">\(P(X \geq 8)\text{.}\)</span></p></li>
+<li id="li-1340"><p id="p-3283">Find <span class="process-math">\(P(X \leq 4.1) \text{ or } P(X \geq 7.8)\text{.}\)</span></p></li>
+<li id="li-1341"><p id="p-3284">Find <span class="process-math">\(P(X \leq 7.3)\text{.}\)</span></p></li>
+</ol></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-359"><h4 class="heading"><span class="codenumber">23<span class="period">.</span></span></h4>
+<p id="p-3290">What does a z-score measure?</p></article><article class="exercise exercise-like" id="exercise-360"><h4 class="heading"><span class="codenumber">24<span class="period">.</span></span></h4>
+<p id="p-3292">Consider the Standard Normal distribution. The mean is always <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span> and the standard deviation is always <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p></article><article class="exercise exercise-like" id="exercise-361"><h4 class="heading"><span class="codenumber">25<span class="period">.</span></span></h4>
+<p id="p-3294">For the distribution in problem 15, calculate the Z-score for a data value of 6.2 inches.</p></article><article class="exercise exercise-like" id="exercise-362"><h4 class="heading"><span class="codenumber">26<span class="period">.</span></span></h4>
+<p id="p-3296">For the distribution in problem 16, calculate the Z-score for a data value of 32 cm.</p></article><article class="exercise exercise-like" id="exercise-363"><h4 class="heading"><span class="codenumber">27<span class="period">.</span></span></h4>
+<p id="p-3298">For the distribution in problem 17, calculate the Z-score for a data value of $5.</p></article><article class="exercise exercise-like" id="exercise-364"><h4 class="heading"><span class="codenumber">28<span class="period">.</span></span></h4>
+<p id="p-3300">For the distribution in problem 18, calculate the Z-score for a data value of 19 miles.</p></article><article class="exercise exercise-like" id="exercise-365"><h4 class="heading"><span class="codenumber">29<span class="period">.</span></span></h4>
+<p id="p-3302">A random sample of 45 people who carry a purse found that they had an average of $2.35 in change in the bottom of their purse. The margin of error was $0.15. Calculate the 95% confidence interval and interpret the results.</p></article><article class="exercise exercise-like" id="exercise-366"><h4 class="heading"><span class="codenumber">30<span class="period">.</span></span></h4>
+<p id="p-3304">Scores on a certain quiz are normally distributed. In sample of 25 students the mean score was 14 points with a standard error estimate of 2 points. Calculate the margin of error and the 95% confidence intervals. Interpret Confidence interval.</p></article><article class="exercise exercise-like" id="exercise-367"><h4 class="heading"><span class="codenumber">31<span class="period">.</span></span></h4>
+<p id="p-3306">A researcher works on a study and found the sample mean to be 84.5 cm and the standard error of estimate to be 0.11 cm. What is the margin of error for the 95% confidence level? What is the 95% confidence interval for the true mean? Interpret the results.</p></article><article class="exercise exercise-like" id="exercise-368"><h4 class="heading"><span class="codenumber">32<span class="period">.</span></span></h4>
+<p id="p-3308">A researcher works on a study and found that the sample mean to be $35.4 and the standard error of estimate to be $0.75. What is the margin of error for the 95% confidence level? What is the 95% confidence interval for the true mean? Interpret the results.</p></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-61"><div class="fn">All of the Normal drawings in this section were created with the online probability calculator at <a class="external" href="http://onlinestatbook.com/2/calculators/normal_dist.html" target="_blank">onlinestatbook.com/2/calculators/normal_dist.html</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-62" id="fn-62"><sup> 62 </sup></a> which is in the public domain.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-62"><div class="fn"><code class="code-inline tex2jax_ignore">http://onlinestatbook.com/2/calculators/normal_dist.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-63"><div class="fn"><code class="code-inline tex2jax_ignore">http://onlinestatbook.com/2/calculators/normal_dist.html</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

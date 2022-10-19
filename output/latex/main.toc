@@ -1,0 +1,20 @@
+\hypertarget {x:book:my-great-book}{}
+\contentsline {chapter}{Acknowledgements}{vii}{chapter*.1}%
+\contentsline {chapter}{Preface}{ix}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Numbers}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}First Day of Class}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}In Class Activity}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}First Day Worksheet}{3}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Orders of Magnitude}{12}{section.1.2}%
+\contentsline {subsection}{Problem Situation: How Big is a Billion?}{13}{section*.11}%
+\contentsline {subsection}{Out of Class Exercises}{21}{section*.16}%
+\contentsline {chapter}{\numberline {2}(No title)}{23}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Examples of PreTeXt features}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Environments and Blocks}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Another section}{26}{section.3.2}%
+\contentsline {part}{Appendices}{27}{section*.22}%
+\contentsline {chapter}{\numberline {A}Selected Hints}{27}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Selected Solutions}{29}{appendix.B}%
+\contentsline {chapter}{\numberline {C}List of Symbols}{31}{appendix.C}%
+\contentsline {part}{Back Matter}{33}{section*.23}%
+\contentsfinish 

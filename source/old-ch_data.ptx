@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="ch-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data</title>
+  <introduction>
+    <p>This chapter will focus on how we communicate about data and draw conclusions from it.</p>
+  </introduction>
+
+  <xi:include href="./sec-charts.ptx"/>
+  <xi:include href="./sec-average.ptx"/>
+  <xi:include href="./sec-data-decisions.ptx"/>
+</chapter>

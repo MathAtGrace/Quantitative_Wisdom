@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="credit-crunch" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Interest</title>
+  <worksheet xml:id="worksheet-credit-crunch">
+    <title>Credit Crunch Worksheet</title>
+
+    <page xml:id="worksheet-credit-crunch-p1">
+      <objectives>
+        <ul>
+          <li>Demonstrate operation sense by communicating in words and symbols the effects of operations on numbers. Apply the correct order of operations in evaluating expressions and formulas.</li>
+          <li>Apply quantitative reasoning strategies to solve real-world problems with proportional relationships using whole numbers, fractions, decimals, and percents as appropriate.</li>
+       </ul>
+      </objectives>
+      <introduction>
+        When you use a credit card, you can pay off the entire balance at the end of the month and avoid paying any interest. If you do not pay the full amount, you are borrowing money from the credit card company. This is called credit card debt. Many people in the United States are concerned about the amount of credit card debt for both individuals and for society in general. In this lesson, you will use skills and ideas from previous lessons to think about some issues related to credit cards. You may want to refer back to the previous lessons.
+      </introduction>
+      <exercise xml:id="exercise-credit-crunch-1" workspace="1in">
+        <statement>
+          According to the Federal Reserve System the total credit card debt carried by Americans as of March 2015 was 848.1 billion dollars.  Write this number in standard notation in dollars and also in scientific notation.
+        </statement>
+        <solution>
+          These number can be written as $848,100,000,000 and as $<m>8.481 \times 10^{11}</m>.
+        </solution>
+      </exercise>
+      <p>
+        You will use the following information from a credit card disclosure in the next few questions.
+      </p>
+      <sidebyside widths="25% 70%" margins="auto">
+        <p><b>Annual Percentage Rate (APR) for Purchases</b></p>
+        <p><b>0.00%</b> introductory APR for 6 months from the date of account opening.  After that, your APR will be <b>10.99%</b> to <b>23.99%</b> based on your creditworthiness. This APR will vary with the market based on the Prime Rate.</p>
+      </sidebyside>
+      <exercise xml:id="exercise-credit-crunch-2" workspace=".5in">
+        <statement>
+          APR stands for Annual Percentage Rate. It is the total interest rate for the entire year. However, we normally make a credit card payment each month. The amount of interest paid each month is called the Periodic Rate. Find the monthly Periodic Rate for an APR of 10.99%, rounded to two decimal places.
+        </statement>
+        <solution>
+          <m>\frac{10.99}{12}\%=0.915833\% \approx 0.92\%</m>
+        </solution>
+      </exercise>
+      <p>
+        Creditworthiness is measured by a <q>credit score,</q> with a high credit score indicating good credit. In the following questions, you will explore how your credit score can affect how much you have to pay in order to borrow money. Juanita and Brian both have a credit card with the terms in the disclosure form given above. They have both had their credit cards for more than 6 months.
+      </p>
+      <exercise xml:id="exercise-credit-crunch-3" workspace=".5in">
+        <statement>
+          Juanita has good credit and gets the lowest interest rate possible for this card. She is not able to pay off her balance each month, so she pays interest. Estimate how much interest Juanita would pay in the month of January if her unpaid balance is $5000.  She has already owned the card for more than six months.
+        </statement>
+        <solution>
+          Answers will vary. 0.92% is a little less than 1%, so the interest owed will be a little less than $50 (1% of 5,000)
+        </solution>
+      </exercise>
+      <exercise xml:id="exercide-credit-crunch-3-5" workspace=".5in">
+        <statement>
+          If Juanita maintains an average balance of $5000 every month for a year, estimate how much interest she will pay in a year.
+        </statement>
+        <solution>
+          Answers will vary. A little less than about $600 (12 times $50)
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-credit-crunch-p2">
+      <exercise xml:id="exercise-credit-crunch-4" workspace=".5in">
+        <statement>
+          Brian has a very low credit score and has to pay the highest interest rate. He is not able to pay off his balance each month, so he pays interest. Calculate how much interest he would pay in the month of January if his balance is $5000, to the nearest cent.
+        </statement>
+        <solution>
+          His Periodic Rate is 23.99/12 = 1.999167%. Multiply 0.01999167 times $5000 = $99.96. Note that it's important to keep a lot of decimal places in the periodic rate since that number is being multiplied by a large dollar amount.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-credit-crunch-5" workspace=".5in">
+        <statement>
+          If Brian maintains an average balance of $5000 every month for a year, calculate how much interest he will pay in a year.
+        </statement>
+        <solution>
+          Multiply $5000 times 0.2399 to get $1,199.50
+        </solution>
+      </exercise>
+      <p>
+        You will use the following information from the disclosure for the next question. A cash advance is when you use your credit card to get cash instead of using it to make a purchase.
+      </p>
+      <table xml:id="table-apr-cash-advance">
+        <tabular>
+          <col width="50%"/>
+          <col width="50%"/>
+          <row header="yes">
+            <cell>
+              <p>
+                Annual Percentage Rate (APR) for Purchases
+              </p>
+            </cell>
+            <cell>
+              <p>
+                APR for Cash Advances
+              </p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>
+                After that, your APR will be 10.99% to 23.99% based on your creditworthiness. This APR will vary with the market based on the Prime Rate.
+              </p>
+            </cell>
+            <cell>
+              <p>
+                28.99%. This APR will vary with the market based on the Prime Rate.
+              </p>
+            </cell>
+          </row>
+        </tabular>
+      </table>
+      <exercise xml:id="exercise-credit-crunch-6" workspace=".5in">
+        <statement>
+          Determine how to fill in the blank to create a reasonable statement.
+          <blockquote>
+            Jeff pays the highest interest rate for purchases. Over a year, for a cash advance he would pay $<fillin characters="7"/> more interest for each dollar he charges to his card, compared to using it for a purchase.
+          </blockquote>
+        </statement>
+        <solution>
+          For a cash advance, he would pay 28.99%, or $0.2899 per dollar. For a purchase, he would pay 23.99%, or $0.2399 per dollar. With the cash advance, he would pay $0.2899-$0.2399 = $0.05 more interest for each dollar he charges.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-credit-crunch-7" workspace=".5in">
+        <statement>
+          Determine how to fill in the blank to create a reasonable statement.
+          <blockquote>
+            Lois pays the lowest interest rate for purchases.  If she purchased a $400 TV using a cash advance, she would pay about<fillin characters="10"/> times as much interest as she would if she used the card as a regular purchase.
+          </blockquote>
+        </statement>
+        <solution>
+          For a cash advance, she would pay 28.99%. For a purchase, she would pay 10.99%. The cash advance interest rate is 28.99/10.99 = 2.64, or about two-and-a-half times as much interest as the purchase rate.
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-credit-crunch-p3">
+      <p>
+        Brian used a spreadsheet to record his credit card charges for a month.  In a spreadsheet, you can refer to a "cell" (one of the boxes that hold numbers or words) using it's location.  For example, $56.08 is in column B and row 2, so we say it is in cell B2.
+      </p>
+      <image source="credit-card-spreadsheet.png" width="60%"/>
+      <p>
+        Brian entered the following formula in cell B7 to calculate his interest for these charges for one month.
+      </p>
+      <p>
+        = (0.2399/12) * (B2 + B3 + B4 + B5)
+      </p>
+      <exercise xml:id="exercise-credit-crunch-8">
+        <statement>
+          Which of the following statements best explains what the expression means in terms of the context?
+          <ul>
+            <li>
+              Brian found the interest charge for the month by dividing 0.2399 by 12 and multiplying it by the sum of Column B.
+            </li>
+            <li>
+              Brian added his individual charges. Then he divided 0.2399 by 12. Then he multiplied the two numbers.
+            </li>
+            <li>
+              Brian found the periodic rate by dividing his APR of 0.2399 by 12 months. He then added the individual charges to get the total amount charged to the credit card. He multiplied the periodic rate by the total charges to find the interest charge for the month.
+            </li>
+          </ul>
+        </statement>
+        <solution>
+          While all the options describe the calculations, the one that describes the expression the best in terms of the context is: Brian found the periodic rate by dividing his APR of 0.2399 by 12 months. He then added the individual charges to get the total amount charged to the credit card. He multiplied the periodic rate by the total charges to find the interest charge for the month.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-credit-crunch-9">
+        <statement>
+          Which of the following are other ways that Brian could have done the calculation (there may be more than one correct answer)
+          <ul>
+            <li>
+              = B2 + B3 + B4 + B5 * 0.2399 / 12
+            </li>
+            <li>
+              = (1/12)*0.2399*(B2 + B3 + B4 + B5)
+            </li>
+            <li>
+              = B2*0.2399/12 + B3*0.2399/12 + B4*0.2399/12 + B5*0.2399/12
+            </li>
+            <li>
+              = (B2 + B3 + B4 + B5)*0.2399/12
+            </li>
+            <li>
+              = (0.2399*(B2 + B3 + B4 + B5))/12
+            </li>
+            <li>
+              = (0.2399/12)*B2 + B3 + B4 + B5
+            </li>
+          </ul>
+        </statement>
+        <solution>
+          Most of these are equivalent to the original calculation. The two that are not are missing parentheses necessary due to order of operations. For example, in the expression "= (0.2399/12)*B2 + B3 + B4 + B5", only the first charge is getting multiplied by the periodic rate. To make this correct, we would need to add grouping symbols to first sum the charges: = (0.2399/12)*(B2 + B3 + B4 + B5)
+        </solution>
+      </exercise>
+    </page>
+  </worksheet>
+
+  <worksheet xml:id="Lab-Investment-Worksheet">
+    <title>
+      Investment Lab
+    </title>
+
+    <page xml:id="Lab-Investment-Worksheet-p1">
+      <introduction>
+        <p>
+          Sal, Cal and Val are triplets. Sal gets a paper route at age 14 and decides to invest $2000 at the beginning of each year in a mutual fund which averages a 10% annual return. Sal only makes deposits for 5 years and then leaves the balance to compound until retirement at age 65. Cal is impressed by Sal’s bank account, gets a job in college at age 19 and dutifully makes deposits into the same mutual fund for 8 years and then leaves the balance to compound until retirement at age 65. Val partied a lot growing up, but then gets a good job at the age of 27 and diligently makes deposits all the way to retirement at the age of 65.  Your job in this project is to recreate the picture of the spreadsheet below in your own spreadsheet and answer the following questions:
+        </p>
+        <p>
+          <url href="https://docs.google.com/spreadsheets/d/1HN28mEYPbSk3LUHqK7RPtklRhb-4VZWRLuhQJndrgU0/edit?usp=sharing" visual="docs.google.com/spreadsheets/d/1HN28mEYPbSk3LUHqK7RPtklRhb-4VZWRLuhQJndrgU0/edit?usp=sharing">Spreadsheet Template</url>
+        </p>
+      </introduction>
+      <exercise xml:id="exercise-investment-lab-1" workspace=".5in">
+        <statement>
+          (6 points) Before trying to recreate the spreadsheet below let's check that you understand where the numbers came from. Consider the cell C5, which shows $4,620.  Write the mathematical equation whose answer is $4620.  Then write the same equation replacing numbers with cell names whenever possible.
+        </statement>
+        <hint>
+          Remember to replace the rate <q>10%</q> with I3, or even better, $I$3.  The dollar signs will let you copy formulas better.
+        </hint>
+        <solution>
+          <p>3 points for 4620 = (2000+2200)*(1 + 0.10) or something algebraically equivalent.</p>
+          <p>3 points for 4620 = (B5+C4)(1+$I$3) or something algebraically equivalent.  It's okay if they replace 4620 with C5.</p>
+        </solution>
+      </exercise>
+      <image source="investment-lab-1.png" width="100%"/>
+      <exercise xml:id="exercise-investment-lab-2">
+        <statement>
+          <p>
+            (20 points) Consider the picture above.  Recreate the spreadshee which tracks the growth of each person’s investment and extend it all the way down to age 65. You must take into account both the deposit and the growth rate of 10% each year.  Remember to use <q>$I$3</q> instead of <q>10%</q> in your formulas.
+          </p>
+          <p>
+            If you are new to spreadsheets, feel free to check out this video <url href="https://youtu.be/9TVmdFtmbbo" visual="youtu.be/9TVmdFtmbbo">Google Sheets Formula Tutorial</url>.  For this lab you only need the first 4-5 minutes of this video.
+          </p>
+        </statement>
+        <solution>
+          Formulas should look like this, at least up to algebra.  It's okay if they have no formulas when they are calculating interest on zero deposits such as D4-D8.
+          <image source="investment-lab-3.png" width="100%"/>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-investment-lab-3" workspace="1in">
+        <statement>
+          <p>
+            (12 points) For each person, calculate the total amount they deposited and the total interest they collected.
+          </p>
+        </statement>
+        <solution>
+          Sal invested $10,000 and gained $1,174,599.83 in interest.  Cal invested  $16,000.00 and gained $1,019,159.56 in interest.   Val invested  $78,000.00 and gained $805,185.11 in interest.  2 points per number
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="Lab-Investment-Worksheet-p2">
+      <exercise xml:id="exercise-investment-lab-4" workspace=".5in">
+        <statement>
+          <p>
+            (4 points) Change the annual interest rate to different numbers. Determine the interest rate where Sal and Val end with the same amount of money (rounded to the nearest tenth of a percentage point).
+          </p>
+        </statement>
+        <solution>
+          The answer is 7.6% or 7.7%, which is 0.076 or 0.077 as decimals.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-investment-lab-5" workspace="5in">
+        <statement>
+          <p>
+            (8 points) Using what you've learned in this lab, write a note to your friend explaining why it is financially wise to begin investing money as early as possible.
+          </p>
+        </statement>
+        <solution>
+          Answers will vary.
+        </solution>
+      </exercise>
+      <p>
+        In order to get full credit for Exercise <xref ref="exercise-investment-lab-2" text="local"/> you need to do two things.
+      </p>
+      <ol>
+        <li>
+          Show all your formulas by clicking <c>View -> Show -> Formulas</c>
+        </li>
+        <li>
+          Turn your spreadsheet into a PDF by clicking <c>File -> Download -> PDF (.pdf)</c>
+        </li>
+        <li>
+          This PDF that you just downloaded is the file you should submit with this lab, along with this worksheet.  You will lose points if you don't follow directions.
+        </li>
+      </ol>
+    </page>
+  </worksheet>
+</section>
