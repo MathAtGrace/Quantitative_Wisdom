@@ -65,7 +65,7 @@
     Federal income comes from our individual income taxes and business income taxes. Income is also borrowed by selling savings bonds, notes and Treasury bills (United States Government, 2019). The government has to pay interest on the national debt. After that, there are two types of spending, mandatory and discretionary. <alert>Mandatory spending</alert> includes Social Security payments, Medicare and other items required by law. <alert>Discretionary spending</alert> is the amount that Congress budgets annually to fund programs and agencies. Here is a pie chart showing the percentage of spending for each type in 2019. The data comes from the Congressional Budget Office (Congressional Budget Office, 2020).
   </p>
   <sidebyside width="50%">
-    <image source="images/democracy/5_6/fed_income_spending.png">
+    <image source="democracy/5_6/fed_income_spending.png">
     <description>Pie chart showing mandatory spending (62%), discretionary spending (30%) and net interest (8%) portions of federal spending in fiscal year 2019.</description>
     </image>
   </sidebyside>
@@ -93,7 +93,7 @@
     If the government spends less than it collects in income, there will be a budget <alert>surplus</alert> for that year. If it spends more than it collects, there will be a <alert>deficit</alert> for that year. It is also possible to have a <alert>balanced budget</alert> where the spending equals the income. The federal deficit refers to the budget shortfall in a single time period, like a quarter or a year. For example, in the Fiscal Year 2018, the U.S. deficit was $779 billion. The graph below shows the federal deficit or surplus each year since 1974 using data from the Congressional Budget Office (Congressional Budget Office, 2014).
   </p>
   <sidebyside width="80%">
-    <image source="images/democracy/5_6/fed_surplus_deficit.png">
+    <image source="democracy/5_6/fed_surplus_deficit.png">
     <description>A bar chart showing the historical and projected federal devicits from 1974 to 2021; The deficits ran from 0 to 500 billion dollars from 1974 to 1996, then there was a budget surplus from 1996 to 2000, then defecits again; The deficits increased to about 1500 billion from 2008 to 2014 and are predected to be less after that.</description>
     </image>
   </sidebyside>
@@ -262,7 +262,7 @@
     Now we can look at more graphs that are written in terms of the percent of GDP. Here is a graph of federal spending and revenues as a percentage of the GDP<fn><url href="https://www.pgpf.org/chart-archive/0173_revenues_spending">"Federal Revenue and Spending, 1985-2050"</url> is copyrighted by <url href="https://www.pgpf.org/">Peter G. Peterson Foundation</url> and used under the <url href="https://www.pgpf.org/permissions">permissions granted</url> for educational use.</fn>.
   </p>
   <sidebyside width="80%">
-    <image source="images/democracy/5_6/debt_to_gdp1.jpg">
+    <image source="democracy/5_6/debt_to_gdp1.jpg">
     <description>Title: The growing debt is caused by a structural mismatch between spending and revenues; There is a line showing the spending from 1984 to 2049 (predicted) and a line showing the revenue in the same years. Most of the time the spending is higher than the revenue, except in the years there was a budget suplus, from 1996 to 2000.</description>
     </image>
   </sidebyside>
@@ -270,7 +270,7 @@
     For each year, if we take the revenue and subtract the spending, we get the budget surplus or deficit. If the result is negative it is a deficit. And here is a graph of the deficits in terms of percentage of GDP<fn><url href="https://www.cbo.gov/publication/55151">"Updated Budget Projections: 2019 to 2029"</url> by <url href="https://www.cbo.gov/">Congressional Budget Office</url> is in the <url href="https://wiki.creativecommons.org/Public_domain">Public Domain.</url></fn>.
   </p>
   <sidebyside width="80%">
-    <image source="images/democracy/5_6/debt_to_gdp2.png">
+    <image source="democracy/5_6/debt_to_gdp2.png">
     <description>Total Deficits and Surpluses; A bar chart that shows the budget deficit or surplus each year as a percentage of GDP.</description>
     </image>
   </sidebyside>
@@ -285,7 +285,7 @@
     As you can see from the previous graphs, most years had a budget deficit. If we add all of those up over time, this is what the national debt looks like<fn><url href="https://www.pgpf.org/chart-archive/0025_federal-debt-hist">"Federal Debt: 1791-2019"</url> is copyrighted by <url href="https://www.pgpf.org/">Peter G. Peterson Foundation</url> and used under the <url href="https://www.pgpf.org/permissions">permissions granted</url> for educational use.</fn>.
   </p>
   <sidebyside width="80%">
-    <image source="images/democracy/5_6/national_debt1.png">
+    <image source="democracy/5_6/national_debt1.png">
     <description>Title: Debt rises and falls with wars and changes in the economy. Debt is currently higher than it has been at any point since 1948. A bar chart that shows the total national debt from 1794 to 2019; Total debt was highest during the civil war, world war 1 and 2, the great depression and in 2019.</description>
     </image>
   </sidebyside>
@@ -293,7 +293,7 @@
     Just like we pay interest on our personal debt, the U.S. pays interest on the national debt. The interest on the debt is expected to keep increasing as shown in this graph<fn><url href="https://www.pgpf.org/analysis/2018/12/higher-interest-rates-will-raise-interest-costs-on-the-national-debt">"Net Interest Cost"</url> is copyrighted by <url href="https://www.pgpf.org/">Peter G. Peterson Foundation</url> and used under the <url href="https://www.pgpf.org/permissions">permissions granted</url> for educational use.</fn>.
   </p>
   <sidebyside width="80%">
-    <image source="images/democracy/5_6/national_debt2.jpg">
+    <image source="democracy/5_6/national_debt2.jpg">
     <description>A graph showing the amount of interest paid on the national debt from 2009 to 2028 (projected after 2017). The amount of interest paid was around 180 billion dollars in 2009 and stayed pretty level until 2017, then was projected to increase steeply to about 900 billion dollars per year in 2028</description>
     </image>
   </sidebyside>
@@ -543,7 +543,7 @@
     For more comparisons, here is a graph showing the debt to GDP ratios around the world in 2020<fn><url href="https://commons.wikimedia.org/wiki/File:Public_debt_percent_gdp_world_map_(2010).svg">"Public Debt Percent GDP World Map"</url> by <url>Wikimedia Commons Contributors</url>, <url>Wikimedia Commons, the free media repository.</url></fn>.
   </p>
   <sidebyside width="90%">
-    <image source="images/democracy/5_6/gdp_ratio_map.png">
+    <image source="democracy/5_6/gdp_ratio_map.png">
     <description>World map showing debt to GDP ratios in each country</description>
     </image>
   </sidebyside>
@@ -560,7 +560,7 @@
       In a previous example, we saw that the federal revenue estimate for 2019 was $3.422 trillion. Use the pie chart to calculate the dollar value of each revenue source shown in the graph.
     </p>
     <sidebyside width="60%">
-      <image source="images/democracy/5_6/federal_pie.png">
+      <image source="democracy/5_6/federal_pie.png">
       <description>A pie chart showing federal revenue for the United States in the fiscal year 2019; The categories are Income taxes 56%, Social Security taxes 36%, Ad valorem taxes 6% and Business and other taxes 2%.</description>
       </image>
     </sidebyside>
@@ -591,7 +591,7 @@
 
     </p>
     <sidebyside width="60%">
-      <image source="images/democracy/5_6/federal_pie2.png">
+      <image source="democracy/5_6/federal_pie2.png">
       <description>A pie chart showing Federal Spending for the United States in fiscal year 2019; The categories are pensions 25%, defense 22%, education 3%, health care 28%, interest 8%, wellfare 8%, transportation 2%, protection 1%, general government 1% and other spending 2%</description>
       </image>
     </sidebyside>
@@ -1296,7 +1296,7 @@
     The total state budget for the state of Virginia in 2018-2019 is approximately $63.9 billion and their population is about 8.5 million people. Use the pie chart (Virginia Department of Planning and Budget, 2018) to calculate how much is budgeted for:
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/Virginia_State_Budget.png">
+    <image source="democracy/5_6/Virginia_State_Budget.png">
     <description>A pie chart showing the Virginia state budget in 2018-2021; The categories are education 34%, health and human resources 30%, transportation 12%, administration 7%, public safety 6% and other 11%.</description>
     </image>
   </sidebyside>
@@ -1350,7 +1350,7 @@
     The Wisconsin state budget for 2018 was $8.9 billion and their population is about 5.8 million. Use the pie chart (Wisconsin Budget Project, 2020) to calculate how much was budgeted for:
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/Wisconsin_State_Budget.png">
+    <image source="democracy/5_6/Wisconsin_State_Budget.png">
     <description>A pie chart showing the Wisconsin state budget in 2018; The categories are K-12 education 35%, Higher education 6%, property tax credits 7%, medical assistance 18%, local governments 5%, corrections 7% and other 22%.</description>
     </image>
   </sidebyside>
@@ -1403,7 +1403,7 @@
     If Canada collected $311.2 Billion of tax revenue in 2017-18, and their population was 37.06 Million people, use the pie chart<fn><url href="https://medium.com/@je_12591/how-is-tax-revenue-spent-in-canada-7bd50afb140a">https://medium.com/@je_12591/how-is-tax-revenue-spent-in-canada-7bd50afb140a</url></fn> to calculate how much was spent on
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/canada_circle.png">
+    <image source="democracy/5_6/canada_circle.png">
     <description>How is Tax Revenue Spent in Canada? | by Junior Economist | Medium</description>
     </image>
   </sidebyside>
@@ -1456,7 +1456,7 @@
     The total planned public spending in the United Kingdom for 2021 is £908.1 billion and their population is 67.7 million. Use the pie chart<fn><url href="https://www.ukpublicspending.co.uk/government_expenditure.html">https://www.ukpublicspending.co.uk/government_expenditure.html</url></fn> to calculate how much will be spent on 
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/uk_circle.png">
+    <image source="democracy/5_6/uk_circle.png">
     <description></description>
     </image>
   </sidebyside>
@@ -1509,7 +1509,7 @@
     The total state budget for the state of New York in 2021 is approximately $177.5 million and their population is about 19.5 million.<fn><url href="https://www.usdebtclock.org/state-debt-clocks/state-of-new-hampshire-debt-clock.html"></url>https://www.usdebtclock.org/state-debt-clocks/state-of-new-hampshire-debt-clock.html</fn> Use the pie chart of the governor’s proposed budget for the fiscal year 2021<fn><url href="https://openbudget.ny.gov/overview.html">https://openbudget.ny.gov/overview.html</url></fn> to calculate how much will be spent on:
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/ny_circle.png">
+    <image source="democracy/5_6/ny_circle.png">
     <description>Pie Chart of State Operating Funds Spending by Function</description>
     </image>
   </sidebyside>
@@ -1562,7 +1562,7 @@
     The Idaho governor’s state general fund budget was $3.465 billion<fn><url href="https://www.idahostatesman.com/news/politics-government/state-politics/article125872789.html">https://www.idahostatesman.com/news/politics-government/state-politics/article125872789.html</url></fn> and their population is about 1.8 million.<fn><url href="https://www.usdebtclock.org/state-debt-clocks/state-of-new-hampshire-debt-clock.html">https://www.usdebtclock.org/state-debt-clocks/state-of-new-hampshire-debt-clock.html</url></fn> Use the pie chart of the governor’s proposed budget for the fiscal year 2021 to calculate how much will be spent on:
   </p>
   <sidebyside width="45%">
-    <image source="images/democracy/5_6/.png">
+    <image source="democracy/5_6/.png">
     <description></description>
     </image>
   </sidebyside>

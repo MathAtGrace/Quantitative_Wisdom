@@ -24,10 +24,12 @@
     <objectives xml:id="god-math-objectives">
       <ul>
         <li>Interact with different philosophical and theological views of mathematics</li>
+        <li>Discuss philosophical and theological view of mathematics with peers</li>
       </ul>
     </objectives>
 
     <page xml:id="god-math-worksheet-p1">
+      <p>For this worksheet you must work in a group of 3 or four people.  Find your group now.</p>
       <p>In the first part of this worksheet, we will consider what people from history have said about math, and we try to consider math from our own Christian perspective.</p>
 
       <exercise xml:id="god-math-warm-up" workspace=".75in">

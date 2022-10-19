@@ -22,4 +22,5 @@
   <xi:include href="./sec-numbers-unit-conversion.ptx"/>
   <xi:include href="./sec-numbers-cost-of-driving.ptx"/>
   <xi:include href="./sec-numbers-home-improvements.ptx"/>
+  <xi:include href="./sec-numbers-percentages.ptx"/>
 </chapter>

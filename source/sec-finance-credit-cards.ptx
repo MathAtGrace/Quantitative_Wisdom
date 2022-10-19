@@ -325,7 +325,7 @@
       First, enter the number of days per month manually. Make sure to double-check with a calendar, and put <q>29</q> for February if it’s a leap year. Note that it says <q>24</q> for the first December, in cell B2. There are still 31 days of that December of course, but the purchase was made on December 7th. If you don’t want to do subtraction in your head, you can always type in <q>=31-7</q>.
     </p>
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex1.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex1.png">
       </image>
     </sidebyside>
     <p>
@@ -335,7 +335,7 @@
       Back at the top, the first outstanding balance is the purchase amount, so enter <q>1200</q> into cell C2. Recall that the first month is the interest-free period, so it really is just $1,200 and some formula with $1,200 as an input. Then in cell D2, enter the formula for the minimum monthly payment with Excel formatting. Drusilla’s card uses the company method, so that is the basic template. The max function in Excel is <q>MAX(number1,number2,…)</q>. We will refer to the value of <m>P</m> with the cell containing it, which is C2. Putting all of that together, we type <q>=MAX(0.02*C2*(1+0.18),25)</q> into cell D2, and after hitting enter it will display <q>28.32</q>.
     </p>
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex2.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex2.png">
       </image>
     </sidebyside>
 
@@ -344,7 +344,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex3.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex3.png">
       </image>
     </sidebyside>
 
@@ -353,7 +353,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex4.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex4.png">
       </image>
     </sidebyside>
 
@@ -362,7 +362,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex5.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex5.png">
       </image>
     </sidebyside>
 
@@ -371,7 +371,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex6.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex6.png">
       </image>
     </sidebyside>
 
@@ -383,7 +383,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex7.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex7.png">
       </image>
     </sidebyside>
 
@@ -392,7 +392,7 @@
     </p>
 
     <sidebyside>
-      <image width="70%" source="images/financial_math/credit_cards/excel_ex8.png">
+      <image width="70%" source="financial_math/credit_cards/excel_ex8.png">
       </image>
     </sidebyside>
 
