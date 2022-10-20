@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-17T21:51:31-04:00       *-->
+<!--*       on 2022-10-20T15:59:16-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,18 +16,30 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.11.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.4.1</span><span class="period">.</span>
 </h4>
+<p><span class="process-math">\(P = \$1000\text{,}\)</span> the principal</p>
+<p><span class="process-math">\(r=\frac{0.04}{2}=0.02\text{,}\)</span> interest is being paid semi-annually (twice a year), so the 4% interest will be divided into two 2% payments.</p>
+<p><span class="process-math">\(t = 8\text{,}\)</span> 4 years compounded twice a year gives <span class="process-math">\(t=4\cdot 2=8\)</span> half-years</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
-P\amp=\frac{6000}{\left(1+\frac{0.06}{12}\right)^{12*8}}\\
-\amp\approx \$3,717.14
+I\amp=PRT\\
+\amp=\$1000(0.02)(8)\\
+\amp=\$160
 \end{align*}
 </div>
-<p>The principal required would be $3717.14</p>
-<p>Or,</p>
-<pre class="code-display tex2jax_ignore">=PV(0.06/12,12*8,0,6000)</pre>
+<p>You will earn $160 in interest over the four years. The future value of the loan is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A\amp=P+I\\
+\amp=\$1000+\$160\\
+\amp=\$1160
+\end{align*}
 </div>
-<span class="incontext"><a href="chap_two_simple_compound.html#solution-49" class="internal">in-context</a></span>
+<p>We could also use a spreadsheet to do this calculation and enter:</p>
+<pre class="code-display tex2jax_ignore">=1000+1000*(0.04/2)*(4*2)</pre>
+<p>which also gives $1,160. The future value of the bond is $1,160. Remember that spreadsheets don’t interpret parentheses as multiplication. We need the asterisks as well as the parentheses.</p>
+</div>
+<span class="incontext"><a href="sec-finance-simple-compound.html#solution-49" class="internal">in-context</a></span>
 </body>
 </html>

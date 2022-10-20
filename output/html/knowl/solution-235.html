@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-17T21:55:21-04:00       *-->
+<!--*       on 2022-10-20T16:01:15-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,13 +16,37 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.4.9.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.3.7.3.1</span><span class="period">.</span>
 </h4>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_4/compare_dist1.png" class="contained" alt="The boxplot for Store 1 shows a 5-number summary of 0.7, 1.8, 2.3, 2.9, 6.3 minutes. The boxplot for Store 2 shows a 5-number summary of 0.5, 1.1, 2.1, 5.7, 9.6 minutes."></div></div></div>
-<p>Store 2 has a slightly shorter median service time (2.1 minutes vs. 2.3 minutes), but the service times are less consistent, with a wider spread of the data.</p>
-<p>The 75th percentiles are 2.9 and 5.7 minutes. That means at store 1, 75% of customers were served within 2.9 minutes, while at store 2, 75% of customers were served within 5.7 minutes.</p>
-<p>Which store should you go to in a hurry? That depends upon your opinion about luck – 25% of customers at store 2 had to wait between 5.7 and 9.6 minutes.</p>
+<ol class="lower-alpha">
+<li>
+<p>In Excel:</p>
+<p><code class="code-inline tex2jax_ignore">=average(15.2,18.8,19.3,19.7,20.2,21.8,22.1,29.4)</code></p>
+<p><span class="process-math">\(=20.81\)</span> seconds</p>
+<p>There are 8 times shown, so <span class="process-math">\(n=8\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\bar{x} \amp= \frac{(15.2+18.8+19.3+19.7+20.2+21.8+22.1+29.4)}{15}\\
+\amp=20.81 \text{ seconds}
+\end{align*}
 </div>
-<span class="incontext"><a href="chap_three_measure_of_variation.html#solution-235" class="internal">in-context</a></span>
+</li>
+<li>
+<p>In Excel:</p>
+<p><code class="code-inline tex2jax_ignore">=median(15.2,18.8,19.3,19.7,20.2,21.8,22.1,29.4)</code></p>
+<p><span class="process-math">\(=19.95\)</span> seconds</p>
+<p>There are 8 times shown, so <span class="process-math">\(n=8\text{.}\)</span> The times are given already in order:</p>
+<p>15.2, 18.8, 19.3, 19.7, 20.2, 21.8, 22.1, 29.4</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+Median\amp=\frac{19.7+20.2}{2}\\
+\amp=19.95 \text{ seconds}
+\end{align*}
+</div>
+</li>
+<li><p>Since the mean and median are approximately equal, we would expect that the distribution is symmetric.</p></li>
+</ol>
+</div>
+<span class="incontext"><a href="chap_three_measure_of_center.html#solution-235" class="internal">in-context</a></span>
 </body>
 </html>

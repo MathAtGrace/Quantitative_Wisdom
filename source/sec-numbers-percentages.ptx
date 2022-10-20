@@ -422,36 +422,38 @@
               </row>
             </tabular>
           </table>
-          <exercise xml:id="exercise-percentages-16">
-            <statement>
-              <p>
-                Which table could be used to answer the following question: <q>What percentage of the students who received an A are in the morning class?</q>
-              </p>
-              <ul>
-                <li>Table 1</li>
-                <li>Table 2</li>
-                <li>Neither table</li>
-              </ul>
-            </statement>
-            <solution>
-              Table 2. You can tell because the columns add to 100%, so the reference value is the grade. This means that 44.4% of the students who got an A were in the morning class.
-            </solution>
-          </exercise>
-          <exercise xml:id="exercise-percentages-17">
-            <statement>
-              <p>
-                Which table could be used to answer the following question: <q>What percentage of the students in the morning class received an A?</q>
-              </p>
-              <ul>
-                <li>Table 1</li>
-                <li>Table 2</li>
-                <li>Neither table</li>
-              </ul>
-            </statement>
-            <solution>
-              Table 1. The rows add up to 100%, so the reference value is the students in each class. 12.5% of the students in the morning class received an A
-            </solution>
-          </exercise>
+        </introduction>
+        <exercise xml:id="exercise-percentages-16">
+          <statement>
+            <p>
+              Which table could be used to answer the following question: <q>What percentage of the students who received an A are in the morning class?</q>
+            </p>
+            <ul>
+              <li>Table 1</li>
+              <li>Table 2</li>
+              <li>Neither table</li>
+            </ul>
+          </statement>
+          <solution>
+            Table 2. You can tell because the columns add to 100%, so the reference value is the grade. This means that 44.4% of the students who got an A were in the morning class.
+          </solution>
+        </exercise>
+        <exercise xml:id="exercise-percentages-17">
+          <statement>
+            <p>
+              Which table could be used to answer the following question: <q>What percentage of the students in the morning class received an A?</q>
+            </p>
+            <ul>
+              <li>Table 1</li>
+              <li>Table 2</li>
+              <li>Neither table</li>
+            </ul>
+          </statement>
+          <solution>
+            Table 1. The rows add up to 100%, so the reference value is the students in each class. 12.5% of the students in the morning class received an A
+          </solution>
+        </exercise>
+      </exercisegroup>
     </page>
   </worksheet>
 

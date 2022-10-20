@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-17T21:52:10-04:00       *-->
+<!--*       on 2022-10-20T15:59:26-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,11 +15,40 @@
 </head>
 <body class="ignore-math"><div class="solution solution-like"><ol class="lower-alpha">
 <li>
-<p><span class="process-math">\(\frac{75\left(\left(1+\frac{0.085}{52}\right)^{52*40}-1\right)}{\left(\frac{0.085}{52}\right)}\)</span></p>
-<p>Or, <code class="code-inline tex2jax_ignore">=FV(0.085/52,52*40,75)</code></p>
-<p>In 40 years you will have $1,325,130.09 in your retirement plan.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+A\amp=2000\left(1+\frac{0.03}{12}\right)^{12*20}\\
+\amp\approx \$3,641.51
+\end{align*}
+</div>
+<p>The account will have $3,641.51 in 20 years</p>
+<p>Or,</p>
+<pre class="code-display tex2jax_ignore">=FV(0.03/12,12*20,0,2000)</pre>
 </li>
-<li><p><span class="process-math">\(1325130.09 – 52*40*75\text{.}\)</span> You will have earned $1,169,130.09 in interest.</p></li>
-<li><p><span class="process-math">\(1169130.09/1325130.09\text{.}\)</span> The final balance will be about 88.2% interest.</p></li>
+<li>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+I\amp=3641.51-2000\\
+\amp=\$1641.51
+\end{align*}
+</div>
+<p>The interest will be $1641.51.</p>
+</li>
+<li>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\frac{1641.51}{3641.51} \approx 0.4508 \rightarrow 45.08\%
+\end{gather*}
+</div>
+<p>The interest is 45.08% of the balance.</p>
+</li>
+<li>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{gather*}
+\frac{2000}{3641.51} \approx 0.5492 \rightarrow 54.92%
+\end{gather*}
+</div>
+<p>The principal is 54.92% of the balance.</p>
+</li>
 </ol></div></body>
 </html>

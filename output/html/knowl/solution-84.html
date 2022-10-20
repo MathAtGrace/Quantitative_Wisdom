@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-17T21:52:41-04:00       *-->
+<!--*       on 2022-10-20T15:59:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,31 +16,20 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.6.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.5.5.1</span><span class="period">.</span>
 </h4>
-<p>First we will see what she owes with the 17.99% APR using the compound interest formula for 35 days:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-900\left(1+\frac{0.1799}{365}\right)^{35} \approx 915.66
-\end{equation*}
+<ol class="lower-alpha">
+<li>
+<p>In 5 years: <span class="process-math">\(\frac{130\left(\left(1+\frac{0.09}{12}\right)^{12*5}-1\right}{\left(\frac{0.09}{12}\right)}\)</span></p>
+<p>Or, <code class="code-inline tex2jax_ignore">=FV(0.09/12,12*5,130)</code></p>
+<p>In 25 more years: <span class="process-math">\(9805.14(1+\frac{0.09}{12})^{12*25}\)</span></p>
+<p><code class="code-inline tex2jax_ignore">=FV(0.09/12,12*25,0,9805.14)</code></p>
+<p>Your final balance will be $92,250.82.</p>
+</li>
+<li><p><span class="process-math">\(92250.82 – 130*5*12\text{.}\)</span> You will earn $84,450.82 in interest.</p></li>
+<li><p><span class="process-math">\(84450.82/92250.82\text{.}\)</span> The final balance will be about 91.5% interest.</p></li>
+</ol>
 </div>
-<p>The spreadsheet formula for this computation is</p>
-<pre class="code-display tex2jax_ignore">=FV(0.1799/365,35,0,900)</pre>
-<p>With interest, Bilqis now owes $915.66.</p>
-<p>Now we will find one percent of the new balance which is</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\$915.66(0.01) \approx \$9.16\text{.}
-\end{equation*}
-</div>
-<p>$25 is larger than $9.16, so her first payment must be at least $25. If she makes the minimum payment we can subtract to find her new balance:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\$915.66-\$25 = \$890.66\text{.}
-\end{equation*}
-</div>
-<p>Her new balance will be $890.66.</p>
-</div>
-<span class="incontext"><a href="chap_two_loans.html#solution-84" class="internal">in-context</a></span>
+<span class="incontext"><a href="chap_two_savings_plan.html#solution-84" class="internal">in-context</a></span>
 </body>
 </html>

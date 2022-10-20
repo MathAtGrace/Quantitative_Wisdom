@@ -500,7 +500,7 @@
     </p>
 
     <p>
-      And for the second step we use the compound interest formula from <xref ref="chap_two_simple_compound"></xref>.
+      And for the second step we use the compound interest formula from <xref ref="sec-finance-simple-compound"></xref>.
     </p>
     <p>
       <md>
@@ -538,7 +538,7 @@
     </md>
     </p>
     <p>
-      Were you surprised by these numbers? You would put in less money in scenario 1 and end up with four times as much. The key to compounding interest is to start early. If you remember the graph of compound interest in <xref ref="chap_two_simple_compound"></xref>, we can see that as time goes on, the balance increases exponentially.
+      Were you surprised by these numbers? You would put in less money in scenario 1 and end up with four times as much. The key to compounding interest is to start early. If you remember the graph of compound interest in <xref ref="sec-finance-simple-compound"></xref>, we can see that as time goes on, the balance increases exponentially.
     </p>
   </solution>
   </example>
