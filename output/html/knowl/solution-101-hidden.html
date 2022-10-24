@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-20T16:00:03-04:00       *-->
+<!--*       on 2022-10-24T16:29:43-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,28 +13,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><div class="solution solution-like">
-<p>First we will see what she owes with the 17.99% APR using the compound interest formula for 35 days:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-900\left(1+\frac{0.1799}{365}\right)^{35} \approx 915.66
-\end{equation*}
-</div>
-<p>The spreadsheet formula for this computation is</p>
-<pre class="code-display tex2jax_ignore">=FV(0.1799/365,35,0,900)</pre>
-<p>With interest, Bilqis now owes $915.66.</p>
-<p>Now we will find one percent of the new balance which is</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\$915.66(0.01) \approx \$9.16\text{.}
-\end{equation*}
-</div>
-<p>$25 is larger than $9.16, so her first payment must be at least $25. If she makes the minimum payment we can subtract to find her new balance:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{equation*}
-\$915.66-\$25 = \$890.66\text{.}
-\end{equation*}
-</div>
-<p>Her new balance will be $890.66.</p>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><ol class="lower-alpha">
+<li>
+<p><span class="process-math">\(\frac{100\left(\left(1+\frac{0.04}{12}\right)^{12*25}-1\right)}{\frac{0.04}{12}}\)</span></p>
+<p>Or, <code class="code-inline tex2jax_ignore">=FV(0.04/12,12*25,100)</code></p>
+<p>Vanessa will have $51,412.95 when she turns 65.</p>
+</li>
+<li>
+<p><span class="process-math">\(\frac{100\left(\left(1+\frac{0.04}{12}\right)^{12*40}-1\right)}{\frac{0.04}{12}}\)</span></p>
+<p><code class="code-inline tex2jax_ignore">=FV(0.04/12,12*40,100</code></p>
+<p>Vanessa would have $118,196.13 if she had started saving when she was 25.</p>
+</li>
+</ol></div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-20T16:00:02-04:00       *-->
+<!--*       on 2022-10-24T16:29:42-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,31 +16,18 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.5.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.5.14.1</span><span class="period">.</span>
 </h4>
-<p>To determine this, we need to think backwards. We are looking for the amount of the loan that can be paid off by $1,000 per month in the remaining 25 years. In other words, we’re looking for <span class="process-math">\(P\)</span> when:</p>
-<p><span class="process-math">\(d=\$1,000\text{,}\)</span> for the monthly loan payment</p>
-<p><span class="process-math">\(r=0.06\text{,}\)</span> for 6% annual rate</p>
-<p><span class="process-math">\(n=12\text{,}\)</span> since we’re doing monthly payments, we’ll compound monthly</p>
-<p><span class="process-math">\(t=25\text{,}\)</span> since we’d be making monthly payments for 25 more years</p>
-<p>To use a spreadsheet for this problem, we use the <code class="code-inline tex2jax_ignore">=PV</code> formula because we want to know what the present value would be at the time you want to sell in 5 years. We enter:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel middle" style="width:40%;">
-<pre class="code-display tex2jax_ignore">=PV(0.06/12, 12*25, 1000,0)</pre>
-<p class="continuation">which gives us $155,206.86.</p>
+<ol class="lower-alpha">
+<li>
+<p><span class="process-math">\(5000(1+0.0235)^{20}+\frac{1000\left(\left(1+0.0235\right)^{20}-1\right)}{0.0235}\)</span></p>
+<p><code class="code-inline tex2jax_ignore">=FV(0.0235,20,1000,5000)</code></p>
+<p>Elena’s final balance will be $33,119.05.</p>
+</li>
+<li><p><span class="process-math">\(33119.05 – (5000 + 1000*20)\text{.}\)</span> Elena will earn $8,119.05 in interest.</p></li>
+<li><p><span class="process-math">\(8119.05/33119.05\text{.}\)</span> The final balance will be about 24.5% interest.</p></li>
+</ol>
 </div>
-<div class="sbspanel middle" style="width:54%;"><img src="external/financial_math/2_4/remaining_balance.png" class="contained" alt="An image of the spreadsheet showing the formula used and the result."></div>
-</div></div>
-<p>To check this with the formula we have:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
-\begin{align*}
-P\amp=\frac{1000\left(1-\left(1+\frac{0.06}{12}\right)^{-12\cdot 25}\right)}{\frac{0.06}{12}}\\
-\amp=\frac{1000(1-(1.005)^{-300})}{0.005}\\
-\amp\approx\$155,206.86
-\end{align*}
-</div>
-<p>The loan balance with 25 years remaining on the loan will be $155,206.86</p>
-</div>
-<span class="incontext"><a href="chap_two_loans.html#solution-100" class="internal">in-context</a></span>
+<span class="incontext"><a href="chap_two_savings_plan.html#solution-100" class="internal">in-context</a></span>
 </body>
 </html>

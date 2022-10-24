@@ -516,8 +516,8 @@
             A friend lends you $200 for a week, which you agree to repay with 5% one-time interest. How much will you have to repay?
           </statement>
         </exercise>
-  </worksheet>
-
+      </exercisegroup>
+    </page>
   </worksheet>
 
   <worksheet xml:id="worksheet-budget">
