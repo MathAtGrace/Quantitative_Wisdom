@@ -522,7 +522,7 @@
 
   <worksheet xml:id="worksheet-budget">
     <title>Gracie's Budget</title>
-    <page>In Class 2.1-2.2: Simple and Compound Interest with Spreadsheets
+    <page>
       <introduction>
         In this lab, you will create a budget spreadsheet to keep track of monthly income, expences, and savings, and you will use several spreadsheet functions and formulas.
       </introduction>

@@ -5,7 +5,7 @@
   <worksheet xml:id="worksheet-cost-of-driving">
     <title>Cost of Driving Worksheet</title>
 
-    <page xml:id="worksheet-cost-of-driving-p1">
+    <page>
       <objectives>
         <ul>
           <li>Use dimensional analysis to convert units, rates, and ratios from any given units to other units. Include conversions among and between U.S. and metric units using a variety of metric prefixes.</li>
@@ -41,7 +41,7 @@
       </exercisegroup>
     </page>
 
-    <page xml:id="worksheet-cost-of-driving-p2">
+    <page>
       <exercise xml:id="exercise-cost-of-driving-4" workspace=".25in">
         <statement>
           In the last lesson, you learned about Dimensional Analysis.  We will be needing those techniques again in this lesson.  To warm up, consider this question:
@@ -94,6 +94,9 @@
           After tax, the rental will cost $98.98 + 0.153($98.98) = $114.12 to the nearest cent.  Thus, the total cost: $33.78 + $114.12 = $147.90
         </solution>
       </exercise>
+    </page>
+
+    <page>
       <exercise xml:id="exercise-cost-of-driving-6" workspace="1in">
         <statement>
           Using the information below, calculate Jenna’s total cost of driving her own car for a round trip.

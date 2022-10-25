@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec_orders_of_mag" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec_numbers_percentages" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Percentages</title>
   <objectives>
     <ul>
@@ -9,7 +9,7 @@
     </ul>
   </objectives>
 
-  <worksheet xml:id="orders-of-mag-worksheet">
+  <worksheet xml:id="worksheet-numbers_percentages">
     <title>Problem Situation: The Language of Percentages</title>
 
     <page>

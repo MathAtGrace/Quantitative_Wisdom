@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ws-finance-savings-loans" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Worksheets Savings and Loans</title>
+
+  <worksheet xml:id="worksheet-preview-savings-loans">
+    <title>Warmup for <xref ref="sec-finance-savings-plan"></xref> and <xref ref="sec-finance-loans"> Due at the beginning of class.</xref></title>
+    <page>
+      <exercisegroup>
+        <introduction>
+          Write the letter of the graph that matches the type of interest.
+          <image source="financial_math/2_3/warm_up.png"/>
+        </introduction>
+        <exercise workspace=".25in">
+          <statement>
+            Simple Interest
+          </statement>
+          <solution>
+            A (linear)
+          </solution>
+        </exercise>
+        <exercise workspace=".25in">
+          <statement>
+            Compound Interest
+          </statement>
+          <solution>
+            B (exponential)
+          </solution>
+        </exercise>
+      </exercisegroup>
+      <exercise workspace=".25in">
+        <statement>
+          <p>
+            Write the letters in order from the type of compounding that would give the lowest amount to the type that would give the highest amount (assuming the same interest rate).
+          </p>
+          <p>
+            A. Quarterly <m>\hfill</m> B. Continuously <m>\hfill</m> C. Daily <m>\hfill</m> D. Monthly <m>\hfill</m> E. Annually
+          </p>
+        </statement>
+        <solution>
+          E A D C B
+        </solution>
+      </exercise>
+      <exercisegroup>
+        <introduction>
+          <p>Write the letter of the formula that you would use to solve the problem. Complete the calculation using a spreadsheet.</p>
+          <assemblage>
+            <title>Financial Formulas</title>
+            <p>
+              A. <c>=P + P*rate*years</c>
+            </p>
+            <p>
+              B. <c>=FV(rate, nper, pmt, [pv], [type])</c>
+            </p>
+            <p>
+              C. <c>=PV(rate, nper, pmt, [fv], [type])</c>
+            </p>
+            <p>
+              D. <c>=P*exp(rate*years)</c>
+            </p>
+            <p>
+              E. <c>=effect(nominal rate, periods per year)</c>
+            </p>
+          </assemblage>
+        </introduction>
+        <exercise workspace="0.75in">
+          <statement>
+            You deposit $10,000 into an account that earns 5% interest, compounded quarterly, for 20 years.
+          </statement>
+          <solution>
+            <p>B</p>
+            <p><c>=FV(0.05/4, 20*4, 0, 10000)</c></p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.75in">
+          <statement>
+            You loan a friend $1,000 for 2 years at 3% simple interest.
+          </statement>
+          <solution>
+            <p>A</p>
+            <p><c>=1000 + 1000*0.03*2</c></p>
+            <p>$1,060</p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.75in">
+          <statement>
+            You want to compare an account that earns 5.4% interest compounded daily with an account that earns 6.2% compounded quarterly.
+          </statement>
+          <solution>
+            <p>E</p>
+            <p><c>=effect(0.054, 365)</c></p>
+            <p>=0.05548</p>
+            <p>=5.5%</p>
+            <p><c>=effect(0.062, 4)</c></p>
+            <p>=0.06346</p>
+            <p>=6.3%</p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.75in">
+          <statement>
+            You deposit $7,000 into an account that earns 8% interest compounded continuously for 10 years.
+          </statement>
+          <solution>
+            <p>D</p>
+            <p><c>=7000*exp(0.08*10)</c></p>
+            <p>=$15,578.79</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+  </worksheet>
+
+  <worksheet xml:id="worksheet-finance-savings-loans">
+    <title>In Class Activity for <xref ref="sec-finance-simple-compound"></xref> and <xref ref="sec-finance-intro-spreadsheet"></xref></title>
+
+    <page>
+      <introduction>
+        <p>Group Activity</p>
+        <p>
+          Use a spreadsheet on a Chromebook, smartphone, laptop or tablet to work on these problems. Write down the spreadsheet syntax to show your work.
+        </p>
+        <p>
+          For example: <c>=FV(.05/12, 2*12, 0, 1000).</c>
+        </p>
+        <p>
+          Answer each question in a complete sentence.
+        </p>
+      </introduction>
+      <exercise workspace="1in">
+        <statement>
+          Your uncle is giving you a simple interest loan of $500 for one year at 4% interest. What is the total amount you will owe him?
+        </statement>
+        <solution>
+          <p>
+            <c>=500+500*0.04*1=$520</c>
+          </p>
+          <p>
+            I would owe my uncle $520 after one year.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="1.5in">
+        <statement>
+          You borrowed $1500 from another relative. She charged you 5% APR, compounded monthly. If you paid her back 2 years later, how much money did you give her?
+        </statement>
+        <solution>
+          <p>
+            <c>=FV(0.05/12, 12*2, 0, 1500)</c>
+          </p>
+          <p>
+            =$1,657.41
+          </p>
+          <p>
+            I would owe my relative $1,657.41 after 2 years.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="2in">
+        <statement>
+          You got a bonus of $7,500 and you want to start a college fund for your child. You find an account paying 9.75% APR compounded quarterly. If your child just turned two years old, how much will you have when they turn 18? How much of that account balance is interest?
+        </statement>
+        <solution>
+          <p>
+            Since they just turned 2, we have 16 more years.
+          </p>
+          <p>
+            <c>=FV(0.0975/4, 16*4, 0, 7500)</c>
+          </p>
+          <p>
+            =$35,029.62
+          </p>
+          <p>
+            I would have $35,029.62 when my child turns 18.
+          </p>
+          <p>
+            To calculate the amount that is interest: $35,029.62 - $7,500 = $27,529.62.
+          </p>
+          <p>
+            The amount of interest earned is $27,529.62.
+          </p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise workspace="1.5in">
+        <statement>
+          Calculate how much you would have in problem 3 above if it was compounded continuously instead of quarterly.
+        </statement>
+        <solution>
+          <p>
+            <c>=7500*exp(.0975*16)</c>
+          </p>
+          <p>
+            =$35,691.16
+          </p>
+          <p>
+            I would have $35,691.16 when my child turns 18 if the interest was compounded continuously.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="1.5in">
+        <statement>
+          If you are considering a credit card with an APR of 27.49%, compounded daily, what annual rate are you effectively paying?
+        </statement>
+        <solution>
+          <p>
+            <c>=Effect(.2749, 365)</c>
+          </p>
+          <p>
+            ~0.316262829
+          </p>
+          <p>
+            ~31.63%
+          </p>
+          <p>
+            If I am using a credit card with an APR of 27.49%, compounded daily, I am effectively paying 31.63% per year.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="1.5in">
+        <statement>
+          How much would you need to deposit today to have one million dollars if you can find an account that pays 10% interest compounded daily for 50 years?
+        </statement>
+        <solution>
+          <p>
+            <c>=PV(0.10/365, 50*365, 0, 1000000)</c>
+          </p>
+          <p>
+            =$6,742.56
+          </p>
+          <p>
+            If I could deposit $6,742.56 in an account with 10% interest compounded daily, I would have one million dollars in 50 years.
+          </p>
+        </solution>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise workspace="6in">
+        <title>Challenge Problem</title>
+        <statement>
+          <p>
+            Sage deposited $2498 into an account paying 7.05% APR, compounded quarterly. Dionne deposited $2994 into an account paying 5.19% APR, compounded monthly. How many years will it take for their balances to (nearly) match?
+          </p>
+          <p>
+            Make a spreadsheet with <q>Year</q> in Column A, and spreadsheet formulas for each person, using a cell reference for the year. Then you can copy the formula down using the fill-down feature.
+          </p>
+        </statement>
+        <solution>
+          Their balances are about the same after 10 years. Dionne starts out with a higher deposit but after 10 years, Sage passes her due to the higher interest rate.
+        </solution>
+      </exercise>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Round-Robin Problems.</title>
+        <introduction>
+          Choose two people from your group to travel together and two to stay. Use the space below to write your formula for each problem.
+        </introduction>
+        <exercise workspace=".5in">
+          <statement>
+            You deposit $2000 in an account earning 3% interest compounded monthly. How much will you have in the account in 20 years? How much interest will you earn?
+          </statement>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Which is better? An account that earns 7.25% compounded quarterly or an account that earns 7.15% compounded daily? Give the effective rate for each account.
+          </statement>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            How much would you need to deposit in an account now in order to have $6,000 in the account in 8 years? Assume the account earns 6% interest compounded monthly.
+          </statement>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            You deposit $4,500 in an account that earns 3.5% interest compounded continuously. How much will you have in 15 years?
+          </statement>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A friend lends you $200 for a week, which you agree to repay with 5% one-time interest. How much will you have to repay?
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </page>
+  </worksheet>
+
+  <worksheet xml:id="worksheet-budget">
+    <title>Gracie's Budget</title>
+    <page>In Class 2.1-2.2: Simple and Compound Interest with Spreadsheets
+      <introduction>
+        In this lab, you will create a budget spreadsheet to keep track of monthly income, expences, and savings, and you will use several spreadsheet functions and formulas.
+      </introduction>
+      <exercise xml:id="exercise-budget-1">
+        <statement>
+          Create a new spreadsheet in Goolge Sheets, Microsoft Excel or Apple Numbers.  This lab will refer to functions and formulas in Google sheets.
+        </statement>
+      </exercise>
+      <exercise xml:id="exercise-budget-2">
+        <statement>
+          Gracie wants to save for a summer vacation with her friends.  She estimates that her vacation will cost $2000.  Can she afford to go?  To find out, she decides to buget her income and expenses for the spring semester to determine if she'll have enough money saved in order to go.  Set up your spreadsheet so that it matches the picture below.
+          <image source="gracie_budget.png" width="100%"/>
+        </statement>
+      </exercise>
+      <exercise xml:id="exercise-budget-3">
+        <statement>
+          Fill in the bugdget with the following information
+          <ul>
+            <li> Gracie's first job makes $500 a month.</li>
+            <li> Gracie only works her second job during March, April, and May.  She makes $200 each of those months.</li>
+            <li> Gracie receives birthday money from some of her relatives in February totally $75.</li>
+            <li> Gracie pays for $35 of school supplies in January and $15 in March.</li>
+            <li> Gracie spends $100 a month on groceries.</li>
+            <li> Gracie spends $10 a month on toiletries (toothpaste, shampoo, etc.)</li>
+            <li> Gracie spends $25 a month on streaming services.</li>
+            <li> Gracie spends $70 a month on eating out and getting coffee.</li>
+            <li> Gracie spends $20 on birthday gifts for her family in the months of January (her mom), March (her brother), and May (her dad).</li>
+            <li> Gracie spends $45 on gasoline each month because she visits her family many weekends during the school year.</li>
+          </ul>
+        </statement>
+      </exercise>
+      <exercise xml:id="exercise-budget-4">
+        <statement>
+          Create formulas for the <q>Total</q> column, the <q>Month Total</q> rows, and the <q>Savings</q> row.
+        </statement>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise xml:id="exercise-budget-5" workspace=".5in">
+        <statement>
+          You should end up computing Gracie's total savings as a number less than her goal of $2000.  How much money does she save up in this scenario?  How much is she short of her goal?
+        </statement>
+      </exercise>
+      <exercise xml:id="exercise-budget-6" workspace="1.5in">
+        <statement>
+          Help Gracie decide what expenses to cut in order to reach her goal.  Precisely list everything she should change, and what her new total savings will be after making your suggested changes.
+        </statement>
+      </exercise>
+      <exercise xml:id="exercise-budget-7" workspace="6in">
+        <statement>
+          Copy and paste your spreadsheet into the space below.
+        </statement>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise xml:id="exercise-budget-8" workspace="6.75in">
+        <statement>
+          <p>Use moral, ethical, and/or biblical reaons to explain why the changes you suggested above were the best choices for Gracie.  Feel free to use your imagination to fill in necessary details about her life.  Write 1-3 paragraphs.</p>
+          <p>This question will be graded according to your use of ethical, moral, or Biblical principles in your reasoning, and your use of numbers in your reasoning, such as:</p>
+          <ol>
+            <li>Interpretation: Ability to explain information presented in mathematical forms (e.g., equations, graphs, diagrams, tables, words)</li>
+            <li>Application / Analysis: Ability to make judgments and draw appropriate conclusions based on the quantitative analysis of data, while recognizing the limits of this analysis</li>
+            <li>Communication: Expressing quantitative evidence in support of the argument or purpose of the work (in terms of what evidence is used and how it is formatted, presented, and contextualized)</li>
+          </ol>
+        </statement>
+      </exercise>
+    </page>
+  </worksheet>
+</section>
