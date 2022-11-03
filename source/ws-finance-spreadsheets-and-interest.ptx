@@ -188,7 +188,7 @@
         <title>Using Spreadsheet Formulas for Compound Interest</title>
         <introduction>
           <p>
-            You will need to use Microsoft Excel or Google Sheets while you watch these videos. You can use a computer, tablet or smart phone with the Google Sheets App.
+            You will need to use Microsoft Excel or Google Sheets while work on this worksheet. You can use a computer, tablet or smart phone with the Google Sheets App.
           </p>
           <p>Future Value Formula: <c>=FV(rate, nper, pmt, [pv], [type])</c></p>
           <p>Present Value Formula <c>=PV(rate, nper, pmt, [fv], [type])</c></p>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-11-03T16:01:34-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Worksheets Savings and Loans</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-finance-loans.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="financial_math.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap_two_income_taxes.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-finance-loans.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="financial_math.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap_two_income_taxes.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+<li><a href="sec_numbers_percentages.html" data-scroll="sec_numbers_percentages" class="internal">Percentages</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
+<li><a href="sec-finance-intro-spreadsheet.html" data-scroll="sec-finance-intro-spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="sec-finance-simple-compound.html" data-scroll="sec-finance-simple-compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="ws-finance-spreadsheets-and-interest.html" data-scroll="ws-finance-spreadsheets-and-interest" class="internal">Worksheets for Spreadsheets and Interest</a></li>
+<li><a href="sec-finance-savings-plan.html" data-scroll="sec-finance-savings-plan" class="internal">Savings Plans</a></li>
+<li><a href="sec-finance-loans.html" data-scroll="sec-finance-loans" class="internal">Loan Payments</a></li>
+<li><a href="ws-finance-savings-loans.html" data-scroll="ws-finance-savings-loans" class="active">Worksheets Savings and Loans</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="chap_two_review.html" data-scroll="chap_two_review" class="internal">Chapter 2 Review</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="chap_three_statistical_process.html" data-scroll="chap_three_statistical_process" class="internal">Overview of the Statistical Process</a></li>
+<li><a href="chap_three_describing_data.html" data-scroll="chap_three_describing_data" class="internal">Describing Data</a></li>
+<li><a href="chap_three_measure_of_center.html" data-scroll="chap_three_measure_of_center" class="internal">Summary Statistics: Measures of Center</a></li>
+<li><a href="chap_three_measure_of_variation.html" data-scroll="chap_three_measure_of_variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
+<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="internal">The Normal Distribution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link">
+<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
+<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
+<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
+<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
+<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
+<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
+<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="ws-finance-savings-loans"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Worksheets Savings and Loans</span>
+</h2>
+<section class="worksheet" id="worksheet-preview-savings-loans"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">3.6.1</span> <span class="title">Warmup for Section 3.4 and Due at the beginning of class. 3.5</span><div class="print-links">
+<a href="worksheet-preview-savings-loans-a4.html" class="a4">A4</a><a href="worksheet-preview-savings-loans-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="onepage" id="page-53"><div class="exercisegroup" id="exercisegroup-36">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-54">Write the letter of the graph that matches the type of interest. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/financial_math/2_3/warm_up.png" class="contained"></div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Simple Interest<div class="workspace" data-space=".25in"></div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Compound Interest<div class="workspace" data-space=".25in"></div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-237"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1343">Write the letters in order from the type of compounding that would give the lowest amount to the type that would give the highest amount (assuming the same interest rate).</p>
+<p id="p-1344">A. Quarterly <span class="process-math">\(\hfill\)</span> B. Continuously <span class="process-math">\(\hfill\)</span> C. Daily <span class="process-math">\(\hfill\)</span> D. Monthly <span class="process-math">\(\hfill\)</span> E. Annually</p>
+<div class="workspace" data-space=".25in"></div></article><div class="exercisegroup" id="exercisegroup-37">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-55">
+<p id="p-1345">Write the letter of the formula that you would use to solve the problem. Complete the calculation using a spreadsheet.</p>
+<article class="assemblage assemblage-like" id="assemblage-18"><h5 class="heading"><span class="title">Financial Formulas.</span></h5>
+<p id="p-1346">A. <code class="code-inline tex2jax_ignore">=P + P*rate*years</code></p>
+<p id="p-1347">B. <code class="code-inline tex2jax_ignore">=FV(rate, nper, pmt, [pv], [type])</code></p>
+<p id="p-1348">C. <code class="code-inline tex2jax_ignore">=PV(rate, nper, pmt, [fv], [type])</code></p>
+<p id="p-1349">D. <code class="code-inline tex2jax_ignore">=P*exp(rate*years)</code></p>
+<p id="p-1350">E. <code class="code-inline tex2jax_ignore">=effect(nominal rate, periods per year)</code></p></article>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-238"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>You deposit $10,000 into an account that earns 5% interest, compounded quarterly, for 20 years.<div class="workspace" data-space="0.75in"></div></article><article class="exercise exercise-like" id="exercise-239"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>You loan a friend $1,000 for 2 years at 3% simple interest.<div class="workspace" data-space="0.75in"></div></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>You want to compare an account that earns 5.4% interest compounded daily with an account that earns 6.2% compounded quarterly.<div class="workspace" data-space="0.75in"></div></article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>You deposit $7,000 into an account that earns 8% interest compounded continuously for 10 years.<div class="workspace" data-space="0.75in"></div></article>
+</div>
+</div></section></section><section class="worksheet" id="worksheet-finance-savings-loans"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">3.6.2</span> <span class="title">In Class Activity for Section 3.2 and Section 3.1</span><div class="print-links">
+<a href="worksheet-finance-savings-loans-a4.html" class="a4">A4</a><a href="worksheet-finance-savings-loans-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="onepage" id="page-54"><div class="introduction" id="introduction-56">
+<p id="p-1366">Group Activity</p>
+<p id="p-1367">Use a spreadsheet to work on these problems. Write down the syntax to show your work. Answer each question in a complete sentence.</p>
+</div>
+<article class="exercise exercise-like" id="exercise-242"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>Jackie is 34 years old. She would like to have one million dollars in her retirement account when she is 65 years old.  How much would she need to deposit every month into an account with an APR of 7.25%, compounded monthly, to achieve her goal?<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="exercise-243"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>If Jackie had started the account at age 21 (same APR), how much would she need to deposit every month to achieve her goal?<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-244"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>If Jackie had started the account at age 21 (same APR) and deposited the amount calculated in Exercise 1 every month, what would the balance be when she retired at age 65?<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="exercise-245"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>How much would Jackie need to deposit as a lump sum at age 21 with the same APR (without making another payment) to have a million dollars at age 65?<div class="workspace" data-space="2in"></div></article></section><section class="onepage" id="page-55"><article class="exercise exercise-like" id="exercise-246"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>Calculate how much you would have in problem 3 above if it was compounded continuously instead of quarterly.<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-247"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>If you are considering a credit card with an APR of 27.49%, compounded daily, what annual rate are you effectively paying?<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-248"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>How much would you need to deposit today to have one million dollars if you can find an account that pays 10% interest compounded daily for 50 years?<div class="workspace" data-space="1.5in"></div></article></section><section class="onepage" id="page-56"><article class="exercise exercise-like" id="exercise-249"><h4 class="heading">
+<span class="codenumber">8<span class="period">.</span></span><span class="space"> </span><span class="title">Challenge Problem.</span>
+</h4>
+<p id="p-1390">Sage deposited $2498 into an account paying 7.05% APR, compounded quarterly. Dionne deposited $2994 into an account paying 5.19% APR, compounded monthly. How many years will it take for their balances to (nearly) match?</p>
+<p id="p-1391">Make a spreadsheet with “Year” in Column A, and spreadsheet formulas for each person, using a cell reference for the year. Then you can copy the formula down using the fill-down feature.</p>
+<div class="workspace" data-space="6in"></div></article></section><section class="onepage" id="page-57"><div class="exercisegroup" id="exercisegroup-38">
+<h4 class="heading"><span class="title">Round-Robin Problems..</span></h4>
+<div class="introduction" id="introduction-57">Choose two people from your group to travel together and two to stay. Use the space below to write your formula for each problem.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-250"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>You deposit $2000 in an account earning 3% interest compounded monthly. How much will you have in the account in 20 years? How much interest will you earn?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-251"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>Which is better? An account that earns 7.25% compounded quarterly or an account that earns 7.15% compounded daily? Give the effective rate for each account.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-252"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>How much would you need to deposit in an account now in order to have $6,000 in the account in 8 years? Assume the account earns 6% interest compounded monthly.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-253"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>You deposit $4,500 in an account that earns 3.5% interest compounded continuously. How much will you have in 15 years?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-254"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>A friend lends you $200 for a week, which you agree to repay with 5% one-time interest. How much will you have to repay?<div class="workspace" data-space=".5in"></div></article>
+</div>
+</div></section></section><section class="worksheet" id="worksheet-budget"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">3.6.3</span> <span class="title">Gracie's Budget</span><div class="print-links">
+<a href="worksheet-budget-a4.html" class="a4">A4</a><a href="worksheet-budget-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="onepage" id="page-58">In Class 2.1-2.2: Simple and Compound Interest with Spreadsheets <div class="introduction" id="introduction-58">In this lab, you will create a budget spreadsheet to keep track of monthly income, expences, and savings, and you will use several spreadsheet functions and formulas.</div>
+<article class="exercise exercise-like" id="exercise-budget-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>Create a new spreadsheet in Goolge Sheets, Microsoft Excel or Apple Numbers.  This lab will refer to functions and formulas in Google sheets.</article><article class="exercise exercise-like" id="exercise-budget-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>Gracie wants to save for a summer vacation with her friends.  She estimates that her vacation will cost $2000.  Can she afford to go?  To find out, she decides to buget her income and expenses for the spring semester to determine if she'll have enough money saved in order to go.  Set up your spreadsheet so that it matches the picture below. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/gracie_budget.png" class="contained"></div></article><article class="exercise exercise-like" id="exercise-budget-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>Fill in the bugdget with the following information <ul class="disc">
+<li id="li-504"><p id="p-derived-li-504">Gracie's first job makes $500 a month.</p></li>
+<li id="li-505"><p id="p-derived-li-505">Gracie only works her second job during March, April, and May.  She makes $200 each of those months.</p></li>
+<li id="li-506"><p id="p-derived-li-506">Gracie receives birthday money from some of her relatives in February totally $75.</p></li>
+<li id="li-507"><p id="p-derived-li-507">Gracie pays for $35 of school supplies in January and $15 in March.</p></li>
+<li id="li-508"><p id="p-derived-li-508">Gracie spends $100 a month on groceries.</p></li>
+<li id="li-509"><p id="p-derived-li-509">Gracie spends $10 a month on toiletries (toothpaste, shampoo, etc.)</p></li>
+<li id="li-510"><p id="p-derived-li-510">Gracie spends $25 a month on streaming services.</p></li>
+<li id="li-511"><p id="p-derived-li-511">Gracie spends $70 a month on eating out and getting coffee.</p></li>
+<li id="li-512"><p id="p-derived-li-512">Gracie spends $20 on birthday gifts for her family in the months of January (her mom), March (her brother), and May (her dad).</p></li>
+<li id="li-513"><p id="p-derived-li-513">Gracie spends $45 on gasoline each month because she visits her family many weekends during the school year.</p></li>
+</ul></article><article class="exercise exercise-like" id="exercise-budget-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>Create formulas for the “Total” column, the “Month Total” rows, and the “Savings” row.</article></section><section class="onepage" id="page-59"><article class="exercise exercise-like" id="exercise-budget-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>You should end up computing Gracie's total savings as a number less than her goal of $2000.  How much money does she save up in this scenario?  How much is she short of her goal?<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-budget-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>Help Gracie decide what expenses to cut in order to reach her goal.  Precisely list everything she should change, and what her new total savings will be after making your suggested changes.<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-budget-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>Copy and paste your spreadsheet into the space below.<div class="workspace" data-space="6in"></div></article></section><section class="onepage" id="page-60"><article class="exercise exercise-like" id="exercise-budget-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-1392">Use moral, ethical, and/or biblical reaons to explain why the changes you suggested above were the best choices for Gracie.  Feel free to use your imagination to fill in necessary details about her life.  Write 1-3 paragraphs.</p>
+<p id="p-1393">This question will be graded according to your use of ethical, moral, or Biblical principles in your reasoning, and your use of numbers in your reasoning, such as:</p>
+<ol class="lower-alpha">
+<li id="li-514"><p id="p-derived-li-514">Interpretation: Ability to explain information presented in mathematical forms (e.g., equations, graphs, diagrams, tables, words)</p></li>
+<li id="li-515"><p id="p-derived-li-515">Application / Analysis: Ability to make judgments and draw appropriate conclusions based on the quantitative analysis of data, while recognizing the limits of this analysis</p></li>
+<li id="li-516"><p id="p-derived-li-516">Communication: Expressing quantitative evidence in support of the argument or purpose of the work (in terms of what evidence is used and how it is formatted, presented, and contextualized)</p></li>
+</ol>
+<div class="workspace" data-space="6.75in"></div></article></section></section></section></div></main>
+</div>
+</body>
+</html>

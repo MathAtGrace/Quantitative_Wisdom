@@ -117,66 +117,70 @@
       <introduction>
         <p>Group Activity</p>
         <p>
-          Use a spreadsheet on a Chromebook, smartphone, laptop or tablet to work on these problems. Write down the spreadsheet syntax to show your work.
-        </p>
-        <p>
-          For example: <c>=FV(.05/12, 2*12, 0, 1000).</c>
-        </p>
-        <p>
-          Answer each question in a complete sentence.
+          Use a spreadsheet to work on these problems. Write down the syntax to show your work. Answer each question in a complete sentence.
         </p>
       </introduction>
       <exercise workspace="1in">
         <statement>
-          Your uncle is giving you a simple interest loan of $500 for one year at 4% interest. What is the total amount you will owe him?
+          Jackie is 34 years old. She would like to have one million dollars in her retirement account when she is 65 years old.  How much would she need to deposit every month into an account with an APR of 7.25%, compounded monthly, to achieve her goal?
         </statement>
         <solution>
           <p>
-            <c>=500+500*0.04*1=$520</c>
+            =PMT(0.0725/12, (65-34)*12, 0, 1000000)
           </p>
           <p>
-            I would owe my uncle $520 after one year.
+            = $719.22
+          </p>
+          <p>
+            She would need to deposit $719.22 each month to have a million dollars when she retires.
           </p>
         </solution>
       </exercise>
       <exercise workspace="1.5in">
         <statement>
-          You borrowed $1500 from another relative. She charged you 5% APR, compounded monthly. If you paid her back 2 years later, how much money did you give her?
+          If Jackie had started the account at age 21 (same APR), how much would she need to deposit every month to achieve her goal?
         </statement>
         <solution>
           <p>
-            <c>=FV(0.05/12, 12*2, 0, 1500)</c>
+            <c>=PMT(0.0725/12, (65-21)*12, 0, 1000000)</c>
           </p>
           <p>
-            =$1,657.41
+            = $262.04
           </p>
           <p>
-            I would owe my relative $1,657.41 after 2 years.
+            She would need to deposit $262.04 each month to have a million dollars when she retires.
           </p>
         </solution>
       </exercise>
       <exercise workspace="2in">
         <statement>
-          You got a bonus of $7,500 and you want to start a college fund for your child. You find an account paying 9.75% APR compounded quarterly. If your child just turned two years old, how much will you have when they turn 18? How much of that account balance is interest?
+          If Jackie had started the account at age 21 (same APR) and deposited the amount calculated in Exercise 1 every month, what would the balance be when she retired at age 65?
         </statement>
         <solution>
           <p>
-            Since they just turned 2, we have 16 more years.
+            <c>=FV(0.0725/12, (65-21)*12, 719.22)</c>
           </p>
           <p>
-            <c>=FV(0.0975/4, 16*4, 0, 7500)</c>
+            = $2,744,713.35
           </p>
           <p>
-            =$35,029.62
+            She would have over $2.7 million dollars when she retired.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="2in">
+        <statement>
+          How much would Jackie need to deposit as a lump sum at age 21 with the same APR (without making another payment) to have a million dollars at age 65?
+        </statement>
+        <solution>
+          <p>
+            <c>=PV(0.0725/12, (65-21)*12, 0, 1000000)</c>
           </p>
           <p>
-            I would have $35,029.62 when my child turns 18.
+            = $41,568.93
           </p>
           <p>
-            To calculate the amount that is interest: $35,029.62 - $7,500 = $27,529.62.
-          </p>
-          <p>
-            The amount of interest earned is $27,529.62.
+            She would need to deposit $41,568.93 at age 21 to have a million dollars when she retires.
           </p>
         </solution>
       </exercise>
