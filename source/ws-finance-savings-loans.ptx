@@ -4,7 +4,7 @@
   <title>Worksheets Savings and Loans</title>
 
   <worksheet xml:id="worksheet-preview-savings-loans">
-    <title>Warmup for <xref ref="sec-finance-savings-plan"></xref> and <xref ref="sec-finance-loans"> Due at the beginning of class.</xref></title>
+    <title>Warmup for <xref ref="sec-finance-savings-plan"/> and <xref ref="sec-finance-loans"/></title>
     <page>
       <exercisegroup>
         <introduction>
@@ -34,13 +34,28 @@
             Write the letters in order from the type of compounding that would give the lowest amount to the type that would give the highest amount (assuming the same interest rate).
           </p>
           <p>
-            A. Quarterly <m>\hfill</m> B. Continuously <m>\hfill</m> C. Daily <m>\hfill</m> D. Monthly <m>\hfill</m> E. Annually
+            A. Quarterly
+          </p>
+          <p>
+            B. Continuously
+          </p>
+          <p>
+            C. Daily
+          </p>
+          <p>
+            D. Monthly
+          </p>
+          <p>
+            E. Annually
           </p>
         </statement>
         <solution>
           E A D C B
         </solution>
       </exercise>
+    </page>
+
+    <page>
       <exercisegroup>
         <introduction>
           <p>Write the letter of the formula that you would use to solve the problem. Complete the calculation using a spreadsheet.</p>
@@ -120,7 +135,7 @@
           Use a spreadsheet to work on these problems. Write down the syntax to show your work. Answer each question in a complete sentence.
         </p>
       </introduction>
-      <exercise workspace="1in">
+      <exercise workspace="0.9in">
         <statement>
           Jackie is 34 years old. She would like to have one million dollars in her retirement account when she is 65 years old.  How much would she need to deposit every month into an account with an APR of 7.25%, compounded monthly, to achieve her goal?
         </statement>
@@ -136,7 +151,7 @@
           </p>
         </solution>
       </exercise>
-      <exercise workspace="1.5in">
+      <exercise workspace="0.9in">
         <statement>
           If Jackie had started the account at age 21 (same APR), how much would she need to deposit every month to achieve her goal?
         </statement>
@@ -152,7 +167,7 @@
           </p>
         </solution>
       </exercise>
-      <exercise workspace="2in">
+      <exercise workspace="0.9in">
         <statement>
           If Jackie had started the account at age 21 (same APR) and deposited the amount calculated in Exercise 1 every month, what would the balance be when she retired at age 65?
         </statement>
@@ -168,7 +183,7 @@
           </p>
         </solution>
       </exercise>
-      <exercise workspace="2in">
+      <exercise workspace="0.9in">
         <statement>
           How much would Jackie need to deposit as a lump sum at age 21 with the same APR (without making another payment) to have a million dollars at age 65?
         </statement>
@@ -187,181 +202,229 @@
     </page>
 
     <page>
-      <exercise workspace="1.5in">
+      <exercise workspace="1in">
         <statement>
-          Calculate how much you would have in problem 3 above if it was compounded continuously instead of quarterly.
+          Sam has a student loan of $30,000 at a fixed APR of 4.45%. If he wants to pay it off in 15 years, how much would he pay per month?
         </statement>
         <solution>
           <p>
-            <c>=7500*exp(.0975*16)</c>
+            <c>=PMT(0.0445/12, 15*12, 30000, 0)</c>
           </p>
           <p>
-            =$35,691.16
+            = $228.73
           </p>
           <p>
-            I would have $35,691.16 when my child turns 18 if the interest was compounded continuously.
+            They would need to pay $228.73 per month for 15 years.
           </p>
         </solution>
       </exercise>
       <exercise workspace="1.5in">
         <statement>
-          If you are considering a credit card with an APR of 27.49%, compounded daily, what annual rate are you effectively paying?
+          How much would Sam pay in total?
         </statement>
         <solution>
           <p>
-            <c>=Effect(.2749, 365)</c>
+            <c>=$228.73*15*12</c>
           </p>
           <p>
-            ~0.316262829
+            = $41,171.40
           </p>
           <p>
-            ~31.63%
-          </p>
-          <p>
-            If I am using a credit card with an APR of 27.49%, compounded daily, I am effectively paying 31.63% per year.
+            They would pay a total of $41,171.40 for the loan.
           </p>
         </solution>
       </exercise>
-      <exercise workspace="1.5in">
+      <exercise workspace="1in">
         <statement>
-          How much would you need to deposit today to have one million dollars if you can find an account that pays 10% interest compounded daily for 50 years?
+          What percentage of the total was paid toward the loan amount of $30,000 and what percentage was paid toward interest?
         </statement>
         <solution>
           <p>
-            <c>=PV(0.10/365, 50*365, 0, 1000000)</c>
+            Percentage toward the principal:
           </p>
           <p>
-            =$6,742.56
+            <c>=$30,000/41,171.40</c>
           </p>
           <p>
-            If I could deposit $6,742.56 in an account with 10% interest compounded daily, I would have one million dollars in 50 years.
+            ≈73%
+          </p>
+          <p>
+            About 73% of the total was paid toward the principal. That means about 27% was paid in interest.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          You want to buy a $350,000 home. You plan to put 10% down and take out a 30-year fixed mortgage on the rest. What will the loan amount be?
+        </statement>
+        <solution>
+          <p>
+            Amount of down payment: 0.10(350,000) = $35,000
+          </p>
+          <p>
+            Loan amount = $350,000 – $35,000 = $315,000
+          </p>
+          <p>
+            The loan amount is $315,000.
+          </p>
+        </solution>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          What will your monthly payment be on your home mortgage if the interest rate is 4.5%?
+        </statement>
+        <solution>
+          <p>
+            <c>=PMT(0.045/12, 30*12, 315000, 0)</c>
+          </p>
+          <p>
+            = $1,596.06
+          </p>
+          <p>
+            My monthly mortgage payment would be $1,596.06.
           </p>
         </solution>
       </exercise>
     </page>
 
     <page>
-      <exercise workspace="6in">
-        <title>Challenge Problem</title>
+      <exercise workspace="2in">
         <statement>
-          <p>
-            Sage deposited $2498 into an account paying 7.05% APR, compounded quarterly. Dionne deposited $2994 into an account paying 5.19% APR, compounded monthly. How many years will it take for their balances to (nearly) match?
-          </p>
-          <p>
-            Make a spreadsheet with <q>Year</q> in Column A, and spreadsheet formulas for each person, using a cell reference for the year. Then you can copy the formula down using the fill-down feature.
-          </p>
+          If you make all the payments on your home mortgage for 30 years, how much would you have paid for the house in total?
         </statement>
         <solution>
-          Their balances are about the same after 10 years. Dionne starts out with a higher deposit but after 10 years, Sage passes her due to the higher interest rate.
+          <p>=$1,596.06*30*12</p>
+          <p>= $574,581.14</p>
+          <p>If I owned the house for 30 years I would pay $574,581.14.</p>
+        </solution>
+      </exercise>
+      <exercise workspace="4in">
+        <statement>
+          In Exercise 9<!--TODO: xref this--> above, what number would you get if you switch the 0 and the 315,000? Why are the answers so different? Explain the difference between these two scenarios.
+        </statement>
+        <solution>
+          <p>=PMT(0.045/12, 30*12, 0, 315000)</p>
+          <p>= $414.81</p>
+          <p>
+            In Exercise 9, we are making loan payments that include interest in addition to the principal of $315,000. The present value is $315,000 and the future value is $0.
+          </p>
+          <p>
+            This is different because we switched the present value to $0 and the future value to $315,000. In this case we would be depositing $414.81 per month to save up to $315,000. Interest is working with us instead of against us.
+          </p>
         </solution>
       </exercise>
     </page>
 
+<!--
     <page>
       <exercisegroup>
-        <title>Round-Robin Problems.</title>
-        <introduction>
-          Choose two people from your group to travel together and two to stay. Use the space below to write your formula for each problem.
-        </introduction>
-        <exercise workspace=".5in">
-          <statement>
-            You deposit $2000 in an account earning 3% interest compounded monthly. How much will you have in the account in 20 years? How much interest will you earn?
-          </statement>
-        </exercise>
-        <exercise workspace=".5in">
-          <statement>
-            Which is better? An account that earns 7.25% compounded quarterly or an account that earns 7.15% compounded daily? Give the effective rate for each account.
-          </statement>
-        </exercise>
-        <exercise workspace=".5in">
-          <statement>
-            How much would you need to deposit in an account now in order to have $6,000 in the account in 8 years? Assume the account earns 6% interest compounded monthly.
-          </statement>
-        </exercise>
-        <exercise workspace=".5in">
-          <statement>
-            You deposit $4,500 in an account that earns 3.5% interest compounded continuously. How much will you have in 15 years?
-          </statement>
-        </exercise>
-        <exercise workspace=".5in">
-          <statement>
-            A friend lends you $200 for a week, which you agree to repay with 5% one-time interest. How much will you have to repay?
-          </statement>
-        </exercise>
+        <title>Car Loan Activity</title>
+        https://docs.google.com/spreadsheets/d/1o6OdDDBv3zeL9DQEuirMHseAdA8mL1a_/edit?usp=sharing&ouid=118200151390871094066&rtpof=true&sd=true
+        https://docs.google.com/spreadsheets/d/1mBJYg_geWY5_jrAjNHG0yZGMwdYS-J1w/edit?usp=sharing&ouid=118200151390871094066&rtpof=true&sd=true
       </exercisegroup>
     </page>
+-->
   </worksheet>
 
-  <worksheet xml:id="worksheet-budget">
-    <title>Gracie's Budget</title>
-    <page>In Class 2.1-2.2: Simple and Compound Interest with Spreadsheets
+  <worksheet xml:id="worksheet-mortgage-lab">
+    <title>Mortgage Lab</title>
+    <page xml:id="worksheet-mortgage-lab-p1">
       <introduction>
-        In this lab, you will create a budget spreadsheet to keep track of monthly income, expences, and savings, and you will use several spreadsheet functions and formulas.
+        This worksheet refers this <url href="https://www.desmos.com/calculator/1d0bkp9jh7">Desmos page</url>.
       </introduction>
-      <exercise xml:id="exercise-budget-1">
+      <exercise xml:id="exercise-mortgage-lab-blue-area" workspace="0.5in">
         <statement>
-          Create a new spreadsheet in Goolge Sheets, Microsoft Excel or Apple Numbers.  This lab will refer to functions and formulas in Google sheets.
+          Set <c>P</c> equal to $130,000.  What number does the area of the blue region correspond to?
         </statement>
+        <solution>
+          The area of the blue region corresponds to <c>P</c>, the principle of the loan, or $130,000. (2 points)
+        </solution>
       </exercise>
-      <exercise xml:id="exercise-budget-2">
+      <exercise xml:id="exercise-mortgage-lab-area-change" workspace="0.5in">
         <statement>
-          Gracie wants to save for a summer vacation with her friends.  She estimates that her vacation will cost $2000.  Can she afford to go?  To find out, she decides to buget her income and expenses for the spring semester to determine if she'll have enough money saved in order to go.  Set up your spreadsheet so that it matches the picture below.
-          <image source="gracie_budget.png" width="100%"/>
+          Try moving the <c>r</c> and <c>Y</c> sliders around.  Does the area of the blue region tend to stay the same, get larger, or get smaller as you make these changes?
         </statement>
+        <solution>
+          The area of the blue region stays the same. (2 points)
+        </solution>
       </exercise>
-      <exercise xml:id="exercise-budget-3">
+      <exercise xml:id="exercise-mortgage-lab-area-why" workspace="0.5in">
         <statement>
-          Fill in the bugdget with the following information
-          <ul>
-            <li> Gracie's first job makes $500 a month.</li>
-            <li> Gracie only works her second job during March, April, and May.  She makes $200 each of those months.</li>
-            <li> Gracie receives birthday money from some of her relatives in February totally $75.</li>
-            <li> Gracie pays for $35 of school supplies in January and $15 in March.</li>
-            <li> Gracie spends $100 a month on groceries.</li>
-            <li> Gracie spends $10 a month on toiletries (toothpaste, shampoo, etc.)</li>
-            <li> Gracie spends $25 a month on streaming services.</li>
-            <li> Gracie spends $70 a month on eating out and getting coffee.</li>
-            <li> Gracie spends $20 on birthday gifts for her family in the months of January (her mom), March (her brother), and May (her dad).</li>
-            <li> Gracie spends $45 on gasoline each month because she visits her family many weekends during the school year.</li>
-          </ul>
+          Given what you know about how loans work, why would this be the case?
         </statement>
+        <solution>
+          For their explanation, mark correct if you can tell that they know that this is because the area of the blue region corresponds to the original principle. (2 points)
+        </solution>
       </exercise>
-      <exercise xml:id="exercise-budget-4">
+      <exercise xml:id="exercise-mortgage-lab-budget-700" workspace="0.5in">
         <statement>
-          Create formulas for the <q>Total</q> column, the <q>Month Total</q> rows, and the <q>Savings</q> row.
+          Suppose you have a budget for $700 a month for a home.  Also suppose that you can get an interest rate of 4%, and that you are looking for a 30 year loan.  Move the Principle <c>P</c> around to find the maximum house price you can afford.  What is it?  For this question, you will get full credit as long as you are close enough.  In order to get full credit, you need to be within $1,000 of the correct answer.  Make sure that you factor in that you will have to make escrow payments.
         </statement>
+        <solution>
+          Answer should be $120,000. (4 points) Mark off for every $1000 they are off by, unless their answer is about $111,000, in which case take off 1 point becaused that means they were confused by escrow payments.
+        </solution>
       </exercise>
-    </page>
-
-    <page>
-      <exercise xml:id="exercise-budget-5" workspace=".5in">
+      <exercise xml:id="exercise-mortgage-lab-budget-700-percent-interest" workspace="0.5in">
         <statement>
-          You should end up computing Gracie's total savings as a number less than her goal of $2000.  How much money does she save up in this scenario?  How much is she short of her goal?
+          In the situation from the last exercise, what percentage of your money goes towards interest over the life of the loan?
         </statement>
+        <solution>
+          The amount of money going toward interest is 41.77% (2 point).  It is okay if they round to a different number of decimals or their number is close enough.
+        </solution>
       </exercise>
-      <exercise xml:id="exercise-budget-6" workspace="1.5in">
+      <exercise xml:id="exercise-mortgage-lab-budget-15-year" workspace="1in">
         <statement>
-          Help Gracie decide what expenses to cut in order to reach her goal.  Precisely list everything she should change, and what her new total savings will be after making your suggested changes.
+          Use the same information from <xref ref="exercise-mortgage-lab-budget-700" text="local">Exercise</xref>, but change the length of the loan to 15 years.  Now what is the maximum house price you can afford?  What now is the percentage of your money going towards interest?
         </statement>
-      </exercise>
-      <exercise xml:id="exercise-budget-7" workspace="6in">
-        <statement>
-          Copy and paste your spreadsheet into the space below.
-        </statement>
-      </exercise>
-    </page>
-
-    <page>
-      <exercise xml:id="exercise-budget-8" workspace="6.75in">
-        <statement>
-          <p>Use moral, ethical, and/or biblical reaons to explain why the changes you suggested above were the best choices for Gracie.  Feel free to use your imagination to fill in necessary details about her life.  Write 1-3 paragraphs.</p>
-          <p>This question will be graded according to your use of ethical, moral, or Biblical principles in your reasoning, and your use of numbers in your reasoning, such as:</p>
+        <solution>
           <ol>
-            <li>Interpretation: Ability to explain information presented in mathematical forms (e.g., equations, graphs, diagrams, tables, words)</li>
-            <li>Application / Analysis: Ability to make judgments and draw appropriate conclusions based on the quantitative analysis of data, while recognizing the limits of this analysis</li>
-            <li>Communication: Expressing quantitative evidence in support of the argument or purpose of the work (in terms of what evidence is used and how it is formatted, presented, and contextualized)</li>
+            <li>Answer should be $81,000 or $82,000. (4 points) Mark off for every $1000 they are off by.</li>
+            <li>The amount of money going toward interest is 24.80% (2 points).  It is okay if they round to a different number of decimals or are close enough.</li>
           </ol>
+        </solution>
+      </exercise>
+    </page>
+
+    <page xml:id="worksheet-mortgage-lab-p2">
+      <exercise xml:id="exercise-mortgage-lab-difference-15-30" workspace="1in">
+        <statement>
+          Given your answer to the exercise above, how would you explain to someone that a 15-year loan has less than twice the monthly payments of a 30 year loan?
         </statement>
+        <solution>
+          (6 points) Give at least 3 points for an answer that is coherent.  Give full credit for an explanation that basically says that paying off the loan faster means that less money goes toward interest.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-mortgage-lab-rising-interest" workspace="1in">
+        <statement>
+          Keeping everything else constant, change the annual percentage rate <c>r</c>.  Explain how a rising interest rate could be considered to make all home buyers a little poorer.
+        </statement>
+        <solution>
+          (6 points) Give at least 3 points for an answer that is coherent.  Give full credit for an explanation that basically says anything similar to, <q>Rising interest rates cause mortgages to be more expensive, thus causing homes to be more expensive.</q>
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-mortgage-lab-credit-card-1" workspace=".25in">
+        <statement>
+          Imagine that you have $4,000 in credit card debt, and you’d like to pay it off in 10 years.  Your credit card company charges 20% on your debt.  How much per month will you have to pay?  (For this problem and problem 7 ignore the escrow payments).
+        </statement>
+        <solution>
+          $77.30 (3 points) Give full credit if they are within $5.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-mortgage-lab-credit-card-2" workspace=".25in">
+        <statement>
+          Given the credit card situation from the last exercise, how much will you have to pay if you try to pay it off in 5 years?
+        </statement>
+        <solution>
+          $105.98 (3 points) Give full credit if they are within $6.
+        </solution>
+      </exercise>
+      <exercise xml:id="exercise-mortgage-lab-credit-card-3" workspace="1in">
+        <statement>
+          Given your answer to the last two exercises, explain to your friend why it is important to pay credit card debt off as soon as possible.
+        </statement>
+        <solution>
+          (6 points) Give at least 3 points for anything coherent.  Give full credit for an explanation that mentions the relatively small increase in monthly payments to cut the length of the loan in half.
+        </solution>
       </exercise>
     </page>
   </worksheet>

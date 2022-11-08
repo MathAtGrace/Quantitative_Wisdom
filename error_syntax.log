@@ -1,4 +1,3 @@
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:124:7:FATAL:PARSER:ERR_NAME_REQUIRED: error parsing attribute name
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:124:7:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:124:7:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag exer line 123
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:429:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: worksheet line 128 and section
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:429:11:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag section line 3
 file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/main.ptx:43:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx, and no fallback was found

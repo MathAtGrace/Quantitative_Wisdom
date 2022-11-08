@@ -27,12 +27,16 @@
     <!-- possible structure of the book.  Once you know what the   -->
     <!-- title of the chapter is, rename the file something based  -->
     <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
+    
     <xi:include href="./ch_intro.ptx"/>
     <xi:include href="./ch_numbers.ptx"/>
+    
     <xi:include href="./ch_finance.ptx"/>
+    
     <xi:include href="./ch_data.ptx"/>
     <xi:include href="./ch_models.ptx"/>
     <xi:include href="./ch_democracy.ptx"/>
+    
     <!-- Of course you will want to add more chapters as you proceed-->
 
     <!-- The final chapter contains a wide variety of elements to  -->
