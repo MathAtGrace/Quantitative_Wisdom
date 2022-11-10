@@ -35,15 +35,17 @@
     </p>
 </introduction>
 
+
 <xi:include href="sec-finance-intro-spreadsheet.ptx" />
 <xi:include href="sec-finance-simple-compound.ptx" />
 <xi:include href="ws-finance-spreadsheets-and-interest.ptx"/>
 <xi:include href="sec-finance-savings-plan.ptx" />
 <xi:include href="sec-finance-loans.ptx" />
 <xi:include href="ws-finance-savings-loans.ptx"/>
-<!--  <xi:include href="./lab-mortgage.ptx"/>-->
+
 <xi:include href="sec-finance-income-taxes.ptx" />
-<xi:include href="sec-finance-review.ptx" />
+<xi:include href="old-sec-taxes.ptx"/>
+<!--<xi:include href="sec-finance-review.ptx" />-->
 <xi:include href="./sec-finance-project.ptx"/>
 
 
