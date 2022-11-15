@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-11-10T16:41:40-05:00       *-->
+<!--*       on 2022-11-15T16:34:41-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,268 +16,143 @@
 <body class="ignore-math">
 <div class="exercisegroup">
 <h4 class="heading">
-<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">6.5.5–8</span><span class="period">.</span>
+<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">6.1.11.1–14</span><span class="period">.</span>
 </h4>
 <div class="introduction">
-<p>In exercises 5-8, complete the following:</p>
+<p>In exercises 1-14, determine the apportionment using</p>
 <ol class="lower-alpha">
-<li><p>How many voters voted in this election?</p></li>
-<li><p>How many votes are needed for a majority?</p></li>
-<li><p>Find the winner under the plurality method.</p></li>
-<li><p>Find the winner under the Instant Runoff Voting method.</p></li>
-<li><p>Find the winner under the Borda Count Method.</p></li>
-<li><p>Find the winner under Copeland’s method.</p></li>
+<li><p>Hamilton’s Method</p></li>
+<li><p>Jefferson’s Method</p></li>
+<li><p>Webster’s Method</p></li>
+<li><p>Huntington-Hill Method</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p>A Portland Community College Board member race has four candidates: E, F, G, H. The votes are:</p>
+<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p>A college offers tutoring in Math, English, Chemistry, and Biology. The number of students enrolled in each subject is listed below. If the college can only afford to hire 15 tutors, determine how many tutors should be assigned to each subject.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">12</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">16</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">17</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">15</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">34</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">13</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">19</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">8</th>
+<th scope="col" class="c m b1 r1 l1 t1 lines">Math</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">English</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Chemistry</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Biology</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l1 t0 lines">330</td>
+<td class="c m b1 r1 l0 t0 lines">265</td>
+<td class="c m b1 r1 l0 t0 lines">130</td>
+<td class="c m b1 r1 l0 t0 lines">70</td>
 </tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p>A Forest Grove School Board position has four candidates: I, J, K, L. The votes are:</p>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem if the college can hire 20 tutors.</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p>The number of salespeople assigned to work during a shift is apportioned based on the average number of customers during that shift. Apportion 20 salespeople given the information below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">15</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">13</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">25</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">16</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">10</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">7</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">11</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">2</th>
+<th scope="col" class="c m b1 r1 l1 t1 lines">Shift</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Morning</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Midday</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Afternoon</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Evening</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l1 t0 lines">Avereage number<br>of customers</td>
+<td class="c m b1 r1 l0 t0 lines">95</td>
+<td class="c m b1 r1 l0 t0 lines">305</td>
+<td class="c m b1 r1 l0 t0 lines">435</td>
+<td class="c m b1 r1 l0 t0 lines">515</td>
 </tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p>A Multnomah County Commissioner's race has five candidates: M, N, O, P, Q. The votes are:</p>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem if the store has 25 salespeople.</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p>Three people invest in a treasure dive, each investing the amount listed below. The dive results in 36 gold coins. Apportion those coins to the investor.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">31</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">35</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">37</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">33</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">12</th>
+<th scope="col" class="c m b1 r1 l1 t1 lines">Aisha</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Basir</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Carlos</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
+<td class="c m b1 r1 l1 t0 lines">$7,600</td>
+<td class="c m b1 r1 l0 t0 lines">$5,900</td>
+<td class="c m b1 r1 l0 t0 lines">$1,400</td>
 </tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">5th choice</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p>The Oregon State Governor's race has five candidates: R, S, T, U, V. The votes are:</p>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem if 37 gold coins are recovered.</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p>A small country consists of four states, whose populations are listed below. If the legislature has 116 seats, apportion the seats.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">22</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">45</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">20</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">47</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">43</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">26</th>
+<th scope="col" class="c m b1 r1 l1 t1 lines">A</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">D</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
+<td class="c m b1 r1 l1 t0 lines">33,700</td>
+<td class="c m b1 r1 l0 t0 lines">559,500</td>
+<td class="c m b1 r1 l0 t0 lines">141,300</td>
+<td class="c m b1 r1 l0 t0 lines">89,100</td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem with 124 seats.</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<p>A small country consists of five states, whose populations are listed below. If the legislature has 119 seats, apportion the seats.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines">A</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">E</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l1 t0 lines">810,000</td>
+<td class="c m b1 r1 l0 t0 lines">473,000</td>
+<td class="c m b1 r1 l0 t0 lines">292,000</td>
+<td class="c m b1 r1 l0 t0 lines">594,000</td>
+<td class="c m b1 r1 l0 t0 lines">211,000</td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem with 126 seats.</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p>A small country consists of six states, whose populations are listed below. If the legislature has 200 seats, apportion the seats.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines">A</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">E</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">F</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
+<td class="c m b1 r1 l1 t0 lines">3,411</td>
+<td class="c m b1 r1 l0 t0 lines">2,421</td>
+<td class="c m b1 r1 l0 t0 lines">11,586</td>
+<td class="c m b1 r1 l0 t0 lines">4,494</td>
+<td class="c m b1 r1 l0 t0 lines">3,126</td>
+<td class="c m b1 r1 l0 t0 lines">4,962</td>
+</tr>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem with 180 seats</p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p>A small country consists of six states, whose populations are listed below. If the legislature has 250 seats, apportion the seats.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines">A</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">B</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">C</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">D</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">E</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">F</th>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
+<td class="c m b1 r1 l1 t0 lines">82,500</td>
+<td class="c m b1 r1 l0 t0 lines">84,600</td>
+<td class="c m b1 r1 l0 t0 lines">96,000</td>
+<td class="c m b1 r1 l0 t0 lines">98,000</td>
+<td class="c m b1 r1 l0 t0 lines">356,500</td>
+<td class="c m b1 r1 l0 t0 lines">382,500</td>
 </tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">5th choice</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-</tr>
-</table></div></div></div>
-<p></p></article>
+</table></div></div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p>Reapportion the previous problem with 240 seats.</p></article>
 </div>
 </div>
-<span class="incontext"><a href="chap_five_review.html#exercisegroup-48" class="internal">in-context</a></span>
+<span class="incontext"><a href="chap_five_apportionment.html#exercisegroup-48" class="internal">in-context</a></span>
 </body>
 </html>

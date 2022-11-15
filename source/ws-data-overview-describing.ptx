@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ws-data-overview-describing" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Worksheets Statistical Process and Describing Data</title>
+
+  <worksheet xml:id="worksheet-finance-savings-loans">
+    <title>In Class Activity for <xref ref="sec-data-statistical-process"/> and <xref ref="sec-data-describing-data"/></title>
+
+    <page>
+      <introduction>
+        <sidebyside>
+          <image width="80%" source="statistics/3_1/statistical_process.png">
+          <description>5 rectangles indicating the 5 steps of the statistical process; 1. Identify the group you want to study, which is the population; 2. Identify the quantity you want to know about the population, which is the parameter; 3. Gather data by taking an unbiased sample or performing an experiment; 4. Graph the data and calculate statistics; 5. Estimate the parameter that you wanted to know with the margin of error and confidence interval.</description>
+          </image>
+        </sidebyside>
+      </introduction>
+      <exercisegroup>
+        <title>Identify the Population, Sample, Parameter and Statistic</title>
+        <introduction>
+          For each scenario, a question or problem has been identified. Draw a diagram and describe the population, sample, parameter and statistic. Be specific with units for the parameter and statistic.
+        </introduction>
+        <exercise workspace="1in">
+          <statement>
+            A US insurance company wants to know whether households have two cars. A survey of 976 US households found that 32% of households have two cars.
+          </statement>
+          <solution>
+            <p>Population – US households</p>
+            <p>Parameter – Percentage of US households that have two cars</p>
+            <p>Sample – 976 US households</p>
+            <p>Statistic – 32% of households in the survey have two cars.</p>
+          </solution>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            A local toy store owner wants to know how much money kids in northern Indiana aged 5-12 get as an allowance per week. They asked 100 kids from around northern Indiana and found the average allowance to be $4.25 per week.
+          </statement>
+          <solution>
+            <p>Population – Kids in Portland aged 5-12</p>
+            <p>Parameter – Average dollar value that kids in Portland get for allowance per week</p>
+            <p>Sample – 100 kids from around Portland</p>
+            <p>Statistic – The average amount of allowance in the sample was $4.25/week.</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Sampling Methods</title>
+        <exercise workspace="0.25in">
+          <statement>
+            Identify the sampling method used:
+            <blockquote>
+              All the Warsaw High School students were assembled in the gym, and then separated into groups by grade. Each student was assigned a number, and 25 numbers were randomly drawn from the students in each grade. They were asked if they planned to go to college.
+            </blockquote>
+          </statement>
+          <solution>
+            <p>Stratified</p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.25in">
+          <statement>
+            Identify the sampling method used:
+            <blockquote>
+              You are standing outside of the grocery store and stop every third person leaving to ask if they purchased milk.
+            </blockquote>
+          </statement>
+          <solution>
+            <p>Systematic</p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.25in">
+          <statement>
+            Identify the sampling method used:
+            <blockquote>
+              At his book club meeting, Dan asked each member if they had seen the movie made from their current book.
+            </blockquote>
+          </statement>
+          <solution>
+            <p>Convenience</p>
+          </solution>
+        </exercise>
+        <exercise workspace="0.25in">
+          <statement>
+            Identify the sampling method used:
+            <blockquote>
+              Instead of the method in exercise 3, the administrator at Warsaw High School chose 100 student numbers randomly and asked those students to report to the office for the survey.
+            </blockquote>
+          </statement>
+          <solution>
+            <p>Simple Random Sample</p>
+          </solution>
+        </exercise>
+        <exercise workspace="1.5in">
+          <statement>
+            You are a statistical consultant and you have been hired to collect data on employee satisfaction. The company has 1000 employees at two buildings, East and West. There are 4 departments and 5 levels of employees. Identify the population, sample, parameter and statistic, then describe a sampling method.
+          </statement>
+          <solution>
+            <p>Population – Employees in the company</p>
+            <p>Parameter – Percentage of all employees who are satisfied at work</p>
+            <p>Sample – A small group of employees</p>
+            <p>Statistic – The percentage of the sample who are satisfied at work</p>
+            <p>Stratified sampling makes the most sense here, by building, department, level or all three!</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Type of Study</title>
+        <introduction>
+          For each of the following, identify whether the study is observational or an experiment.  If it is observational, identify the controls if they exist, and identify the cases.  If it is an experiment, identify the control group, the treatment group, and the blinding if it exists.
+        </introduction>
+        <exercise workspace="1.5in">
+          <statement>
+            Over a 6-month period, among 100 people with bipolar disorder, patients given a high dose of omega-3 fats improved more than those given a placebo. Patients didn’t know which they were given, but the experimenters knew.
+          </statement>
+          <solution>
+            <p>Control Group: People with bipolar disorder receiving the placebo</p>
+            <p>Treatment Group: People with bipolar disorder receiving high dose of omega-3 fats</p>
+            <p> Blinding: Single-blind (patients don’t know but those giving the pills do)</p>
+          </solution>
+        </exercise>
+        <exercise workspace="1.5in">
+          <statement>
+            A National Cancer Institute study of 716 melanoma patients and 1014 cancer-free patients found that those having a single large mole had twice the risk of melanoma.
+          </statement>
+          <solution>
+            <p>Controls: Patients without a single large mole</p>
+            <p>Cases: Patients with a single large mole</p>
+          </solution>
+        </exercise>
+        <exercise workspace="1.5in">
+          <statement>
+            1000 people were randomly separated into two groups—one group was assigned to exercise for 45 minutes daily, and the other group was instructed not to exercise. The participants in the exercise group reported falling asleep within 15 minutes of going to bed, but those not exercising laid awake for at least 30 minutes.
+          </statement>
+          <solution>
+            <p>Control Group: People not exercising</p>
+            <p>Treatment Group: People exercising</p>
+            <p> Blinding: No Blinding (participants know if they are in the exercise group)</p>
+          </solution>
+        </exercise>
+        <exercise workspace="1.5in">
+          <statement>
+            500 patients with migraine headaches receive a shot to see if it helps reduce the frequency of the headaches. The nurses giving the shots write down the code on each syringe and the patient name. The syringes look identical, but half contain the new medicine and half contain saline.
+          </statement>
+          <solution>
+            <p>Control Group: Patients receiving saline (no medicine)</p>
+            <p>Treatment Group: Patients receiving new medicine</p>
+            <p> Blinding: Double-blind (neither patients nor nurses administering know which syringes have medicine)</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Confidence Intervals</title>
+        <exercise workspace="0.5in">
+          <statement>
+            The table below lists results for a Gallup poll conducted via random telephone interviews in October 2015. Assume that the margin of error is 4 percentage points.  Find the confidence interval for each category.
+            <table>
+              <tabular top="medium">
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                  </cell>
+                  <cell right="medium">
+                    American adults
+                  </cell>
+                  <cell right="medium">
+                    18-34 years old
+                  </cell>
+                  <cell right="medium">
+                    35-49 years old
+                  </cell>
+                  <cell right="medium">
+                    50-64 years old
+                  </cell>
+                  <cell right="medium">
+                    65+ years old
+                  </cell>
+                </row>
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    Support Legalizing the use of Marijuana
+                  </cell>
+                  <cell right="medium">
+                    58%
+                  </cell>
+                  <cell right="medium">
+                    71%
+                  </cell>
+                  <cell right="medium">
+                    64%
+                  </cell>
+                  <cell right="medium">
+                    58%
+                  </cell>
+                  <cell right="medium">
+                    35%
+                  </cell>
+                </row>
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    Confidence Interval
+                  </cell>
+                  <cell right="medium">
+                  </cell>
+                  <cell right="medium">
+                  </cell>
+                  <cell right="medium">
+                  </cell>
+                  <cell right="medium">
+                  </cell>
+                  <cell right="medium">
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+          </statement>
+          <solution>
+            <table>
+              <tabular top="medium">
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                  </cell>
+                  <cell right="medium">
+                    American adults
+                  </cell>
+                  <cell right="medium">
+                    18-34 years old
+                  </cell>
+                  <cell right="medium">
+                    35-49 years old
+                  </cell>
+                  <cell right="medium">
+                    50-64 years old
+                  </cell>
+                  <cell right="medium">
+                    65+ years old
+                  </cell>
+                </row>
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    Support Legalizing the use of Marijuana
+                  </cell>
+                  <cell right="medium">
+                    58<percent />
+                  </cell>
+                  <cell right="medium">
+                    71<percent />
+                  </cell>
+                  <cell right="medium">
+                    64<percent />
+                  </cell>
+                  <cell right="medium">
+                    58<percent />
+                  </cell>
+                  <cell right="medium">
+                    35<percent />
+                  </cell>
+                </row>
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    Confidence Interval
+                  </cell>
+                  <cell right="medium">
+                    54<percent /> - 62<percent />
+                  </cell>
+                  <cell right="medium">
+                    67<percent /> - 75<percent />
+                  </cell>
+                  <cell right="medium">
+                    60<percent /> - 68<percent />
+                  </cell>
+                  <cell right="medium">
+                    54<percent /> - 62<percent />
+                  </cell>
+                  <cell right="medium">
+                    31<percent /> - 39<percent />
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Which age group(s) can you claim that over half of the people support legalization of marijuana? Explain.
+          </statement>
+          <solution>
+            For all age groups except those 65 and older, we can claim that over half of them support legalization of marijuana.
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            For which age group(s) can you claim that the majority of people do not support legalization of marijuana? Explain.
+          </statement>
+          <solution>
+            For those 65 and older, we can claim that the majority do not support legalization of marijuana.
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Explain why the percentage for all American adults isn’t exactly the average of all the categories.
+          </statement>
+          <solution>
+            The average (mean) for the four age categories is <m>(71% + 64% + 58%+ 35%)/4 =57%</m> and the stated overall percentage for American adults is close at 58%, but not exact. This is because there is not the same number of people in each age category.
+          </solution>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            Go to <url href="https://news.gallup.com/poll/229085/college-students-say-campus-climate-deters-speech.aspx">college-students-say-campus-climate-deters-speech.aspx</url> or see the printed handout in class. Give the percentage, margin of error and confidence interval. What do you think about the survey methods used?
+          </statement>
+          <solution>
+            61% +/- 2% said in 2017 that their campus climate prevents them from saying what they believe, for a confidence interval of (59%, 63%). This is an increase from 2016, 54% +/- 2% or (52%, 56%).
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Types of Bias</title>
+        <introduction>
+          In each situation, identify a potential source of bias. You will use each type from the class prep once.
+        </introduction>
+        <exercise workspace=".5in">
+          <statement>
+            Trident gum did a survey of dentists to see how many would recommend their gum.
+          </statement>
+          <solution>
+            Self-interest study
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A boss asks their employees if they have taken drugs in the last week.
+          </statement>
+          <solution>
+            Lack of anonymity
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A researcher on a phone survey asks, “Do you plan to vote for the school district bond or would you rather see our schools crumble?”
+          </statement>
+          <solution>
+            Loaded question
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A survey was given to a random sample of students but more than half of the students didn’t return the survey.
+          </statement>
+          <solution>
+            Non-response bias
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A survey about Grace College student’s experiences in MAT-1185 was given to students at in the class, but students who commute never received the survey.
+          </statement>
+          <solution>
+            Sampling bias
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A survey asks people for their weight.
+          </statement>
+          <solution>
+            Response bias. Depending on the context, people may not give their true weight
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            A broadcast email was sent to all Grace College students with a satisfaction survey.
+          </statement>
+          <solution>
+            Voluntary response bias
+          </solution>
+        </exercise>
+      </exercisegroup>
+      <exercisegroup>
+        <title>Describing Data: Types of Data</title>
+        <introduction>
+          Please complete the anonymous survey online. The link is in Moodle. This will give our class some data to work with.
+        </introduction>
+        <exercise workspace="1 in">
+          <statement>
+            For each question in the survey, determine whether the data is qualitative or quantitative.
+          </statement>
+          <solution>
+            <p>What is your gender? - Qualitative</p>
+            <p>How old are you? - Quantitative</p>
+            <p>How many credits are you taking this semester? - Quantitative</p>
+            <p>What is your usual mode of transportation to chapel? - Qualtitative</p>
+            <p>Give your height in inches. - Quantitative</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Frequency Tables and Graphs of Qualitative Data</title>
+        <exercise workspace="3.5in">
+          <statement>
+            For one of the sets of qualitative data, make a frequency table using a spreadsheet. Use your table to make a pie chart and a bar chart. Write a sentence or two about any patterns or observations you make from the graph.
+          </statement>
+        </exercise>
+        <exercise workspace="4.25in">
+          <statement>
+            For the credit hour data, make a histogram. Write a sentence or two about any patterns or observations you make from the graph. Label and title your graph.
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Bad plots</title>
+        <introduction>
+          What is wrong with these graphs?
+        </introduction>
+        <exercise workspace="2in">
+          <statement>
+            Ticket Prices
+            <sidebyside>
+              <image width="50%" source="statistics/3_2/ticket-prices.jpg">
+              <description>Picture of baseball vs basketball prices</description>
+              </image>
+            </sidebyside>
+          </statement>
+          <solution>
+            There is a visual distortion because instead of using bars, the balls increase in height and width. The baseball ticket is twice as much, but the area appears to be 4-8 times as much.
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercise workspace="2in">
+        <statement>
+          Percentage of Victories
+          <sidebyside>
+            <image width="15%" source="statistics/3_2/percents.jpg">
+            <description>Zoomed in picture of yankees vs red sox victory percentages</description>
+            </image>
+          </sidebyside>
+        </statement>
+        <solution>
+          Not starting at zero can make differences look larger. The difference between 42% and 53% is not that large. The scale should start at zero
+        </solution>
+      </exercise>
+    </page>
+  </worksheet>
+</section>

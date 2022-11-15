@@ -218,7 +218,7 @@
       Maria’s gross income includes her wages, tips, and earned interest.
     </p>
     <p>
-      Gross Income = $32,400 + $8,300 + $95 = $40,795 
+      Gross Income = $32,400 + $8,300 + $95 = $40,795
     </p>
     <p>
       Maria can use her 401k contribution as an adjustment.
@@ -227,10 +227,10 @@
       Adjusted Gross Income = $40,795 - $3,500 = $37,295
     </p>
     <p>
-      Since Maria is unmarried and is the primary caregiver for her daughter, she can file as the head of household and take the standard deduction of $18,000. 
+      Since Maria is unmarried and is the primary caregiver for her daughter, she can file as the head of household and take the standard deduction of $19,400.
     </p>
     <p>
-      Taxable Income = $37,295 - $18,000 = $19,295
+      Taxable Income = $37,295 - $19,400 = $17,895
     </p>
   </solution>
   </example>
@@ -922,7 +922,7 @@
   </solution>
 </exercise>
 
-<!--TODO Adjust solutions from 2018 to 2022 numbers-->
+
 
 <exercise>
   <statement>
@@ -985,57 +985,57 @@
       <ul>
         <li>
           <p>
-            Francis: Taxable Income <m>35000-7000-12000 = \$16,000</m>
+            Francis: Taxable Income <m>35000-7000-12950 = \$15,050</m>
           </p>
         </li>
         <li>
           <p>
-            Tax from Table: <m> 952.5+0.12*(16000-9525) = \$1,729.50</m> 
+            Tax from Table: <m> 1027.5+0.12*(15050-10275) = \$1,600.50</m> 
           </p>
         </li>
         <li>
           <p>
-            Owed/Refund: <m>1729.50 – 14000-4000 = -\$16,270.50</m>
+            Owed/Refund: <m>1600.50 – 14000-4000 = -\$16,399.50</m>
           </p>
         </li>
       </ul>
       <ul>
         <li>
           <p>
-            Edward: Taxable Income <m> 40000-3000-12000 = \$25,000</m>
+            Edward: Taxable Income <m> 40000-3000-12950 = \$24,050</m>
           </p>
         </li>
         <li>
           <p>
-            Tax from Table: <m>952.50+0.12*(25000-9525) = \$2,809.50</m> 
+            Tax from Table: <m>1027.5+0.12*(24050-10275) = \$2,680.50</m> 
           </p>
         </li>
         <li>
           <p>
-            Owed/Refund: <m> 2809.50 -5500-5000 = -\$7,690.50</m>
+            Owed/Refund: <m> 2680.50 -5500-5000 = -\$7,819.50</m>
           </p>
         </li>
       </ul>
     </p>
     <p>
-      Altogether, they will get a <m>16270.50+7690.50 = \$23,961</m> refund. 
+      Altogether, they will get a <m>16399.50+7819.50 = \$24,219</m> refund.
     </p>
     <p>
       MARRIED CASE:
       <ul>
         <li>
           <p>
-            Taxable income: <m>(35000+40000) – (7000+3000) – 24000 = \$41,000</m> 
+            Taxable income: <m>(35000+40000) – (7000+3000) – 25900 = \$39,100</m>
           </p>
         </li>
         <li>
           <p>
-            Tax from Table: <m>1905 + 0.12*(41000-19050) = \$4,539</m> 
+            Tax from Table: <m>2055 + 0.12*(39100-20550) = \$4,281</m>
           </p>
         </li>
         <li>
           <p>
-            Owed/Refund: <m>4539 – (14000 + 5500) – (4000+5000) = -\$23,961</m>
+            Owed/Refund: <m>4281 – (14000 + 5500) – (4000+5000) = -\$24,219</m>
           </p>
         </li>
       </ul>
@@ -1049,7 +1049,7 @@
 <exercise>
   <statement>
   <p>
-    Janice is unmarried and has two kids. She earned $76,000 in wages last year, received $750 in interest from a savings account, and contributed $25,000 to a tax deferred savings account. Her itemized deductions are $19,600.
+    Janice is unmarried and has two kids. She earned $76,000 in wages last year, received $750 in interest from a savings account, and contributed $25,000 to a tax deferred savings account. Her itemized deductions are $20,600.
   </p>
   <p>
   <ol label="a.">
@@ -1101,15 +1101,15 @@
       </li>
       <li>
         <p>
-          Taxable Income: <m> 51750-19600 = \$32,150 </m>
+          Taxable Income: <m> 51750-20600 = \$31,150 </m>
         </p>
       </li>
       <li>
         <p>
-          Tax from Table: <m>1360+0.12*(32150-13600) = \$3,586</m>. Owed/Refund: <m> 3586 – 4200 – 6300 = - \$6,914</m>
+          Tax from Table: <m>1465+0.12*(31150-14650) = \$3,445</m>. Owed/Refund: <m> 3445 – 4200 – 6300 = - \$7,055</m>
         </p>
         <p>
-          Janice will receive a refund for $6,914.
+          Janice will receive a refund for $7,055.
         </p>
       </li>
     </ol>
