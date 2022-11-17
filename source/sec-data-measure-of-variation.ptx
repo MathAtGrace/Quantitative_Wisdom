@@ -34,12 +34,14 @@
     </ul>
 </objectives>
 
+<!--
 <introduction>
   <figure>
       <caption>Alternative Video Lessons</caption>
       <video youtubeplaylist="PLsFUxEAXGFKTa_hnRZrtND9kCMz0g-8c6" />
     </figure>
 </introduction>
+-->
 
 <subsection>
   <title>Measures of Variation</title>
@@ -137,7 +139,7 @@
       </row>
       <row>
         <cell>10</cell>
-        <cell><m>5-5=0</m></cell>
+        <cell><m>10-5=5</m></cell>
       </row>
     </tabular>
   </sidebyside>
