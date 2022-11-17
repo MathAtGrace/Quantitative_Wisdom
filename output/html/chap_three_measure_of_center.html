@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-11-15T16:30:40-05:00       *-->
+<!--*       on 2022-11-15T18:22:29-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -23,7 +23,7 @@
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
@@ -36,35 +36,6 @@
   loader: {
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
-  },
-/* support for the sfrac command in MathJax (Beveled fraction) */
-  startup: {
-    ready() {
-      //
-      // Creating a simple "sfrac" package on-the-fly
-      //
-      const Configuration = MathJax._.input.tex.Configuration.Configuration;
-      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
-      
-      new CommandMap('sfrac', {
-        sfrac: 'SFrac'
-        }, {
-        SFrac(parser, name) {
-        const num = parser.ParseArg(name);
-        const den = parser.ParseArg(name);
-        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
-        parser.Push(frac);
-        }
-      });
-      //
-      // Create the package for the overridden macros
-      //
-      Configuration.create('sfrac', {
-        handler: {macro: ['sfrac']}
-      });
-      
-    MathJax.startup.defaultReady();
-    }
   },
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -112,11 +83,11 @@ var ggbApp = new GGBApplet({"appName": "graphing",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ws-data-overview-describing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap_three_measure_of_variation.html" title="Next">Next</a></span>
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="statistics.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-data-measure-of-variation.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ws-data-overview-describing.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap_three_measure_of_variation.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="statistics.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="statistics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-data-measure-of-variation.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -130,58 +101,10 @@ true);
 </ul>
 </li>
 <li class="link">
-<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
-<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
-<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
-<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
-<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
-<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
-<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
-<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
-<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
-<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
-<li><a href="sec_numbers_percentages.html" data-scroll="sec_numbers_percentages" class="internal">Percentages</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
-<li><a href="sec-finance-intro-spreadsheet.html" data-scroll="sec-finance-intro-spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
-<li><a href="sec-finance-simple-compound.html" data-scroll="sec-finance-simple-compound" class="internal">Simple and Compound Interest</a></li>
-<li><a href="ws-finance-spreadsheets-and-interest.html" data-scroll="ws-finance-spreadsheets-and-interest" class="internal">Worksheets for Spreadsheets and Interest</a></li>
-<li><a href="sec-finance-savings-plan.html" data-scroll="sec-finance-savings-plan" class="internal">Savings Plans</a></li>
-<li><a href="sec-finance-loans.html" data-scroll="sec-finance-loans" class="internal">Loan Payments</a></li>
-<li><a href="ws-finance-savings-loans.html" data-scroll="ws-finance-savings-loans" class="internal">Worksheets Savings and Loans</a></li>
-<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
-<li><a href="sec-taxes.html" data-scroll="sec-taxes" class="internal">Income Tax Worksheet</a></li>
-<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
-<li><a href="sec-data-statistical-process.html" data-scroll="sec-data-statistical-process" class="internal">Overview of the Statistical Process</a></li>
-<li><a href="sec-data-describing-data.html" data-scroll="sec-data-describing-data" class="internal">Describing Data</a></li>
-<li><a href="ws-data-overview-describing.html" data-scroll="ws-data-overview-describing" class="internal">Worksheets Statistical Process and Describing Data</a></li>
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">1</span> <span class="title">Data</span></a><ul>
 <li><a href="chap_three_measure_of_center.html" data-scroll="chap_three_measure_of_center" class="active">Summary Statistics: Measures of Center</a></li>
-<li><a href="chap_three_measure_of_variation.html" data-scroll="chap_three_measure_of_variation" class="internal">Summary Statistics: Measures of Variation</a></li>
-<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
-<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="internal">The Normal Distribution</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
-</li>
-<li class="link">
-<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
-<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
-<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
-<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
-<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
-<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
-<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+<li><a href="sec-data-measure-of-variation.html" data-scroll="sec-data-measure-of-variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="ws-data-summary-stats.html" data-scroll="ws-data-summary-stats" class="internal">Worksheet Measures of Central Tendancy and Variation</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
@@ -194,61 +117,61 @@ true);
 </div></div>
 <main class="main"><div id="content" class="pretext-content">
 <section class="section" id="chap_three_measure_of_center"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">Summary Statistics: Measures of Center</span>
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Summary Statistics: Measures of Center</span>
 </h2>
-<article class="objectives goal-like" id="objectives-19"><h3 class="heading">
-<span class="type">Objectives:</span><span class="space"> </span><span class="title">Section 4.4 Summary Statistics: Measures of Center</span>
+<article class="objectives goal-like" id="objectives-1"><h3 class="heading">
+<span class="type">Objectives:</span><span class="space"> </span><span class="title">Section 1.1 Summary Statistics: Measures of Center</span>
 </h3>
-<div class="introduction" id="introduction-73"><p id="p-2187">Students will be able to:</p></div>
+<div class="introduction" id="introduction-2"><p id="p-12">Students will be able to:</p></div>
 <ul class="disc">
-<li id="li-853"><p id="p-2188">Calculate and describe the measures of center: mean and median</p></li>
-<li id="li-854"><p id="p-2189">Analyze the relationship of the mean and median to the shape of the data</p></li>
-</ul></article><section class="introduction" id="introduction-74"><figure class="figure figure-like" id="figure-13"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-8" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JULa2MWipO0?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span>Alternative Video Lesson</figcaption></figure></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.1</span> <span class="title">Calculating Summary Statistics</span>
+<li id="li-1"><p id="p-13">Calculate and describe the measures of center: mean and median</p></li>
+<li id="li-2"><p id="p-14">Analyze the relationship of the mean and median to the shape of the data</p></li>
+</ul></article><section class="introduction" id="introduction-3"><figure class="figure figure-like" id="figure-1"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-1" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/JULa2MWipO0?&amp;modestbranding=1&amp;rel=0"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span>Alternative Video Lesson</figcaption></figure></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Calculating Summary Statistics</span>
 </h3>
-<p id="p-2190">In addition to graphical and verbal descriptions, we can use numbers to summarize quantitative distributions. We want to know what an “average” value is (where the data is centered), and how spread out the values are. Together, the center and spread provide important information which can be used to estimate our population parameters. In this section we will discuss the measures of center and in the next section we will discuss the measures of spread.</p></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.2</span> <span class="title">Measures of Center</span>
+<p id="p-15">In addition to graphical and verbal descriptions, we can use numbers to summarize quantitative distributions. We want to know what an “average” value is (where the data is centered), and how spread out the values are. Together, the center and spread provide important information which can be used to estimate our population parameters. In this section we will discuss the measures of center and in the next section we will discuss the measures of spread.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Measures of Center</span>
 </h3>
-<p id="p-2191">There are a few different types of “averages” that measure the center, and the one we use will depend on the shape of the distribution. We will mention the mode but focus mainly on the two most common “averages”: the <em class="alert">mean</em> and the <em class="alert">median</em>.</p></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.3</span> <span class="title">Mode</span>
+<p id="p-16">There are a few different types of “averages” that measure the center, and the one we use will depend on the shape of the distribution. We will mention the mode but focus mainly on the two most common “averages”: the <em class="alert">mean</em> and the <em class="alert">median</em>.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.3</span> <span class="title">Mode</span>
 </h3>
-<p id="p-2192">In the previous section, we saw that the modes are related to the peaks where similar values are grouped. The mode is the value with the highest frequency (A mode is the value where a peak occurs. One additional way to calculate the mode(s) is to take the midpoint of each peak in the histogram.)</p></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.4</span> <span class="title">Mean</span>
+<p id="p-17">In the previous section, we saw that the modes are related to the peaks where similar values are grouped. The mode is the value with the highest frequency (A mode is the value where a peak occurs. One additional way to calculate the mode(s) is to take the midpoint of each peak in the histogram.)</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">Mean</span>
 </h3>
-<p id="p-2193">The <em class="alert">mean</em>, or more formally the arithmetic mean, is what probably comes to mind when you hear the word average. The calculation of the mean uses every data value in the distribution and is therefore strongly affected by skew and outliers.</p>
-<p id="p-2194">To calculate the mean of a distribution, we divide the sum of the data values by the number of data values we have. The sample mean is usually represented by, a lower-case with a bar over it, read-bar. The lower-case letter n is used to represent the number of data values or <em class="alert">sample size</em>.</p>
-<article class="assemblage assemblage-like" id="assemblage-19"><h4 class="heading"><span class="title">Mean.</span></h4>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-2195">
+<p id="p-18">The <em class="alert">mean</em>, or more formally the arithmetic mean, is what probably comes to mind when you hear the word average. The calculation of the mean uses every data value in the distribution and is therefore strongly affected by skew and outliers.</p>
+<p id="p-19">To calculate the mean of a distribution, we divide the sum of the data values by the number of data values we have. The sample mean is usually represented by, a lower-case with a bar over it, read-bar. The lower-case letter n is used to represent the number of data values or <em class="alert">sample size</em>.</p>
+<article class="assemblage assemblage-like" id="assemblage-1"><h4 class="heading"><span class="title">Mean.</span></h4>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-20">
 \begin{equation*}
 \bar{x}=\frac{\text{sum of data values}}{n}
 \end{equation*}
-</div></article><article class="example example-like" id="example-76"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+</div></article><article class="example example-like" id="example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
 </h4>
-<p id="p-2196">Mirabel’s exam scores for her last math class were: 79, 86, 82, 94. What is her mean test score?</p>
+<p id="p-21">Mirabel’s exam scores for her last math class were: 79, 86, 82, 94. What is her mean test score?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-276" id="solution-276"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-276"><div class="solution solution-like">
-<p id="p-2197">To find the mean test score we need to find the sum of her test scores, then divide the sum by the number of test scores (<span class="process-math">\(n=4\)</span>). The mean is:</p>
-<p id="p-2198"><span class="process-math">\(\bar{x}=\frac{79+86+82+94}{4}=85.25\)</span> points</p>
-<p id="p-2199">We will round the sample mean to one more decimal place than the original data. In this case, we would round 85.25 to 85.3 points. Also notice that the mean has the same units as the data and it is important to label it.</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-22">To find the mean test score we need to find the sum of her test scores, then divide the sum by the number of test scores (<span class="process-math">\(n=4\)</span>). The mean is:</p>
+<p id="p-23"><span class="process-math">\(\bar{x}=\frac{79+86+82+94}{4}=85.25\)</span> points</p>
+<p id="p-24">We will round the sample mean to one more decimal place than the original data. In this case, we would round 85.25 to 85.3 points. Also notice that the mean has the same units as the data and it is important to label it.</p>
 </div></div>
-</div></article><p id="p-2200">It is reasonable to calculate the mean by hand when the data set is small, but if the data set is large, or if you will be finding additional statistics, then technology is the way to go. We can find the mean of a data set using the spreadsheet formula <code class="code-inline tex2jax_ignore">=AVERAGE</code>.</p>
-<article class="example example-like" id="example-77"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span>
+</div></article><p id="p-25">It is reasonable to calculate the mean by hand when the data set is small, but if the data set is large, or if you will be finding additional statistics, then technology is the way to go. We can find the mean of a data set using the spreadsheet formula <code class="code-inline tex2jax_ignore">=AVERAGE</code>.</p>
+<article class="example example-like" id="example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-2201">The price of peanut butter at 5 stores was $3.29, $3.59, $3.79, $3.75, and $3.99. Find the mean price using a spreadsheet. There are two ways to use the <code class="code-inline tex2jax_ignore">=AVERAGE</code> formula. If your data set is not too large, you can enter each value directly into the formula. Using this method, we write</p>
-<pre class="code-display tex2jax_ignore" id="p-2202">=AVERAGE(3.29 3.59, 3.79, 3.75, 3.99)</pre>
+<p id="p-26">The price of peanut butter at 5 stores was $3.29, $3.59, $3.79, $3.75, and $3.99. Find the mean price using a spreadsheet. There are two ways to use the <code class="code-inline tex2jax_ignore">=AVERAGE</code> formula. If your data set is not too large, you can enter each value directly into the formula. Using this method, we write</p>
+<pre class="code-display tex2jax_ignore" id="p-27">=AVERAGE(3.29 3.59, 3.79, 3.75, 3.99)</pre>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/mean1.png" class="contained" alt="A screenshot of Excel showing the =AVERAGE formula typed in with the values."></div></div></div>
-<p id="p-2203">and we get an answer of $3.68.</p>
-<p id="p-2204">The other method is to enter the data values into a single column (or row) of the spreadsheet and reference the column (or row) range in the formula. We can enter the range by highlighting the data values. As illustrated below, if we enter the data into column A, the formula is</p>
-<pre class="code-display tex2jax_ignore" id="p-2205">=AVERAGE(A1:A5)</pre>
+<p id="p-28">and we get an answer of $3.68.</p>
+<p id="p-29">The other method is to enter the data values into a single column (or row) of the spreadsheet and reference the column (or row) range in the formula. We can enter the range by highlighting the data values. As illustrated below, if we enter the data into column A, the formula is</p>
+<pre class="code-display tex2jax_ignore" id="p-30">=AVERAGE(A1:A5)</pre>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/mean2.png" class="contained" alt="A screenshot of Excel showing the =AVERAGE formula typed in with the cell references. The data is in column A"></div></div></div>
-<p id="p-2206">and we also get an answer of $3.68.</p></article><p id="p-2207">Sometimes when there is a lot of data with repeated values we are given a frequency table.</p>
-<article class="example example-like" id="example-78"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span>
+<p id="p-31">and we also get an answer of $3.68.</p></article><p id="p-32">Sometimes when there is a lot of data with repeated values we are given a frequency table.</p>
+<article class="example example-like" id="example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h4>
-<p id="p-2208">One hundred families from a particular neighborhood are randomly selected and asked to give their annual household income rounded to the nearest $5,000. The results are shown in the frequency table below.</p>
+<p id="p-33">One hundred families from a particular neighborhood are randomly selected and asked to give their annual household income rounded to the nearest $5,000. The results are shown in the frequency table below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r1 l1 t1 lines">Income<br>(thousands of dollars)</th>
@@ -287,152 +210,152 @@ true);
 <td class="c m b1 r1 l0 t0 lines">7</td>
 </tr>
 </table></div></div></div>
-<p id="p-2209">Calculating the mean by hand could get tedious if we try to type in all 100 values:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-74">
+<p id="p-34">Calculating the mean by hand could get tedious if we try to type in all 100 values:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-1">
 \begin{gather*}
 \bar{x}=\frac{\overbrace{15+ \cdot + 15}^{6 \text{ terms}} + \overbrace{20+ \cdot + 20}^{8 \text{ terms}} + \overbrace{25 + \cdot + 25}^{11 \text{ terms}} + \cdot}{100}
 \end{gather*}
 </div>
-<p id="p-2211">We could calculate this more easily by noticing that adding 15 to itself six times is the same as <span class="process-math">\((15)(6)=90\text{.}\)</span> Using this simplification, we get</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-75">
+<p id="p-36">We could calculate this more easily by noticing that adding 15 to itself six times is the same as <span class="process-math">\((15)(6)=90\text{.}\)</span> Using this simplification, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-2">
 \begin{align*}
 \bar{x}\amp=\frac{(15)(6)+(20)(8)+(25)(11)+(30)(17)+(35)(19)+(40)(20)+(45)(21)+(50)(7)}{100}\\
 \amp=\frac{3390}{100}\\
 \amp=33.9
 \end{align*}
 </div>
-<p id="p-2213">The mean household income of our sample is 33.9 thousand dollars or $33,900.</p></article><p id="p-2214">We could also use <code class="code-inline tex2jax_ignore">=AVERAGE</code> to find the mean for this example, but it would require entering each repeated value individually. If the mean is all we need, then taking advantage of multiplication as repeated addition is the more straightforward way to go. We could also enter the frequency table and the calculation above in a spreadsheet.</p>
-<article class="example example-like" id="example-79"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span>
+<p id="p-38">The mean household income of our sample is 33.9 thousand dollars or $33,900.</p></article><p id="p-39">We could also use <code class="code-inline tex2jax_ignore">=AVERAGE</code> to find the mean for this example, but it would require entering each repeated value individually. If the mean is all we need, then taking advantage of multiplication as repeated addition is the more straightforward way to go. We could also enter the frequency table and the calculation above in a spreadsheet.</p>
+<article class="example example-like" id="example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h4>
-<p id="p-2215">Extending the last example, suppose a new family moves into the neighborhood and has a household income of $5 million ($5000 thousand). Adding this to our sample, our mean becomes:</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-76">
+<p id="p-40">Extending the last example, suppose a new family moves into the neighborhood and has a household income of $5 million ($5000 thousand). Adding this to our sample, our mean becomes:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
 \begin{align*}
 \bar{x}\amp=\frac{(15)(6)+(20)(8)+(25)(11)+(30)(17)+(35)(19)+(40)(20)+(45)(12)+(50)(7)+(5000)(1)}{100}\\
 \amp=\frac{8390}{101}\\
 \amp=83.069
 \end{align*}
 </div>
-<p id="p-2217">While 83.1 thousand dollars, or $83,100 is the correct mean household income for the new sample, it is no longer representative of the neighborhood – in fact, it is greater than every income in the sample aside from the new one we added!</p></article><p id="p-2218">Imagine the data values on a see-saw or balance scale. The mean is the value at the tip of the triangle that keeps the data in balance, like in the picture below.</p>
+<p id="p-42">While 83.1 thousand dollars, or $83,100 is the correct mean household income for the new sample, it is no longer representative of the neighborhood – in fact, it is greater than every income in the sample aside from the new one we added!</p></article><p id="p-43">Imagine the data values on a see-saw or balance scale. The mean is the value at the tip of the triangle that keeps the data in balance, like in the picture below.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/mean3.png" class="contained" alt="A drawing of a see-saw with rectangles to indicate the data values. Most of the data values are to the left of the fulcrum; the two values to the right are spread out which causes the data to be balanced."></div></div></div>
-<p id="p-2219">If we graph our household data, the $5 million value is so far out to the right that the mean has to adjust to keep things in balance.</p>
+<p id="p-44">If we graph our household data, the $5 million value is so far out to the right that the mean has to adjust to keep things in balance.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/mean4.png" class="contained" alt="With the outlier data value added, the see-saw is extended with that value far to the right. Now all of the original data values are to the left of the fulcrum."></div></div></div>
-<p id="p-2220">For this reason, when working with data that is skewed or has outliers, it is common to use a different measure of center, the median.</p></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.5</span> <span class="title">Median</span>
+<p id="p-45">For this reason, when working with data that is skewed or has outliers, it is common to use a different measure of center, the median.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.5</span> <span class="title">Median</span>
 </h3>
-<p id="p-2221">The <em class="alert">median</em> of a data set is the “middle” value, when the data are listed in order from smallest to largest. We can also think of the median as the value that has 50% of the data below it and 50% of data above it. As we will discover later, the median is also the <em class="alert">50th percentile</em>.</p>
-<article class="assemblage assemblage-like" id="assemblage-20"><h4 class="heading"><span class="title">Median.</span></h4>
-<p id="p-2222">If the number of data values is odd, then the median is the middle data value If the number of data values is even, then the median is the mean of the middle pair</p></article><article class="example example-like" id="example-80"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.6</span><span class="period">.</span>
+<p id="p-46">The <em class="alert">median</em> of a data set is the “middle” value, when the data are listed in order from smallest to largest. We can also think of the median as the value that has 50% of the data below it and 50% of data above it. As we will discover later, the median is also the <em class="alert">50th percentile</em>.</p>
+<article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Median.</span></h4>
+<p id="p-47">If the number of data values is odd, then the median is the middle data value If the number of data values is even, then the median is the mean of the middle pair</p></article><article class="example example-like" id="example-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
 </h4>
-<p id="p-2223">When finding the median of an odd number of values.</p>
-<p id="p-2224">Use the following quiz scores: 5, 10, 8, 6, 4, 8, 2, 5, 7, 7, 6</p>
-<p id="p-2225">We must start by listing the data in order: 2, 4, 5, 5, 6, 6, 7, 7, 8, 8, 10.</p>
-<p id="p-2226">It is helpful to mark or cross off the numbers as you list them to make sure you don’t miss any. Also, be sure to count the number of data values in your ordered list to make sure it matches the number of data values in the original list.</p>
-<p id="p-2227">In this example there are 11 quiz scores. When the distribution contains an odd number of data values there will be a single number in the middle and that is the median. For small data sets, we can “walk” one value at a time from the ends of the ordered list towards the center to find the median</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-77">
+<p id="p-48">When finding the median of an odd number of values.</p>
+<p id="p-49">Use the following quiz scores: 5, 10, 8, 6, 4, 8, 2, 5, 7, 7, 6</p>
+<p id="p-50">We must start by listing the data in order: 2, 4, 5, 5, 6, 6, 7, 7, 8, 8, 10.</p>
+<p id="p-51">It is helpful to mark or cross off the numbers as you list them to make sure you don’t miss any. Also, be sure to count the number of data values in your ordered list to make sure it matches the number of data values in the original list.</p>
+<p id="p-52">In this example there are 11 quiz scores. When the distribution contains an odd number of data values there will be a single number in the middle and that is the median. For small data sets, we can “walk” one value at a time from the ends of the ordered list towards the center to find the median</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
 \begin{gather*}
 \overbrace{2,4,5,5,6}^{\text{Lower Half}} \overbrace{6}^{\text{Median}} \overbrace{7,7,8,8,10}^{\text{Upper Half}}
 \end{gather*}
 </div>
-<p id="p-2229">The median test score is 6 points.</p></article><article class="example example-like" id="example-81"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.7</span><span class="period">.</span>
+<p id="p-54">The median test score is 6 points.</p></article><article class="example example-like" id="example-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
 </h4>
-<p id="p-2230">When finding the median of an even number of values.</p>
-<p id="p-2231">Use the following quiz scores: 2, 4, 5, 5, 6, 6, 7, 7, 8, 8, 10, 20.</p>
-<p id="p-2232">There are now 12 quiz scores in our sample. When the distribution contains an even number of data values there will be a pair of values in the middle rather than a single value. Then we take the average of the middle two values.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-78">
+<p id="p-55">When finding the median of an even number of values.</p>
+<p id="p-56">Use the following quiz scores: 2, 4, 5, 5, 6, 6, 7, 7, 8, 8, 10, 20.</p>
+<p id="p-57">There are now 12 quiz scores in our sample. When the distribution contains an even number of data values there will be a pair of values in the middle rather than a single value. Then we take the average of the middle two values.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
 \begin{gather*}
 \overbrace{2,4,5,5,6}^{\text{Lower Half}} \overbrace{6, 7}^{\text{Middle Pair}} \overbrace{7,8,8,10,20}^{\text{Upper Half}}
 \end{gather*}
 </div>
-<p id="p-2234">Median<span class="process-math">\(=\frac{6+7}{2}=6.5\)</span> points</p>
-<p id="p-2235">What is important to notice is that despite adding an outlier to our data set, the median is largely unaffected. The median quiz score for the new distribution is 6.5 points.</p>
-<p id="p-2236">We can also find the median using the spreadsheet formula <code class="code-inline tex2jax_ignore">=MEDIAN</code>. Just like the spreadsheet function <code class="code-inline tex2jax_ignore">=AVERAGE</code>, we can either list the individual data values in the formula, or we can enter the data values into a row (or column) and use the row range (or column range) in the formula.</p>
-<p id="p-2237">Using the data values of the original distribution, we can write function as</p>
-<pre class="code-display tex2jax_ignore" id="p-2238">=MEDIAN(2, 4, 5, 6, 6, 7, 7, 8, 8, 10)</pre>
+<p id="p-59">Median<span class="process-math">\(=\frac{6+7}{2}=6.5\)</span> points</p>
+<p id="p-60">What is important to notice is that despite adding an outlier to our data set, the median is largely unaffected. The median quiz score for the new distribution is 6.5 points.</p>
+<p id="p-61">We can also find the median using the spreadsheet formula <code class="code-inline tex2jax_ignore">=MEDIAN</code>. Just like the spreadsheet function <code class="code-inline tex2jax_ignore">=AVERAGE</code>, we can either list the individual data values in the formula, or we can enter the data values into a row (or column) and use the row range (or column range) in the formula.</p>
+<p id="p-62">Using the data values of the original distribution, we can write function as</p>
+<pre class="code-display tex2jax_ignore" id="p-63">=MEDIAN(2, 4, 5, 6, 6, 7, 7, 8, 8, 10)</pre>
 <p class="continuation">or</p>
-<pre class="code-display tex2jax_ignore" id="p-2239">=MEDIAN(A1:AK)</pre>
+<pre class="code-display tex2jax_ignore" id="p-64">=MEDIAN(A1:AK)</pre>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/median1.png" class="contained" alt="A screenshot of Excel showing the =MEDIAN formula typed in with the cell references. The data is in row 1"></div></div></div>
-<p id="p-2240">and we get 6 points for the median test score.</p></article><article class="example example-like" id="example-82"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.8</span><span class="period">.</span>
+<p id="p-65">and we get 6 points for the median test score.</p></article><article class="example example-like" id="example-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
 </h4>
-<p id="p-2241">Let’s continue with our peanut butter example and find the median both by hand and with a spreadsheet. The price of peanut butter at 5 stores was $3.29, $3.59, $3.79, $3.75, and $3.99.</p>
-<p id="p-2242">To find the median by hand, we must first list the prices in order. This give us: $3.29, $3.59, $3.75, $3.79, $3.99</p>
-<p id="p-2243">Since there are an odd number of data values in the sample (<span class="process-math">\(n=5\)</span>), we know that the median will be the single data value in the middle of the ordered list.</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="md-79">
+<p id="p-66">Let’s continue with our peanut butter example and find the median both by hand and with a spreadsheet. The price of peanut butter at 5 stores was $3.29, $3.59, $3.79, $3.75, and $3.99.</p>
+<p id="p-67">To find the median by hand, we must first list the prices in order. This give us: $3.29, $3.59, $3.75, $3.79, $3.99</p>
+<p id="p-68">Since there are an odd number of data values in the sample (<span class="process-math">\(n=5\)</span>), we know that the median will be the single data value in the middle of the ordered list.</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{gather*}
 \overbrace{3.29, 3.59}^{\text{Lower Half}} \overbrace{3.75}^{\text{Median}} \overbrace{3.79, 3.99}^{\text{Upper Half}}
 \end{gather*}
 </div>
-<p id="p-2245">The median price of peanut butter at these five stores is $3.75.</p>
-<p id="p-2246">Using a spreadsheet, we write</p>
-<pre class="code-display tex2jax_ignore" id="p-2247">=MEDIAN(3.29, 3.59, 3.79, 3.75, 3.99)</pre>
+<p id="p-70">The median price of peanut butter at these five stores is $3.75.</p>
+<p id="p-71">Using a spreadsheet, we write</p>
+<pre class="code-display tex2jax_ignore" id="p-72">=MEDIAN(3.29, 3.59, 3.79, 3.75, 3.99)</pre>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_3/median2.png" class="contained" alt="A screenshot of Excel showing the =MEDIAN formula with all the data values typed in."></div></div></div>
-<p id="p-2248">and we get a median price of $3.75.</p></article><p id="p-2249">It is worth noting that when you use a spreadsheet to find the median you do not have to order the data first. You can enter the data values in the order they are given to you.</p></section><section class="subsection" id="subsection-99"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">4.4.6</span> <span class="title">The Relationship Between the Mean and the Median</span>
+<p id="p-73">and we get a median price of $3.75.</p></article><p id="p-74">It is worth noting that when you use a spreadsheet to find the median you do not have to order the data first. You can enter the data values in the order they are given to you.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.6</span> <span class="title">The Relationship Between the Mean and the Median</span>
 </h3>
-<p id="p-2250">If a distribution is skewed, the mean is pulled in the direction of the skew, as we saw in the see-saw diagram. In a right skewed distribution, the mean is greater than the median, while in a left skewed distribution, the mean is less than the median. If the distribution is symmetric, the mean and the median will be approximately equal.</p>
-<p id="p-2251">To demonstrate this, we have entered some data in GeoGebra, as previously explained, and made histograms. To see the statistics that GeoGebra calculates, we click on the summation symbol <span class="process-math">\((\sum x)\)</span> on the right-hand menu bar.</p>
-<article class="example example-like" id="example-83"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.9</span><span class="period">.</span>
+<p id="p-75">If a distribution is skewed, the mean is pulled in the direction of the skew, as we saw in the see-saw diagram. In a right skewed distribution, the mean is greater than the median, while in a left skewed distribution, the mean is less than the median. If the distribution is symmetric, the mean and the median will be approximately equal.</p>
+<p id="p-76">To demonstrate this, we have entered some data in GeoGebra, as previously explained, and made histograms. To see the statistics that GeoGebra calculates, we click on the summation symbol <span class="process-math">\((\sum x)\)</span> on the right-hand menu bar.</p>
+<article class="example example-like" id="example-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
 </h4>
-<p id="p-2252">Fifty people from the Portland Metro area who are employed full time were sampled and their annual salaries were recorded (to the nearest thousand dollars). The histogram and summary statistics from GeoGebra are shown below.</p>
-<p id="p-2253">From the histogram we can see that the shape of the distribution is unimodal and skewed to the right. We can see from the statistics output on the left that the mean is greater than the median. This is because the few people with higher incomes bring the average up.</p>
-<figure class="figure figure-like" id="figure-14"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median1.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is skewed to the right. The statistics output shows the mean is $67,160 and the Median is $53,500."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.10<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=\$67,160\text{,}\)</span> Median <span class="process-math">\(=\$53,500\text{,}\)</span> Mean <span class="process-math">\(\gt\)</span> Median</figcaption></figure></article><article class="example example-like" id="example-84"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.11</span><span class="period">.</span>
+<p id="p-77">Fifty people from the Portland Metro area who are employed full time were sampled and their annual salaries were recorded (to the nearest thousand dollars). The histogram and summary statistics from GeoGebra are shown below.</p>
+<p id="p-78">From the histogram we can see that the shape of the distribution is unimodal and skewed to the right. We can see from the statistics output on the left that the mean is greater than the median. This is because the few people with higher incomes bring the average up.</p>
+<figure class="figure figure-like" id="figure-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median1.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is skewed to the right. The statistics output shows the mean is $67,160 and the Median is $53,500."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.10<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=\$67,160\text{,}\)</span> Median <span class="process-math">\(=\$53,500\text{,}\)</span> Mean <span class="process-math">\(\gt\)</span> Median</figcaption></figure></article><article class="example example-like" id="example-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
 </h4>
-<p id="p-2254">A random selection of 30 math 105 exams at PCC were sampled and their scores were recorded. The histogram of the resulting distribution is shown below.</p>
-<p id="p-2255">The shape of the distribution is unimodal and skewed to the left. There also appears to be an outlier between 20 and 30. We can see from the statistics output that the mean is less than the median. This is because the low test score brought the average down. points points</p>
-<figure class="figure figure-like" id="figure-15"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median2.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is skewed to the left. The statistics output shows the mean is 81.7 points and the Median is 87.5 points."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.12<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=81.7\)</span> points, Median <span class="process-math">\(=87.5\)</span> points, Mean <span class="process-math">\(\lt\)</span> Median</figcaption></figure></article><article class="example example-like" id="example-85"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.13</span><span class="period">.</span>
+<p id="p-79">A random selection of 30 math 105 exams at PCC were sampled and their scores were recorded. The histogram of the resulting distribution is shown below.</p>
+<p id="p-80">The shape of the distribution is unimodal and skewed to the left. There also appears to be an outlier between 20 and 30. We can see from the statistics output that the mean is less than the median. This is because the low test score brought the average down. points points</p>
+<figure class="figure figure-like" id="figure-3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median2.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is skewed to the left. The statistics output shows the mean is 81.7 points and the Median is 87.5 points."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.12<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=81.7\)</span> points, Median <span class="process-math">\(=87.5\)</span> points, Mean <span class="process-math">\(\lt\)</span> Median</figcaption></figure></article><article class="example example-like" id="example-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span>
 </h4>
-<p id="p-2256">Nineteen people identifying as female were sampled and their heights (in inches) were recorded. The histogram of the resulting distribution is shown below.</p>
-<p id="p-2257">The shape of the distribution is unimodal and roughly symmetric. We can also see from the statistics output that the mean and the median are approximately equal. inches inches</p>
-<figure class="figure figure-like" id="figure-16"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median3.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is approximately symmetric. The statistics output shows the mean is 62.6 inches and the Median is 62 inches."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.14<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=62.6\)</span> inches, Median <span class="process-math">\(=62\)</span> inches Mean <span class="process-math">\(\approx\)</span> Median</figcaption></figure></article><p id="p-2258">We can use these observations in reverse as well. If we know the mean is greater than the median, then we can expect the distribution to be skewed to the right. If the mean is less than the median, then we can expect the distribution to be skewed to the left. When the mean and the median are approximately equal, the distribution is likely to be symmetric.</p>
-<article class="example example-like" id="example-86"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.15</span><span class="period">.</span>
+<p id="p-81">Nineteen people identifying as female were sampled and their heights (in inches) were recorded. The histogram of the resulting distribution is shown below.</p>
+<p id="p-82">The shape of the distribution is unimodal and roughly symmetric. We can also see from the statistics output that the mean and the median are approximately equal. inches inches</p>
+<figure class="figure figure-like" id="figure-4"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/statistics/3_3/mean_vs_median3.png" class="contained" alt="A screenshot of GeoGebra showing the histogram is approximately symmetric. The statistics output shows the mean is 62.6 inches and the Median is 62 inches."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.14<span class="period">.</span></span><span class="space"> </span>Mean <span class="process-math">\(=62.6\)</span> inches, Median <span class="process-math">\(=62\)</span> inches Mean <span class="process-math">\(\approx\)</span> Median</figcaption></figure></article><p id="p-83">We can use these observations in reverse as well. If we know the mean is greater than the median, then we can expect the distribution to be skewed to the right. If the mean is less than the median, then we can expect the distribution to be skewed to the left. When the mean and the median are approximately equal, the distribution is likely to be symmetric.</p>
+<article class="example example-like" id="example-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.15</span><span class="period">.</span>
 </h4>
-<p id="p-2259">Recent college graduates were asked how much student loan debt they have. The data has a mean of $46,265 and a median of $33,652. Just based on this information, do you expect the distribution to be symmetric, skewed to the left, or skewed to the right?</p>
+<p id="p-84">Recent college graduates were asked how much student loan debt they have. The data has a mean of $46,265 and a median of $33,652. Just based on this information, do you expect the distribution to be symmetric, skewed to the left, or skewed to the right?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-277" id="solution-277"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-277"><div class="solution solution-like"><p id="p-2260">Since the mean is greater than the median, we can expect the distribution to be skewed to the right.</p></div></div>
-</div></article></section><section class="exercises" id="exercises-8"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">4.4.7</span> <span class="title">Exercises</span>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like"><p id="p-85">Since the mean is greater than the median, we can expect the distribution to be skewed to the right.</p></div></div>
+</div></article></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.1.7</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="diners_example"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-2261">A group of diners were asked how much they would pay for a meal. Their responses were: $7.50, $25.00, $10.00, $10.00, $7.50, $8.25, $9.00, $5.00, $15.00, $8.00, $7.25, $7.50, $8.00, $7.00. $12.00.</p>
-<ol id="p-2262" class="lower-alpha">
-<li id="li-855"><p id="p-2263">Find the mean, including units.</p></li>
-<li id="li-856"><p id="p-2264">Find the median, including units.</p></li>
-<li id="li-857"><p id="p-2265">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
+<p id="p-86">A group of diners were asked how much they would pay for a meal. Their responses were: $7.50, $25.00, $10.00, $10.00, $7.50, $8.25, $9.00, $5.00, $15.00, $8.00, $7.25, $7.50, $8.00, $7.00. $12.00.</p>
+<ol id="p-87" class="lower-alpha">
+<li id="li-3"><p id="p-88">Find the mean, including units.</p></li>
+<li id="li-4"><p id="p-89">Find the median, including units.</p></li>
+<li id="li-5"><p id="p-90">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="commercials_example"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-2279">The amount of commercials in an hour of television varies by channel. The total length (in minutes) of all commercials from 8 pm to 9 pm in for some selected broadcast and cable channels on a weekday evening were: 10, 12.75, 7, 9, 9.75, 6.5, 12.5, 12.5, 8.75, 17, 10.5, 2.</p>
-<ol id="p-2280" class="lower-alpha">
-<li id="li-861"><p id="p-2281">Find the mean, inluding units.</p></li>
-<li id="li-862"><p id="p-2282">Find the median, including units.</p></li>
-<li id="li-863"><p id="p-2283">Based on the mean and median, would you expect the distribution to be symmetric, skewed left, or skewed right?</p></li>
+<p id="p-104">The amount of commercials in an hour of television varies by channel. The total length (in minutes) of all commercials from 8 pm to 9 pm in for some selected broadcast and cable channels on a weekday evening were: 10, 12.75, 7, 9, 9.75, 6.5, 12.5, 12.5, 8.75, 17, 10.5, 2.</p>
+<ol id="p-105" class="lower-alpha">
+<li id="li-9"><p id="p-106">Find the mean, inluding units.</p></li>
+<li id="li-10"><p id="p-107">Find the median, including units.</p></li>
+<li id="li-11"><p id="p-108">Based on the mean and median, would you expect the distribution to be symmetric, skewed left, or skewed right?</p></li>
 </ol></article><article class="exercise exercise-like" id="puzzle_example"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-2297">You recorded the time in seconds it took for 8 participants to solve a puzzle. The times were: 15.2, 18.8, 19.3, 19.7, 20.2, 21.8, 22.1, 29.4.</p>
-<ol id="p-2298" class="lower-alpha">
-<li id="li-867"><p id="p-2299">Find the mean, including units.</p></li>
-<li id="li-868"><p id="p-2300">Find the median, including units.</p></li>
-<li id="li-869"><p id="p-2301">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
+<p id="p-122">You recorded the time in seconds it took for 8 participants to solve a puzzle. The times were: 15.2, 18.8, 19.3, 19.7, 20.2, 21.8, 22.1, 29.4.</p>
+<ol id="p-123" class="lower-alpha">
+<li id="li-15"><p id="p-124">Find the mean, including units.</p></li>
+<li id="li-16"><p id="p-125">Find the median, including units.</p></li>
+<li id="li-17"><p id="p-126">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="oreo_example"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-2315">You weigh 9 Oreo cookies, and you find the weights (in grams) are: 3.49, 3.51, 3.51, 3.51, 3.52, 3.54, 3.55, 3.58, 3.61.</p>
-<ol id="p-2316" class="lower-alpha">
-<li id="li-873"><p id="p-2317">Find the mean, including units.</p></li>
-<li id="li-874"><p id="p-2318">Find the median, including units.</p></li>
-<li id="li-875"><p id="p-2319">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
+<p id="p-140">You weigh 9 Oreo cookies, and you find the weights (in grams) are: 3.49, 3.51, 3.51, 3.51, 3.52, 3.54, 3.55, 3.58, 3.61.</p>
+<ol id="p-141" class="lower-alpha">
+<li id="li-21"><p id="p-142">Find the mean, including units.</p></li>
+<li id="li-22"><p id="p-143">Find the median, including units.</p></li>
+<li id="li-23"><p id="p-144">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right? Explain.</p></li>
 </ol></article><article class="exercise exercise-like" id="car_example"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-2333">Use the following table is the cost of purchasing a car at a local dealership.  Some of the cars sold were new and some were used.</p>
-<ol id="p-2334" class="lower-alpha">
-<li id="li-879"><p id="p-2335">Calculate find the mean, including units.</p></li>
-<li id="li-880"><p id="p-2336">Can you figure out how to find the median using the frequency table? See if you can do it without listing out all the data values.</p></li>
-<li id="li-881">
-<p id="p-2337">Based on the mean and the median, would you expect the distribution to be symmetric skewed left or skewed right? Explain.</p>
+<p id="p-158">Use the following table is the cost of purchasing a car at a local dealership.  Some of the cars sold were new and some were used.</p>
+<ol id="p-159" class="lower-alpha">
+<li id="li-27"><p id="p-160">Calculate find the mean, including units.</p></li>
+<li id="li-28"><p id="p-161">Can you figure out how to find the median using the frequency table? See if you can do it without listing out all the data values.</p></li>
+<li id="li-29">
+<p id="p-162">Based on the mean and the median, would you expect the distribution to be symmetric skewed left or skewed right? Explain.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r1 l1 t1 lines">Cost<br>(Thousands of dollars)</th>
@@ -473,11 +396,11 @@ true);
 </table></div></div></div>
 </li>
 </ol></article><article class="exercise exercise-like" id="email_example"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<p id="p-2347">As part of a study of email, a researcher counted the length of 34 emails. The lengths of the emails are shown below, rounded to the nearest thousand characters (so a length 0 means that the numbers of characters rounded to 0, not that the message was blank).<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-39" id="fn-39"><sup> 39 </sup></a></p>
-<ol id="p-2348" class="lower-alpha">
-<li id="li-885"><p id="p-2349">Calculate and find the mean, including units.</p></li>
-<li id="li-886"><p id="p-2350">Can you figure out how to find the median using the frequency table? See if you can do it without listing all the data values.</p></li>
-<li id="li-887"><p id="p-2351">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right?</p></li>
+<p id="p-172">As part of a study of email, a researcher counted the length of 34 emails. The lengths of the emails are shown below, rounded to the nearest thousand characters (so a length 0 means that the numbers of characters rounded to 0, not that the message was blank).<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a></p>
+<ol id="p-173" class="lower-alpha">
+<li id="li-33"><p id="p-174">Calculate and find the mean, including units.</p></li>
+<li id="li-34"><p id="p-175">Can you figure out how to find the median using the frequency table? See if you can do it without listing all the data values.</p></li>
+<li id="li-35"><p id="p-176">Based on the mean and the median, would you expect the distribution to be symmetric, skewed left, or skewed right?</p></li>
 </ol>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
@@ -544,34 +467,34 @@ true);
 <td class="c m b1 r1 l1 t0 lines">14</td>
 <td class="c m b1 r1 l0 t0 lines">2</td>
 </tr>
-</table></div></div></div></article><article class="exercise exercise-like" id="exercise-379"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<p id="p-2361">Studies are often done by pharmaceutical companies to determine the effectiveness of a treatment. Suppose that a new cancer drug is currently under study. Of interest is the average length of time in months patients live once starting the treatment. Two researchers each follow a different set of 40 cancer patients throughout their treatment. The following data (in months) are collected.</p>
-<ol id="p-2362" class="lower-alpha">
-<li id="li-891"><p id="p-2363">Find the mean and median of each group.</p></li>
-<li id="li-892">
-<p id="p-2364">Compare and contrast the two groups.</p>
-<ul id="p-2365" class="disc">
-<li id="li-893"><p id="p-2366">Researcher 1: 3, 4, 11, 15, 16, 17, 22, 44, 37, 16, 14, 24, 25, 15, 26, 27, 33, 29, 35, 44, 13, 21, 22, 10, 12, 8, 40, 32, 26, 27, 31, 34, 29, 17, 8, 24, 18, 47, 33, 34</p></li>
-<li id="li-894"><p id="p-2367">Researcher 2: 3, 14, 11, 5, 16, 17, 28, 41, 31, 18, 14, 14, 26, 25, 21, 22, 31, 2, 35, 44, 23, 21, 21, 16, 12, 18, 41, 22, 16, 25, 33, 34, 29, 13, 18, 24, 23, 42, 33, 29 5.</p></li>
+</table></div></div></div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-186">Studies are often done by pharmaceutical companies to determine the effectiveness of a treatment. Suppose that a new cancer drug is currently under study. Of interest is the average length of time in months patients live once starting the treatment. Two researchers each follow a different set of 40 cancer patients throughout their treatment. The following data (in months) are collected.</p>
+<ol id="p-187" class="lower-alpha">
+<li id="li-39"><p id="p-188">Find the mean and median of each group.</p></li>
+<li id="li-40">
+<p id="p-189">Compare and contrast the two groups.</p>
+<ul id="p-190" class="disc">
+<li id="li-41"><p id="p-191">Researcher 1: 3, 4, 11, 15, 16, 17, 22, 44, 37, 16, 14, 24, 25, 15, 26, 27, 33, 29, 35, 44, 13, 21, 22, 10, 12, 8, 40, 32, 26, 27, 31, 34, 29, 17, 8, 24, 18, 47, 33, 34</p></li>
+<li id="li-42"><p id="p-192">Researcher 2: 3, 14, 11, 5, 16, 17, 28, 41, 31, 18, 14, 14, 26, 25, 21, 22, 31, 2, 35, 44, 23, 21, 21, 16, 12, 18, 41, 22, 16, 25, 33, 34, 29, 13, 18, 24, 23, 42, 33, 29 5.</p></li>
 </ul>
 </li>
-</ol></article><article class="exercise exercise-like" id="exercise-380"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<p id="p-2384">The US Census Bureau, in addition to counting the population of the US every 10 years, conducts yearly informational surveys, such as the American Community Survey (ACS). For the 2012 ACS, a randomly chosen group of 20 respondents (10 males, 10 females) answered a question about their incomes.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-41" id="fn-41"><sup> 41 </sup></a></p>
-<ul id="p-2385" class="disc">
-<li id="li-897"><p id="p-2386">Males: $53,000; $70,000; $12,800; 30,000; $4,500; $42,000; $48,000; $60,000; $108,000; $11,000</p></li>
-<li id="li-898"><p id="p-2387">Females: $1,600; $1,200; $20,000; $25,000; $670; $29,000; $44,000; $30,000; $5,800; $50,000</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-209">The US Census Bureau, in addition to counting the population of the US every 10 years, conducts yearly informational surveys, such as the American Community Survey (ACS). For the 2012 ACS, a randomly chosen group of 20 respondents (10 males, 10 females) answered a question about their incomes.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a></p>
+<ul id="p-210" class="disc">
+<li id="li-45"><p id="p-211">Males: $53,000; $70,000; $12,800; 30,000; $4,500; $42,000; $48,000; $60,000; $108,000; $11,000</p></li>
+<li id="li-46"><p id="p-212">Females: $1,600; $1,200; $20,000; $25,000; $670; $29,000; $44,000; $30,000; $5,800; $50,000</p></li>
 </ul>
-<ol id="p-2388" class="lower-alpha">
-<li id="li-899"><p id="p-2389">Find the mean and median of each group.</p></li>
-<li id="li-900"><p id="p-2390">Compare and contrast the two groups.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-381"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-2406">An experiment compared the ability of three groups of participants to remember briefly-presented chess positions. The data are shown below. The numbers represent the average number of pieces correctly remembered from three chess positions.</p>
+<ol id="p-213" class="lower-alpha">
+<li id="li-47"><p id="p-214">Find the mean and median of each group.</p></li>
+<li id="li-48"><p id="p-215">Compare and contrast the two groups.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-231">An experiment compared the ability of three groups of participants to remember briefly-presented chess positions. The data are shown below. The numbers represent the average number of pieces correctly remembered from three chess positions.</p>
 <ol class="lower-alpha">
-<li id="li-903"><p id="p-2407">Make a histogram for each group.</p></li>
-<li id="li-904"><p id="p-2408">Find the mean of each group.</p></li>
-<li id="li-905"><p id="p-2409">Find the median of each group</p></li>
-<li id="li-906">
-<p id="p-2410">Compare the shapes of the distributions as well as the centers of the three groups.</p>
+<li id="li-51"><p id="p-232">Make a histogram for each group.</p></li>
+<li id="li-52"><p id="p-233">Find the mean of each group.</p></li>
+<li id="li-53"><p id="p-234">Find the median of each group</p></li>
+<li id="li-54">
+<p id="p-235">Compare the shapes of the distributions as well as the centers of the three groups.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r1 l1 t1 lines">Non-players</th>
@@ -635,14 +558,14 @@ true);
 </tr>
 </table></div></div></div>
 </li>
-</ol></article><article class="exercise exercise-like" id="exercise-382"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-2420">There is evidence that smiling can attenuate judgments of possible wrongdoing. This phenomenon termed the "smile-leniency effect" was the focus of a study by Marianne LaFrance &amp; Marvin Hecht in 1995<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-43" id="fn-43"><sup> 43 </sup></a>. The following data are measurements of how lenient the sentences were for three different types of smiles and one neutral control. A higher number indicates greater leniency. The same subject was used for all of the conditions so that may affect the results.</p>
+</ol></article><article class="exercise exercise-like" id="exercise-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-245">There is evidence that smiling can attenuate judgments of possible wrongdoing. This phenomenon termed the "smile-leniency effect" was the focus of a study by Marianne LaFrance &amp; Marvin Hecht in 1995<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a>. The following data are measurements of how lenient the sentences were for three different types of smiles and one neutral control. A higher number indicates greater leniency. The same subject was used for all of the conditions so that may affect the results.</p>
 <ol class="lower-alpha">
-<li id="li-911"><p id="p-2421">Make a histogram for each smile type and the neutral control.</p></li>
-<li id="li-912"><p id="p-2422">Find the mean for each type of smile and the neutral control.</p></li>
-<li id="li-913"><p id="p-2423">Find the median for each type of smile and the neutral control.</p></li>
-<li id="li-914">
-<p id="p-2424">Compare the shapes of the distributions as well as the centers for each type of smile and control.</p>
+<li id="li-59"><p id="p-246">Make a histogram for each smile type and the neutral control.</p></li>
+<li id="li-60"><p id="p-247">Find the mean for each type of smile and the neutral control.</p></li>
+<li id="li-61"><p id="p-248">Find the median for each type of smile and the neutral control.</p></li>
+<li id="li-62">
+<p id="p-249">Compare the shapes of the distributions as well as the centers for each type of smile and control.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r1 l1 t1 lines">False Smile</th>
@@ -856,18 +779,18 @@ true);
 </tr>
 </table></div></div></div>
 </li>
-</ol></article><article class="exercise exercise-like" id="exercise-383"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<p id="p-2435">Make up three data sets with 5 values each that have:</p>
+</ol></article><article class="exercise exercise-like" id="exercise-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-260">Make up three data sets with 5 values each that have:</p>
 <ol class="lower-alpha">
-<li id="li-919"><p id="p-2436">The same mean but different medians</p></li>
-<li id="li-920"><p id="p-2437">The same median but different means.</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-384"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<p id="p-2441">The frequency table below shows the number of women’s shoes that were sold in an hour at a local shoe store.</p>
-<ol id="p-2442" class="lower-alpha">
-<li id="li-923"><p id="p-2443">Would you treat this data as categorical or quantitative?</p></li>
-<li id="li-924"><p id="p-2444">How would the bar graph be different from the histogram?</p></li>
-<li id="li-925">
-<p id="p-2445">Treat the data as quantitative and find the mean and the median. Are these useful statistics?</p>
+<li id="li-67"><p id="p-261">The same mean but different medians</p></li>
+<li id="li-68"><p id="p-262">The same median but different means.</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-266">The frequency table below shows the number of women’s shoes that were sold in an hour at a local shoe store.</p>
+<ol id="p-267" class="lower-alpha">
+<li id="li-71"><p id="p-268">Would you treat this data as categorical or quantitative?</p></li>
+<li id="li-72"><p id="p-269">How would the bar graph be different from the histogram?</p></li>
+<li id="li-73">
+<p id="p-270">Treat the data as quantitative and find the mean and the median. Are these useful statistics?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r1 l1 t1 lines">Shoe Size</th>
@@ -895,37 +818,37 @@ true);
 </tr>
 </table></div></div></div>
 </li>
-</ol></article><article class="exercise exercise-like" id="exercise-385"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<p id="p-2455">At the end of the term, 400 students take a final exam, and their scores (as percentages) are plotted in a histogram.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 46 </sup></a></p>
+</ol></article><article class="exercise exercise-like" id="exercise-13"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-280">At the end of the term, 400 students take a final exam, and their scores (as percentages) are plotted in a histogram.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:50%;"><img src="external/statistics/3_3/400_exams.png" class="contained"></div></div></div>
-<ol id="p-2456" class="lower-alpha">
-<li id="li-929"><p id="p-2457">Is the graph shown above skewed right, skewed left, or symmetric? Explain why you chose your answer.</p></li>
-<li id="li-930"><p id="p-2458">Based on your answer to part (a), which would you expect: that the mean is less than the median, the mean is greater than the median, or that the mean and median are equal?</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-386"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<p id="p-2462">The following graph shows the distribution of yearly incomes of 40 patrons at a college coffee shop.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-48" id="fn-48"><sup> 48 </sup></a></p>
+<ol id="p-281" class="lower-alpha">
+<li id="li-77"><p id="p-282">Is the graph shown above skewed right, skewed left, or symmetric? Explain why you chose your answer.</p></li>
+<li id="li-78"><p id="p-283">Based on your answer to part (a), which would you expect: that the mean is less than the median, the mean is greater than the median, or that the mean and median are equal?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-14"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-287">The following graph shows the distribution of yearly incomes of 40 patrons at a college coffee shop.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a></p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:50%;"><img src="external/statistics/3_3/40_coffee.png" class="contained"></div></div></div>
-<ol id="p-2463" class="lower-alpha">
-<li id="li-933"><p id="p-2464">Is the graph shown above skewed right, skewed right, or symmetric? Explain why you chose your answer.</p></li>
-<li id="li-934"><p id="p-2465">Based on your answer to part (a), which would you expect: that the mean is less than the median, the mean is greater than the median, or that the mean and median are equal?</p></li>
-</ol></article><article class="exercise exercise-like" id="exercise-387"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
-<p id="p-2469">For each of the following distributions, would you expect that the mean is less than the median, less than the median, or equal to the median? Explain your reasoning.</p>
-<ol id="p-2470" class="lower-alpha">
-<li id="li-937"><p id="p-2471">Household incomes in the US</p></li>
-<li id="li-938"><p id="p-2472">Weights of newborn babies</p></li>
-<li id="li-939"><p id="p-2473">The number of children in a household in the US</p></li>
-<li id="li-940"><p id="p-2474">Medical costs for all adults</p></li>
-<li id="li-941"><p id="p-2475">Medical costs for adults in the US older than 65</p></li>
-</ol></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-39"><div class="fn">The data is from Advanced High School Statistics, 2nd Ed. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-40" id="fn-40"><sup> 40 </sup></a>).</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-40"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-41"><div class="fn">Data from Advanced High School Statistics, 2nd Ed. Section 2.1 Exercise #1. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-42" id="fn-42"><sup> 42 </sup></a>).</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-42"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-43"><div class="fn">LaFrance, M., &amp; Hecht, M. A. (1995) Why smiles generate leniency. Personality and Social Psychology Bulletin, 21, 207-214. Adapted from <a class="external" href="http://www.onlinestatbook.com/" target="_blank">www.onlinestatbook.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-44" id="fn-44"><sup> 44 </sup></a>, by David M. Lane, et al, used under <a class="external" href="https://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">CC-BY-SA 3.0</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-45" id="fn-45"><sup> 45 </sup></a>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-44"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.onlinestatbook.com/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-45"><div class="fn"><code class="code-inline tex2jax_ignore">https://creativecommons.org/licenses/by-sa/3.0/us/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-46"><div class="fn">Graph and description from Advanced High School Statistics, 2nd Ed. Section 2.2 Exercise. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-47" id="fn-47"><sup> 47 </sup></a>)</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-47"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-48"><div class="fn">Graph and description from Advanced High School Statistics, 2nd Ed. Section 2.2 Exercise. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-49" id="fn-49"><sup> 49 </sup></a>)</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-49"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
+<ol id="p-288" class="lower-alpha">
+<li id="li-81"><p id="p-289">Is the graph shown above skewed right, skewed right, or symmetric? Explain why you chose your answer.</p></li>
+<li id="li-82"><p id="p-290">Based on your answer to part (a), which would you expect: that the mean is less than the median, the mean is greater than the median, or that the mean and median are equal?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-15"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-294">For each of the following distributions, would you expect that the mean is less than the median, less than the median, or equal to the median? Explain your reasoning.</p>
+<ol id="p-295" class="lower-alpha">
+<li id="li-85"><p id="p-296">Household incomes in the US</p></li>
+<li id="li-86"><p id="p-297">Weights of newborn babies</p></li>
+<li id="li-87"><p id="p-298">The number of children in a household in the US</p></li>
+<li id="li-88"><p id="p-299">Medical costs for all adults</p></li>
+<li id="li-89"><p id="p-300">Medical costs for adults in the US older than 65</p></li>
+</ol></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">The data is from Advanced High School Statistics, 2nd Ed. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a>).</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">Data from Advanced High School Statistics, 2nd Ed. Section 2.1 Exercise #1. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a>).</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn">LaFrance, M., &amp; Hecht, M. A. (1995) Why smiles generate leniency. Personality and Social Psychology Bulletin, 21, 207-214. Adapted from <a class="external" href="http://www.onlinestatbook.com/" target="_blank">www.onlinestatbook.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a>, by David M. Lane, et al, used under <a class="external" href="https://creativecommons.org/licenses/by-sa/3.0/us/" target="_blank">CC-BY-SA 3.0</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.onlinestatbook.com/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn"><code class="code-inline tex2jax_ignore">https://creativecommons.org/licenses/by-sa/3.0/us/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Graph and description from Advanced High School Statistics, 2nd Ed. Section 2.2 Exercise. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a>)</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn">Graph and description from Advanced High School Statistics, 2nd Ed. Section 2.2 Exercise. (<a class="external" href="https://www.openintro.org/stat/textbook.php?stat_book=aps" target="_blank">https://www.openintro.org/stat/textbook.php?stat_book=aps</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a>)</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.openintro.org/stat/textbook.php?stat_book=aps</code></div></div>
 </div></main>
 </div>
 </body>

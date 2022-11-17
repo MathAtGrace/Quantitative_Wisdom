@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-11-15T16:35:46-05:00       *-->
+<!--*       on 2022-11-17T10:55:11-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,268 +16,73 @@
 <body class="ignore-math">
 <div class="exercisegroup">
 <h4 class="heading">
-<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">6.5.5–8</span><span class="period">.</span>
+<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">6.4.5.11–20</span><span class="period">.</span>
 </h4>
 <div class="introduction">
-<p>In exercises 5-8, complete the following:</p>
+<p>For each map in problems 11-20, complete the following:</p>
 <ol class="lower-alpha">
-<li><p>How many voters voted in this election?</p></li>
 <li><p>How many votes are needed for a majority?</p></li>
-<li><p>Find the winner under the plurality method.</p></li>
-<li><p>Find the winner under the Instant Runoff Voting method.</p></li>
-<li><p>Find the winner under the Borda Count Method.</p></li>
-<li><p>Find the winner under Copeland’s method.</p></li>
+<li><p>How many seats are won by each party?</p></li>
+<li><p>Calculate the efficiency gap.</p></li>
+<li><p>Calculate the percentage of the state that each district represents.</p></li>
+<li><p>Calculate how many district seats the efficiency gap is worth.</p></li>
+<li><p>Explain whether you think the map is fair and why or why not.</p></li>
 </ol>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<p>A Portland Community College Board member race has four candidates: E, F, G, H. The votes are:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">12</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">16</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">17</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">15</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">34</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">13</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">19</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">8</th>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-<td class="c m b1 r1 l0 t0 lines">G</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">F</td>
-<td class="c m b1 r1 l0 t0 lines">E</td>
-<td class="c m b1 r1 l0 t0 lines">H</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<p>A Forest Grove School Board position has four candidates: I, J, K, L. The votes are:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">15</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">13</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">25</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">16</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">10</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">7</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">11</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">2</th>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">J</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">K</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">L</td>
-<td class="c m b1 r1 l0 t0 lines">I</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<p>A Multnomah County Commissioner's race has five candidates: M, N, O, P, Q. The votes are:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">31</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">35</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">37</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">33</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">12</th>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">5th choice</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">N</td>
-<td class="c m b1 r1 l0 t0 lines">M</td>
-<td class="c m b1 r1 l0 t0 lines">Q</td>
-<td class="c m b1 r1 l0 t0 lines">O</td>
-<td class="c m b1 r1 l0 t0 lines">P</td>
-</tr>
-</table></div></div></div>
-<p></p></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<p>The Oregon State Governor's race has five candidates: R, S, T, U, V. The votes are:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular">
-<tr class="header-horizontal">
-<th scope="col" class="c m b1 r1 l1 t1 lines">Number of voters</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">22</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">45</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">20</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">47</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">43</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">18</th>
-<th scope="col" class="c m b1 r1 l0 t1 lines">26</th>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">1st choice</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">2nd choice</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">3rd choice</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">4th choice</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">5th choice</td>
-<td class="c m b1 r1 l0 t0 lines">V</td>
-<td class="c m b1 r1 l0 t0 lines">U</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-<td class="c m b1 r1 l0 t0 lines">S</td>
-<td class="c m b1 r1 l0 t0 lines">T</td>
-<td class="c m b1 r1 l0 t0 lines">R</td>
-</tr>
-</table></div></div></div>
-<p></p></article>
+<article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p>This state has 4 districts with 7 people in each district.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_11.png" class="contained" alt="A map with 4 districts drawn; Districts 1 has 1 D and 6 R's; District 2 has 3 D's and 4 R's; District 3 has 6 D's and 1 R; District 4 has 7 D's and 0 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p>This state has 4 districts with 9 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_12.png" class="contained" alt="A map with 4 districts drawn; Districts 1, 2 and 4 have 5 D's and 4 R's; District 3 has 6 D's and 3 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p>This state has 5 districts with 5 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_13.png" class="contained" alt="A map with 5 districts drawn; Districts 1, 2, 3 and 5 have 2 D's and 3 R's; District 4 has 4 D's and 1 R."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<p>This state has 5 districts with 7 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_14.png" class="contained" alt="A map with 5 districts drawn; Districts 1 and 3 have 3 D's and 4 R's each; Districts 2, 4 and 5 have 5 D's and 2 R's each."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<p>This state has 5 districts with 9 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_15.png" class="contained" alt="A map with 5 districts drawn; Districts 1 and 3 have 2 D's and 7 R's each; Districts 2 and 4 have 5 D's and 4 R's each; District 5 has 4 D's and 5 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<p>This state has 5 districts with 11 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_16.png" class="contained" alt="A map with 5 districts drawn; Districts 1, 2, 4 and 5 have 5 D's and 6 R's each; District 3 has 7 D's and 4 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<p>This state has 6 districts with 5 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_17.png" class="contained" alt="A map with 6 districts drawn; Districts 1 through 5 have 3 D's and 2 R's each; District 6 has 0 D's and 5 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<p>This state has 6 districts with 7 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_18.png" class="contained" alt="A map with 6 districts drawn; Districts 1, 3, 4 and 6 have 3 D's and 4 R's each; District 2 has 2 D's and 5 R's; District 5 has 7 D's and 0 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<p>This state has 6 districts with 9 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_19.png" class="contained" alt="A map with 6 districts drawn; Districts 1, 2 and 4 have 2 D's and 7 R's each; District 3 has 9 D's and 0 R's; District 5 has 1 D and 8 R's; District 6 has 4 D's and 5 R's."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article><article class="exercise exercise-like"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<p>This state has 6 districts with 11 people in each.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><img src="external/democracy/5_4/exercise_20.png" class="contained" alt="A map with 6 districts drawn; Districts 1 and 3 have 0 D's and 11 R's each; District 2 has 8 D's and 3 R's; Districts 4, 5 and 6 have 6 D's and 5 R's each."></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><p></p></div>
+</div></div></article>
 </div>
 </div>
-<span class="incontext"><a href="chap_five_review.html#exercisegroup-56" class="internal">in-context</a></span>
+<span class="incontext"><a href="chap_five_gerrymandering.html#exercisegroup-56" class="internal">in-context</a></span>
 </body>
 </html>

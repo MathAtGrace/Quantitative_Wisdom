@@ -34,6 +34,8 @@
 <xi:include href="ws-data-overview-describing.ptx"/>
 <xi:include href="sec-data-measure-of-center.ptx" />
 <xi:include href="sec-data-measure-of-variation.ptx" />
+<xi:include href="ws-data-summary-stats.ptx"/>
+
 <xi:include href="sec-data-review.ptx" />
 
  <xi:include href="sec-data-normal-model.ptx" />

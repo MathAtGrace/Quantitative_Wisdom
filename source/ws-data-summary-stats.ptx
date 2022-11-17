@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="ws-data-summary-stats" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Worksheet Measures of Central Tendancy and Variation</title>
+
+
+  <figure>
+    <caption>Drawing Like a Scientist</caption>
+    <video youtube="hqh1MRWZjms" />
+  </figure>
+
+  <worksheet xml:id="worksheet-data-">
+    <title>In Class Activity for <xref ref="sec-data-measure-of-center"/> and <xref ref="sec-data-measure-of-variation"/></title>
+
+    <page>
+      <exercisegroup>
+        <title>Halloween Data</title>
+        <introduction>
+          <p>
+            A data scientist has been counting the number of trick-or-treaters that come to his house every year. We will analyze the shape, center and spread of this data.  Source: <url href="https://www.dataplusscience.com/HalloweenData.html"/>
+          </p>
+        </introduction>
+        <exercise workspace="3in">
+          <statement>
+            <p>
+              Make a histogram of the number of trick-or-treaters using a bin-width of 100 trick-or-treaters.  Save room to make a boxplot right below it, but not yet. Follow the steps in order. Label your axes.
+            </p>
+            <p>
+              If you are doing this in class, then actually draw the histogram (and later, the boxplot) by hand.  If you are doing this online, then space has been provided to copy and paste them below.  A great resource is <url href="https://www.statskingdom.com/histogram-maker.html"/>
+            </p>
+            <table>
+              <tabular top="medium" left="medium">
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    Year
+                  </cell>
+                  <cell right="medium">
+                    2008
+                  </cell>
+                  <cell right="medium">
+                    2009
+                  </cell>
+                  <cell right="medium">
+                    2010
+                  </cell>
+                  <cell right="medium">
+                    2011
+                  </cell>
+                  <cell right="medium">
+                    2012
+                  </cell>
+                  <cell right="medium">
+                    2013
+                  </cell>
+                  <cell right="medium">
+                    2014
+                  </cell>
+                  <cell right="medium">
+                    2015
+                  </cell>
+                  <cell right="medium">
+                    2016
+                  </cell>
+                  <cell right="medium">
+                    2017
+                  </cell>
+                  <cell right="medium">
+                    2018
+                  </cell>
+                  <cell right="medium">
+                    2019
+                  </cell>
+                  <cell right="medium">
+                    2020
+                  </cell>
+                  <cell right="medium">
+                    2021
+                  </cell>
+                  <cell right="medium">
+                    2022
+                  </cell>
+                </row>
+                <row bottom="medium">
+                  <cell left="medium" right="medium">
+                    <line>Number of</line>
+                    <line>Trick-or-Treaters</line>
+                  </cell>
+                  <cell right="medium">
+                    492
+                  </cell>
+                  <cell right="medium">
+                    542
+                  </cell>
+                  <cell right="medium">
+                    726
+                  </cell>
+                  <cell right="medium">
+                    869
+                  </cell>
+                  <cell right="medium">
+                    673
+                  </cell>
+                  <cell right="medium">
+                    391
+                  </cell>
+                  <cell right="medium">
+                    454
+                  </cell>
+                  <cell right="medium">
+                    747
+                  </cell>
+                  <cell right="medium">
+                    822
+                  </cell>
+                  <cell right="medium">
+                    776
+                  </cell>
+                  <cell right="medium">
+                    600
+                  </cell>
+                  <cell right="medium">
+                    523
+                  </cell>
+                  <cell right="medium">
+                    219
+                  </cell>
+                  <cell right="medium">
+                    487
+                  </cell>
+                  <cell right="medium">
+                    512
+                  </cell>
+                </row>
+              </tabular>
+            </table>
+          </statement>
+          <solution>
+            <image source="statistics/3_3/trick-or-treat.png" width="100%"/>
+            <image source="statistics/3_3/trick-or-treat-box.png" width="100%"/>
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            What is the shape of the histogram? If you are not sure yet, answer the next question, then come back to this one.
+          </statement>
+          <solution>
+            The shape is bimodal, but skewness is hard to determine.  The histogram we made gives a bigger left tail, but the mean is larger than the median.
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Find the mean, median and mode, include units.
+          </statement>
+          <solution>
+            <p>Put in order: 219, 391, 454, 487, 492, 512, 523, 542, 600, 673, 726, 747, 776, 822, 869</p>
+            <p>The mean is 588.9 trick-or treaters. The median is 542 trick-or-treaters.</p>
+            <p>The modes are the centers of the highest peaks at 400-600 and 700-800 trick-or-treaters.</p>
+          </solution>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Find the 5-number summary, IQR and range, including units.
+          </statement>
+          <solution>
+            <p>The 5-number summary is: 219, 489.5, 542, 736.5, 869 trick-or-treaters</p>
+            <p>The IQR is 736.5 - 489.5 = 247 trick-or-treaters</p>
+            <p>The range is 869-219=650 trick-or-treaters</p>
+          </solution>
+        </exercise>
+        <exercise>
+          <statement>
+            Use the 5-number summary to draw a boxplot above. Make your horizontal scale match your histogram scale.
+          </statement>
+        </exercise>
+        <exercise workspace=".5in">
+          <statement>
+            Do you think there are any outliers? Why or why not?
+          </statement>
+          <solution>
+            <p>There do not seem to be any years that are outliers.</p>
+            <p>Althougth the 2020 number is debatable.</p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Comparing Distributions</title>
+        <introduction>
+          <p>
+            Below are fictitious student test scores from a MAT-1185 quiz in two different classes. You will be making a boxplot for each to compare their distributions.
+          </p>
+          <p>Class 1: 72, 86, 65, 99, 86, 71, 55, 86, 92, 73, 95, 71 points</p>
+          <p>Class 2: 75, 94, 82, 81, 69, 71, 85, 92, 88, 78, 73, 65, 66 points</p>
+        </introduction>
+        <exercise workspace="2.5in">
+          <statement>
+            Find the mean, 5-number summary, IQR and range for each class, including units.
+          </statement>
+          <solution>
+            <p>Class 1:</p>
+            <p>Mean: 79.3 points</p>
+            <p>5-Number summary:</p>
+            <p>(55, 71, 79.5, 89, 99) points</p>
+            <p>IQR = Q3-Q1 = 89 – 71 = 18 points</p>
+            <p>Range = Max – Min = 99 – 55 = 44 points</p>
+            <p>Class 2:</p>
+            <p>Mean: 78.4 points</p>
+            <p>5-Number summary:</p>
+            <p>(65, 70, 78, 86.5, 94) points</p>
+            <p>IQR = Q3-Q1 = 86.5 – 70 = 16.5 points</p>
+            <p>Range = Max – Min = 94 – 65 = 29 points</p>
+          </solution>
+        </exercise>
+        <exercise workspace="4in">
+          <statement>
+            Draw the boxplot for each class using the same scale.
+          </statement>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            What is the shape of the data for each class? How can you tell?
+          </statement>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <exercisegroup>
+        <title>Calculating Standard Deviation, <m>s</m></title>
+        <exercise workspace="4in">
+          <statement>
+            <p>Using your means rounded to one decimal place, find the standard deviation for Class 1, including units. The variable n refers to the number of data values.</p>
+            <p>Mean = <fillin characters="20"/>  n = <fillin characters="7"/></p>
+            <image source="statistics/3_4/test_scores_1.PNG" width="100%"/>
+            <me> s = \sqrt{\frac{\sum (x-\text{mean})^2}{n-1}}</me>
+          </statement>
+          <solution>
+            <image source="statistics/3_4/test_scores_1_ans.PNG" width="100%"/>
+            <me>\sqrt{\frac{1956.28}{12-1}} \approx 13.34 points</me>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </page>
+
+    <page>
+      <title>Calculating Standard Deviation, <m>s</m></title>
+      <exercise workspace="4in">
+        <statement>
+          <p>Using your means rounded to one decimal place, find the standard deviation for Class 2, including units. The variable n refers to the number of data values.</p>
+          <p>Mean = <fillin characters="20"/>  n = <fillin characters="7"/></p>
+          <image source="statistics/3_4/test_scores_2.PNG" width="100%"/>
+          <me> s = \sqrt{\frac{\sum (x-\text{mean})^2}{n-1}}</me>
+        </statement>
+        <solution>
+          <image source="statistics/3_4/test_scores_2_ans.PNG" width="100%"/>
+          <me>\sqrt{\frac{1101.08}{13-1}} \approx 9.58 points</me>
+        </solution>
+      </exercise>
+    </page>
+
+    <page>
+      <exercise workspace="2in">
+        <statement>
+          Write a few complete sentences summarizing the four characteristics of the distribution of class 1.
+        </statement>
+        <solution>
+          The test scores for class 1 are approximately symmetric with a mean of 79.3 points and a standard deviation of 13.35 points. The student who scored 55 points may be an outlier.
+        </solution>
+      </exercise>
+      <exercise workspace="2in">
+        <statement>
+          Write a few complete sentences summarizing the four characteristics of the distribution of class 2.
+        </statement>
+        <solution>
+          The test scores for class 2 are approximately symmetric with a mean of 78.4 points and a standard deviation of 9.58 points. 
+        </solution>
+      </exercise>
+      <exercise workspace="4in">
+        <statement>
+          Which class did better on the test? Use the vocabulary and values for center and spread in your answer.
+        </statement>
+        <solution>
+          Class 1 had a slightly higher mean (79.3 vs 78.4 points) and median (79.5 vs 78 points) and students scored higher, but some students also scored lower. It could be said that Class 1 did better. It could also be said that Class 2 did better because they have a smaller range (29 vs 44 points) and standard deviation (9.58 vs 13.34 points), so their scores were less spread out and more consistent. The lowest score in class 2 was 65. The lowest score in Class 1 was 55 points which may be an outlier due to a student having a bad day, illness or emergency, etc.
+        </solution>
+      </exercise>
+    </page>
+  </worksheet>
+</section>

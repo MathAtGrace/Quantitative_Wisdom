@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-11-17T10:49:59-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>In Class Activity for Section 4.1 and Section 4.2</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Quantitative Wisdom">
+<meta property="book:author" content="Dr. Ryan Johnson">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl', 'sfrac']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+/* support for the sfrac command in MathJax (Beveled fraction) */
+  startup: {
+    ready() {
+      //
+      // Creating a simple "sfrac" package on-the-fly
+      //
+      const Configuration = MathJax._.input.tex.Configuration.Configuration;
+      const CommandMap = MathJax._.input.tex.SymbolMap.CommandMap;
+      
+      new CommandMap('sfrac', {
+        sfrac: 'SFrac'
+        }, {
+        SFrac(parser, name) {
+        const num = parser.ParseArg(name);
+        const den = parser.ParseArg(name);
+        const frac = parser.create('node', 'mfrac', [num, den], {bevelled: true});
+        parser.Push(frac);
+        }
+      });
+      //
+      // Create the package for the overridden macros
+      //
+      Configuration.create('sfrac', {
+        handler: {macro: ['sfrac']}
+      });
+      
+    MathJax.startup.defaultReady();
+    }
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="quantitative-wisdom.html"><span class="title">Quantitative Wisdom:</span> <span class="subtitle">A course on quantitative reasoning from a Christian perspective of wisdom</span></a></h1>
+<p class="byline">Dr. Ryan Johnson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><button id="calculator-toggle" class="toolbar-item button toggle" title="Show calculator" aria-expanded="false" aria-controls="calculator-container">Calc</button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ws-data-overview-describing.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ws-data-overview-describing.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-data-measure-of-center.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ws-data-overview-describing.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ws-data-overview-describing.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-data-measure-of-center.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-introduction.html" data-scroll="ch-introduction" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a><ul>
+<li><a href="time.html" data-scroll="time" class="internal">Time Management Lab</a></li>
+<li><a href="mindset.html" data-scroll="mindset" class="internal">Mindset Lab</a></li>
+<li><a href="sec-math-theology.html" data-scroll="sec-math-theology" class="internal">God and Math</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-numbers.html" data-scroll="ch-numbers" class="internal"><span class="codenumber">2</span> <span class="title">Numbers</span></a><ul>
+<li><a href="sec-problem-solving.html" data-scroll="sec-problem-solving" class="internal">Problem Solving</a></li>
+<li><a href="sec_orders_of_mag.html" data-scroll="sec_orders_of_mag" class="internal">Orders of Magnitude</a></li>
+<li><a href="sec_water_footprint.html" data-scroll="sec_water_footprint" class="internal">Proportional Reasoning</a></li>
+<li><a href="unit-conversion.html" data-scroll="unit-conversion" class="internal">Unit Conversion</a></li>
+<li><a href="cost-of-driving.html" data-scroll="cost-of-driving" class="internal">Cost of Driving</a></li>
+<li><a href="home-improvements.html" data-scroll="home-improvements" class="internal">Home Improvements</a></li>
+<li><a href="sec_numbers_percentages.html" data-scroll="sec_numbers_percentages" class="internal">Percentages</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="financial_math.html" data-scroll="financial_math" class="internal"><span class="codenumber">3</span> <span class="title">Finance</span></a><ul>
+<li><a href="sec-finance-intro-spreadsheet.html" data-scroll="sec-finance-intro-spreadsheet" class="internal">Introduction to Spreadsheets</a></li>
+<li><a href="sec-finance-simple-compound.html" data-scroll="sec-finance-simple-compound" class="internal">Simple and Compound Interest</a></li>
+<li><a href="ws-finance-spreadsheets-and-interest.html" data-scroll="ws-finance-spreadsheets-and-interest" class="internal">Worksheets for Spreadsheets and Interest</a></li>
+<li><a href="sec-finance-savings-plan.html" data-scroll="sec-finance-savings-plan" class="internal">Savings Plans</a></li>
+<li><a href="sec-finance-loans.html" data-scroll="sec-finance-loans" class="internal">Loan Payments</a></li>
+<li><a href="ws-finance-savings-loans.html" data-scroll="ws-finance-savings-loans" class="internal">Worksheets Savings and Loans</a></li>
+<li><a href="chap_two_income_taxes.html" data-scroll="chap_two_income_taxes" class="internal">Income Taxes</a></li>
+<li><a href="sec-taxes.html" data-scroll="sec-taxes" class="internal">Income Tax Worksheet</a></li>
+<li><a href="finance-final-project.html" data-scroll="finance-final-project" class="internal">Planning and Budget Project</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="statistics.html" data-scroll="statistics" class="internal"><span class="codenumber">4</span> <span class="title">Data</span></a><ul>
+<li><a href="sec-data-statistical-process.html" data-scroll="sec-data-statistical-process" class="internal">Overview of the Statistical Process</a></li>
+<li><a href="sec-data-describing-data.html" data-scroll="sec-data-describing-data" class="internal">Describing Data</a></li>
+<li><a href="ws-data-overview-describing.html" data-scroll="ws-data-overview-describing" class="internal">Worksheets Statistical Process and Describing Data</a></li>
+<li><a href="sec-data-measure-of-center.html" data-scroll="sec-data-measure-of-center" class="internal">Summary Statistics: Measures of Center</a></li>
+<li><a href="sec-data-measure-of-variation.html" data-scroll="sec-data-measure-of-variation" class="internal">Summary Statistics: Measures of Variation</a></li>
+<li><a href="ws-data-summary-stats.html" data-scroll="ws-data-summary-stats" class="internal">Worksheet Measures of Central Tendancy and Variation</a></li>
+<li><a href="chap_three_review.html" data-scroll="chap_three_review" class="internal">Chapter 3 Review</a></li>
+<li><a href="chap_three_normal_model.html" data-scroll="chap_three_normal_model" class="internal">The Normal Distribution</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-models.html" data-scroll="ch-models" class="internal"><span class="codenumber">5</span> <span class="title">Math Models</span></a><ul><li><a href="linear.html" data-scroll="linear" class="internal">Linear Equations</a></li></ul>
+</li>
+<li class="link">
+<a href="democracy.html" data-scroll="democracy" class="internal"><span class="codenumber">6</span> <span class="title">Democracy</span></a><ul>
+<li><a href="chap_five_apportionment.html" data-scroll="chap_five_apportionment" class="internal">Apportionment</a></li>
+<li><a href="chap_five_voting_methods.html" data-scroll="chap_five_voting_methods" class="internal">Voting Methods</a></li>
+<li><a href="chap_five_popular_vote.html" data-scroll="chap_five_popular_vote" class="internal">The Popular Vote, Electoral College and Electoral Power</a></li>
+<li><a href="chap_five_gerrymandering.html" data-scroll="chap_five_gerrymandering" class="internal">Gerrymandering and How to Measure It</a></li>
+<li><a href="chap_five_review.html" data-scroll="chap_five_review" class="internal">Chapter 5 Review</a></li>
+<li><a href="chap_five_budget_deficit_debt.html" data-scroll="chap_five_budget_deficit_debt" class="internal">Federal Budget, Deficit and National Debt</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></li>
+<li class="link"><a href="appendix-1.html" data-scroll="appendix-1" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="worksheet" id="worksheet-data-overview-describing"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">4.3.1</span> <span class="title">In Class Activity for Section 4.1 and Section 4.2</span><div class="print-links">
+<a href="worksheet-data-overview-describing-a4.html" class="a4">A4</a><a href="worksheet-data-overview-describing-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="onepage" id="page-64"><div class="introduction" id="introduction-67"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_1/statistical_process.png" class="contained" alt="5 rectangles indicating the 5 steps of the statistical process; 1. Identify the group you want to study, which is the population; 2. Identify the quantity you want to know about the population, which is the parameter; 3. Gather data by taking an unbiased sample or performing an experiment; 4. Graph the data and calculate statistics; 5. Estimate the parameter that you wanted to know with the margin of error and confidence interval."></div></div></div></div>
+<div class="exercisegroup" id="exercisegroup-38">
+<h4 class="heading"><span class="title">Identify the Population, Sample, Parameter and Statistic.</span></h4>
+<div class="introduction" id="introduction-68">For each scenario, a question or problem has been identified. Draw a diagram and describe the population, sample, parameter and statistic. Be specific with units for the parameter and statistic.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-345"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>A US insurance company wants to know whether households have two cars. A survey of 976 US households found that 32% of households have two cars.<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="exercise-346"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>A local toy store owner wants to know how much money kids in northern Indiana aged 5-12 get as an allowance per week. They asked 100 kids from around northern Indiana and found the average allowance to be $4.25 per week.<div class="workspace" data-space="1in"></div></article>
+</div>
+</div></section><section class="onepage" id="page-65"><div class="exercisegroup" id="exercisegroup-39">
+<h4 class="heading"><span class="title">Sampling Methods.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-347"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>Identify the sampling method used: <blockquote class="blockquote" id="blockquote-21">All the Warsaw High School students were assembled in the gym, and then separated into groups by grade. Each student was assigned a number, and 25 numbers were randomly drawn from the students in each grade. They were asked if they planned to go to college.</blockquote>
+<div class="workspace" data-space="0.25in"></div></article><article class="exercise exercise-like" id="exercise-348"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>Identify the sampling method used: <blockquote class="blockquote" id="blockquote-22">You are standing outside of the grocery store and stop every third person leaving to ask if they purchased milk.</blockquote>
+<div class="workspace" data-space="0.25in"></div></article><article class="exercise exercise-like" id="exercise-349"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>Identify the sampling method used: <blockquote class="blockquote" id="blockquote-23">At his book club meeting, Dan asked each member if they had seen the movie made from their current book.</blockquote>
+<div class="workspace" data-space="0.25in"></div></article><article class="exercise exercise-like" id="exercise-350"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>Identify the sampling method used: <blockquote class="blockquote" id="blockquote-24">Instead of the method in exercise 3, the administrator at Warsaw High School chose 100 student numbers randomly and asked those students to report to the office for the survey.</blockquote>
+<div class="workspace" data-space="0.25in"></div></article><article class="exercise exercise-like" id="exercise-351"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>You are a statistical consultant and you have been hired to collect data on employee satisfaction. The company has 1000 employees at two buildings, East and West. There are 4 departments and 5 levels of employees. Identify the population and parameter, then describe a sampling method in detail.<div class="workspace" data-space="1.5in"></div></article>
+</div>
+</div></section><section class="onepage" id="page-66"><div class="exercisegroup" id="exercisegroup-40">
+<h4 class="heading"><span class="title">Type of Study.</span></h4>
+<div class="introduction" id="introduction-69">For each of the following, identify whether the study is observational or an experiment.  If it is observational, identify the controls if they exist, and identify the cases.  If it is an experiment, identify the control group, the treatment group, and the blinding if it exists.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-352"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>Over a 6-month period, among 100 people with bipolar disorder, patients given a high dose of omega-3 fats improved more than those given a placebo. Patients didn’t know which they were given, but the experimenters knew.<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-353"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>A National Cancer Institute study of 716 melanoma patients and 1014 cancer-free patients found that those having a single large mole had twice the risk of melanoma.<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-354"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>1000 people were randomly separated into two groups—one group was assigned to exercise for 45 minutes daily, and the other group was instructed not to exercise. The participants in the exercise group reported falling asleep within 15 minutes of going to bed, but those not exercising laid awake for at least 30 minutes.<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-355"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>500 patients with migraine headaches receive a shot to see if it helps reduce the frequency of the headaches. The nurses giving the shots write down the code on each syringe and the patient name. The syringes look identical, but half contain the new medicine and half contain saline.<div class="workspace" data-space="1.5in"></div></article>
+</div>
+</div></section><section class="onepage" id="page-67"><div class="exercisegroup" id="exercisegroup-41">
+<h4 class="heading"><span class="title">Confidence Intervals.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-356"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>The table below lists results for a Gallup poll conducted via random telephone interviews in October 2015. Assume that the margin of error is 4 percentage points.  Find the confidence interval for each category. <figure class="table table-like" id="table-26"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.3.1<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t2 lines"></td>
+<td class="l m b2 r2 l0 t2 lines">American adults</td>
+<td class="l m b2 r2 l0 t2 lines">18-34 years old</td>
+<td class="l m b2 r2 l0 t2 lines">35-49 years old</td>
+<td class="l m b2 r2 l0 t2 lines">50-64 years old</td>
+<td class="l m b2 r2 l0 t2 lines">65+ years old</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Support Legalizing the use of Marijuana</td>
+<td class="l m b2 r2 l0 t0 lines">58%</td>
+<td class="l m b2 r2 l0 t0 lines">71%</td>
+<td class="l m b2 r2 l0 t0 lines">64%</td>
+<td class="l m b2 r2 l0 t0 lines">58%</td>
+<td class="l m b2 r2 l0 t0 lines">35%</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Confidence Interval</td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+</tr>
+</table></div></figure><div class="workspace" data-space="0.5in"></div></article><article class="exercise exercise-like" id="exercise-357"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>Which age group(s) can you claim that over half of the people support legalization of marijuana? Explain.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-358"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>For which age group(s) can you claim that the majority of people do not support legalization of marijuana? Explain.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-359"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>Explain why the percentage for all American adults isn’t exactly the average of all the categories.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-360"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>Go to <a class="external" href="https://news.gallup.com/poll/229085/college-students-say-campus-climate-deters-speech.aspx" target="_blank">college-students-say-campus-climate-deters-speech.aspx</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-38" id="fn-38"><sup> 38 </sup></a> or see the printed handout in class. Give the percentage, margin of error and confidence interval. What do you think about the survey methods used?<div class="workspace" data-space="1in"></div></article>
+</div>
+</div></section><section class="onepage" id="page-68"><div class="exercisegroup" id="exercisegroup-42">
+<h4 class="heading"><span class="title">Types of Bias.</span></h4>
+<div class="introduction" id="introduction-70">In each situation, identify a potential source of bias. You will use each type from the class prep once.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-361"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>Trident gum did a survey of dentists to see how many would recommend their gum.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-362"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>A boss asks their employees if they have taken drugs in the last week.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-363"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>A researcher on a phone survey asks, “Do you plan to vote for the school district bond or would you rather see our schools crumble?”<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-364"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>A survey was given to a random sample of students but more than half of the students didn’t return the survey.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-365"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>A survey about Grace College student’s experiences in MAT-1185 was given to students at in the class, but students who commute never received the survey.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-366"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>A survey asks people for their weight.<div class="workspace" data-space=".5in"></div></article><article class="exercise exercise-like" id="exercise-367"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>A broadcast email was sent to all Grace College students with a satisfaction survey.<div class="workspace" data-space=".5in"></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-43">
+<h4 class="heading"><span class="title">Describing Data: Types of Data.</span></h4>
+<div class="introduction" id="introduction-71">Please complete the anonymous survey online. The link is in Moodle. This will give our class some data to work with.</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-368"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>For each question in the survey, determine whether the data is qualitative or quantitative.<div class="workspace" data-space="1 in"></div></article></div>
+</div></section><section class="onepage" id="page-69"><div class="exercisegroup" id="exercisegroup-44">
+<h4 class="heading"><span class="title">Frequency Tables and Graphs of Qualitative Data.</span></h4>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-369"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>For one of the sets of qualitative data, make a frequency table using a spreadsheet. Use your table to make a pie chart and a bar chart. Write a sentence or two about any patterns or observations you make from the graph.<div class="workspace" data-space="3.5in"></div></article><article class="exercise exercise-like" id="exercise-370"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>For the credit hour data, make a histogram. Write a sentence or two about any patterns or observations you make from the graph. Label and title your graph.<div class="workspace" data-space="4.25in"></div></article>
+</div>
+</div></section><section class="onepage" id="page-70"><div class="exercisegroup" id="exercisegroup-45">
+<h4 class="heading"><span class="title">Bad plots.</span></h4>
+<div class="introduction" id="introduction-72">What is wrong with these graphs?</div>
+<div class="exercisegroup-exercises"><article class="exercise exercise-like" id="exercise-371"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>Ticket Prices <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_2/ticket-prices.jpg" class="contained" alt="Picture of baseball vs basketball prices"></div></div></div>
+<div class="workspace" data-space="2in"></div></article></div>
+</div></section><section class="onepage" id="page-71"><article class="exercise exercise-like" id="exercise-372"><h4 class="heading"><span class="codenumber">28<span class="period">.</span></span></h4>Percentage of Victories <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><img src="external/statistics/3_2/percents.jpg" class="contained" alt="Zoomed in picture of yankees vs red sox victory percentages"></div></div></div>
+<div class="workspace" data-space="2in"></div></article></section></section></div></main>
+</div>
+</body>
+</html>

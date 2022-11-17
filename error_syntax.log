@@ -1,3 +1,7 @@
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:429:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: worksheet line 128 and section
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx:429:11:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag section line 3
-file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/main.ptx:43:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-finance-savings-loans.ptx, and no fallback was found
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:143:20:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: solution line 140 and exercise
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:186:23:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: exercise line 26 and exercisegroup
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:187:12:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: exercisegroup line 16 and page
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:188:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: page line 15 and worksheet
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:189:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: worksheet line 12 and section
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx:189:11:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag section line 3
+file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/main.ptx:37:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load file:/G:/My%20Drive/Quantitative%20Reasoning/Quantitative_Wisdom/source/ws-data-summary-stats.ptx, and no fallback was found

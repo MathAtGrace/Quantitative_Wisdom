@@ -35,7 +35,7 @@
       <exercise xml:id="exercise-income-taxes-1" workspace="1in">
         <statement>
           Fill out boxes 1-15 the form to find the couple's taxable income
-          <image source="1040.png" width="100%"/>
+          <image source="1040.jpg" width="100%"/>
         </statement>
         <solution>
           <p>Box 1 should be 106,900</p>
@@ -181,7 +181,7 @@
       <p>
         While tax tables and the tax rates work well for calculating tax for a single individual, a business might want to create a spreadsheet that automatically calculates the tax for their employees.
       </p>
-      <image source="taxes-company.png" width="100%"/>
+      <image source="taxes-company.jpg" width="100%"/>
       <p>
         For simplicity, let's assume all of the employees are married and filing jointly, and all of their taxable incomes fall between $20,551 and $83,550.  Let's also assume that they will take the standard deduction, have no other income, make no adjustments to their taxable income, and give nothing to charity.  These assumptions will be close enough for this company's purposes.
       </p>

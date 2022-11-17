@@ -3,7 +3,7 @@
 <section xml:id="ws-data-overview-describing" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Worksheets Statistical Process and Describing Data</title>
 
-  <worksheet xml:id="worksheet-finance-savings-loans">
+  <worksheet xml:id="worksheet-data-overview-describing">
     <title>In Class Activity for <xref ref="sec-data-statistical-process"/> and <xref ref="sec-data-describing-data"/></title>
 
     <page>
@@ -93,7 +93,7 @@
         </exercise>
         <exercise workspace="1.5in">
           <statement>
-            You are a statistical consultant and you have been hired to collect data on employee satisfaction. The company has 1000 employees at two buildings, East and West. There are 4 departments and 5 levels of employees. Identify the population, sample, parameter and statistic, then describe a sampling method.
+            You are a statistical consultant and you have been hired to collect data on employee satisfaction. The company has 1000 employees at two buildings, East and West. There are 4 departments and 5 levels of employees. Identify the population and parameter, then describe a sampling method in detail.
           </statement>
           <solution>
             <p>Population – Employees in the company</p>
